@@ -1,91 +1,39 @@
-import React from 'react'
-import Link from 'next/link'
+import React, {Fragment} from 'react'
+import { ThemeProvider } from 'styled-components';
+import Sticky from 'react-stickynode';
+import { ResetCSS } from '../common/src/assets/css/style';
+import { DrawerProvider } from '../common/src/contexts/DrawerContext';
+import { lightTheme } from '../common/src/theme/light';
+import { GlobalStyle, ContentWrapper } from '../containers/Landing/light.style'
+import Nav from "../components/nav";
 import Head from 'next/head'
-import Nav from '../components/nav'
 
-const Home = () => (
-  <div>
-    <Head>
-      <title>Home</title>
-    </Head>
+export default () => {
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <Fragment>
+        <Head>
+          <title>DietMaister</title>
+          <meta name="Description" content="DietMaister landing page" />
+          <meta name="theme-color" content="#ec5555" />
+          {/* Load google fonts */}
+          <link
+            href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700,800|Roboto:300,400,400i,500,700,900"
+            rel="stylesheet"
+          />
+        </Head>
 
-    <Nav />
+        <ResetCSS/>
+        <GlobalStyle />
 
-    <div className='hero'>
-      <h1 className='title'>Welcome to Next.js!</h1>
-      <p className='description'>
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
-
-      <div className='row'>
-        <Link href='https://github.com/zeit/next.js#setup'>
-          <a className='card'>
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next.js on GitHub and in their examples.</p>
-          </a>
-        </Link>
-        <Link href='https://github.com/zeit/next.js/tree/master/examples'>
-          <a className='card'>
-            <h3>Examples &rarr;</h3>
-            <p>Find other example boilerplates on the Next.js GitHub.</p>
-          </a>
-        </Link>
-        <Link href='https://github.com/zeit/next.js'>
-          <a className='card'>
-            <h3>Create Next App &rarr;</h3>
-            <p>Was this tool helpful? Let us know how we can improve it!</p>
-          </a>
-        </Link>
-      </div>
-    </div>
-
-    <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
-      }
-    `}</style>
-  </div>
-)
-
-export default Home
+        <ContentWrapper>
+          <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+            <DrawerProvider>
+                <Nav />
+            </DrawerProvider>
+          </Sticky>
+        </ContentWrapper>
+      </Fragment>
+    </ThemeProvider>
+  )
+}
