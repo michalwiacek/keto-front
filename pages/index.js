@@ -5,8 +5,8 @@ import { ResetCSS } from '../common/src/assets/css/style';
 import { DrawerProvider } from '../common/src/contexts/DrawerContext';
 import { lightTheme } from '../common/src/theme/light';
 import { GlobalStyle, ContentWrapper } from '../containers/Landing/light.style'
-import Nav from "../components/nav";
 import Head from 'next/head'
+
 
 export default () => {
   return (
@@ -29,7 +29,6 @@ export default () => {
         <ContentWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
-                <Nav />
             </DrawerProvider>
           </Sticky>
         </ContentWrapper>

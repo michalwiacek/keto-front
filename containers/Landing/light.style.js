@@ -35,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 50px 40px 30px 40px;
       }
       .mobile_menu {
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         flex-grow: 1;
         @media (max-width: 767px) {
           margin-bottom: 30px;
