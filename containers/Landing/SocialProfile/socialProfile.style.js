@@ -10,7 +10,7 @@ export const SocialProfileWrapper = styled.div`
 export const SocialProfileItem = styled.div`
   margin-right: 18px;
   a {
-    color: #fff;
+    color: #222222;
     transition: 0.15s ease-in-out;
     &:hover {
       color: #3444f1;

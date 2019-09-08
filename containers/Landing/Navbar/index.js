@@ -10,11 +10,12 @@ import HamburgMenu from '../../../components/HamburgMenu';
 import Container from '../../../components/Container';
 import { DrawerContext } from '../../../common/src/contexts/DrawerContext';
 
-import { MENU_ITEMS } from '../../../common/src/data';
+import {MENU_ITEMS, SOCIAL_PROFILES} from '../../../common/src/data';
 import ScrollSpyMenu from '../../../components/ScrollSpyMenu';
 
 import LogoImage from '../../../common/src/assets/images/1@2x.png';
 import LogoImageAlt from '../../../common/src/assets/images/1.png';
+import SocialProfile from "../SocialProfile";
 
 const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -27,7 +28,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
   };
 
   return (
-    <NavbarWrapper {...navbarStyle} className="portfolio_navbar">
+    <NavbarWrapper {...navbarStyle} className="light_navbar">
       <Container noGutter mobileGutter width="1200px">
         <Box {...row}>
           <Logo
@@ -50,11 +51,6 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
               menuItems={MENU_ITEMS}
               offset={-70}
             />
-            <Link href="#">
-              <a className="navbar_button">
-                <Button {...button} title="LET'S TALK" />
-              </a>
-            </Link>
             <Drawer
               width="420px"
               placement="right"
@@ -68,12 +64,8 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
                 drawerClose={true}
                 offset={-100}
               />
-              <Link href="#">
-                <a className="navbar_drawer_button">
-                  <Button {...button} title="LET'S TALK" />
-                </a>
-              </Link>
             </Drawer>
+            <SocialProfile items={SOCIAL_PROFILES} />
           </Box>
         </Box>
       </Container>
@@ -101,7 +93,7 @@ Navbar.defaultProps = {
     width: '100%',
   },
   logoStyle: {
-    maxWidth: ['120px', '130px'],
+    maxWidth: ['150px', '130px'],
   },
   button: {
     type: 'button',
