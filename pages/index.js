@@ -5,7 +5,9 @@ import { ResetCSS } from '../common/src/assets/css/style';
 import { DrawerProvider } from '../common/src/contexts/DrawerContext';
 import { lightTheme } from '../common/src/theme/light';
 import { GlobalStyle, ContentWrapper } from '../containers/Landing/light.style'
-import Nav from "../components/nav";
+import Navbar from "../containers/Landing/Navbar";
+
+import BannerSection from '../containers/Landing/Banner';
 import Head from 'next/head'
 
 export default () => {
@@ -29,9 +31,10 @@ export default () => {
         <ContentWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
-                <Nav />
+              <Navbar />
             </DrawerProvider>
           </Sticky>
+          <BannerSection />
         </ContentWrapper>
       </Fragment>
     </ThemeProvider>
