@@ -61,23 +61,23 @@ export const SOCIAL_PROFILES = [
 
 export const MENU_ITEMS = [
   {
-    label: 'ME',
-    path: '#banner_section',
+    label: 'O NAS',
+    path: '/about',
     offset: '0',
   },
   {
-    label: 'PROJECT',
-    path: '#portfolio_section',
+    label: 'PRZEPISY',
+    path: '/recipes',
     offset: '0',
   },
   {
-    label: 'AWARDS',
-    path: '#awards_section',
+    label: 'BLOG',
+    path: '/blog',
     offset: '0',
   },
   {
-    label: 'WHY ME?',
-    path: '#process_section',
+    label: 'KONTAKT',
+    path: '/contact',
     offset: '0',
   },
 ];

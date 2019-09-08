@@ -123,7 +123,7 @@ export const GlobalStyle = createGlobalStyle`
 export const ContentWrapper = styled.div`
   overflow: hidden;
   .sticky-nav-active {
-    .portfolio_navbar {
+    .light_navbar {
       background: #fff;
       box-shadow: 0px 3px 8px 0px rgba(43, 83, 135, 0.08);
       padding: 15px 0;
@@ -137,7 +137,7 @@ export const ContentWrapper = styled.div`
     }
   }
 
-  .portfolio_button {
+  .light_button {
     border-radius: 0;
     border: 2px solid ${themeGet('colors.borderColor', '#1b1e25')};
     background-color: transparent;
@@ -168,7 +168,7 @@ export const ContentWrapper = styled.div`
     }
   }
 
-  .portfolio_navbar {
+  .light_navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -195,7 +195,7 @@ export const ContentWrapper = styled.div`
         }
         &.is-current {
           a {
-            color: #fff;
+            color: black;
             &:after {
               transform: scaleX(1);
               transform-origin: left center 0;
@@ -207,12 +207,12 @@ export const ContentWrapper = styled.div`
           padding: 5px;
           font-size: 16px;
           font-weight: 700;
-          color: #fff;
+          color: black;
           position: relative;
           font-family: 'Raleway', sans-serif;
           transition: 0.15s ease-in-out;
           &:hover {
-            color: #fff;
+            color: black;
             &:after {
               transform: scaleX(1);
               transform-origin: left center 0;
@@ -224,7 +224,7 @@ export const ContentWrapper = styled.div`
             position: absolute;
             width: calc(100% - 8px);
             height: 11px;
-            background: #3444f1;
+            background: #ff5b60;
             bottom: 6px;
             left: 0;
             z-index: -1;
@@ -259,7 +259,7 @@ export const ContentWrapper = styled.div`
   }
 
   .sticky-nav-active {
-    .portfolio_navbar {
+    .light_navbar {
       .main_menu {
         li {
           a {
