@@ -36,6 +36,10 @@ import Reviewer1 from '../src/assets/images/1.png';
 import Reviewer2 from '../src/assets/images/1.png';
 import Reviewer3 from '../src/assets/images/1.png';
 
+import Member1 from '../src/assets/images/placeholders/345x500.jpg';
+import Member2 from '../src/assets/images/placeholders/345x500.jpg';
+import Member3 from '../src/assets/images/placeholders/345x500.jpg';
+
 export const SOCIAL_PROFILES = [
   {
     icon: socialTwitter,
@@ -58,6 +62,94 @@ export const SOCIAL_PROFILES = [
     url: '#',
   },
 ];
+
+export const TEAM_MEMBER = [
+  {
+    id: 1,
+    name: 'Jessica Fanddy',
+    thumbnail_url: Member1,
+    designation: 'Co Founder',
+    social_links: [
+      {
+        id: 1,
+        icon: 'flaticon-facebook-logo',
+        url: '#',
+      },
+      {
+        id: 1,
+        icon: 'flaticon-twitter-logo-silhouette',
+        url: '#',
+      },
+      {
+        id: 1,
+        icon: 'flaticon-instagram',
+        url: '#',
+      },
+      {
+        id: 1,
+        icon: 'flaticon-dribble-logo',
+        url: '#',
+      },
+    ],
+  },
+    ,
+    {
+      id: 2,
+      name: 'Devid Justingul',
+      thumbnail_url: Member2,
+      designation: 'Senior Ui/UX Designer',
+      social_links: [
+        {
+          id: 1,
+          icon: 'flaticon-facebook-logo',
+          url: '#',
+        },
+        {
+          id: 1,
+          icon: 'flaticon-twitter-logo-silhouette',
+          url: '#',
+        },
+        {
+          id: 1,
+          icon: 'flaticon-instagram',
+          url: '#',
+        },
+        {
+          id: 1,
+          icon: 'flaticon-dribble-logo',
+          url: '#',
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: 'Handdy Albuzz',
+      thumbnail_url: Member3,
+      designation: 'Article Writer',
+      social_links: [
+        {
+          id: 1,
+          icon: 'flaticon-facebook-logo',
+          url: '#',
+        },
+        {
+          id: 1,
+          icon: 'flaticon-twitter-logo-silhouette',
+          url: '#',
+        },
+        {
+          id: 1,
+          icon: 'flaticon-instagram',
+          url: '#',
+        },
+        {
+          id: 1,
+          icon: 'flaticon-dribble-logo',
+          url: '#',
+        },
+      ],
+    },
+  ];
 
 export const MENU_ITEMS = [
   {

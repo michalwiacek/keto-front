@@ -63,7 +63,7 @@ BannerSection.propTypes = {
 BannerSection.defaultProps = {
   row: {
     flexBox: true,
-    // flexWrap: 'wrap',
+    flexWrap: 'wrap',
     alignItems: 'stretch',
   },
   contentArea: {

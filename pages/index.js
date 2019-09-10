@@ -1,14 +1,15 @@
 import React, {Fragment} from 'react'
-import { ThemeProvider } from 'styled-components';
-import Sticky from 'react-stickynode';
-import { ResetCSS } from '../common/src/assets/css/style';
-import { DrawerProvider } from '../common/src/contexts/DrawerContext';
-import { lightTheme } from '../common/src/theme/light';
-import { GlobalStyle, ContentWrapper } from '../containers/Landing/light.style'
-import Navbar from "../containers/Landing/Navbar";
-
-import BannerSection from '../containers/Landing/Banner';
 import Head from 'next/head'
+import Sticky from 'react-stickynode';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme } from '../common/src/theme/light';
+import { ResetCSS } from '../common/src/assets/css/style';
+import { GlobalStyle, ContentWrapper } from '../containers/Landing/light.style'
+
+import Navbar from "../containers/Landing/Navbar";
+import BannerSection from '../containers/Landing/Banner';
+import TeamSection from "../containers/Landing/TeamSection";
+import { DrawerProvider } from '../common/src/contexts/DrawerContext';
 
 export default () => {
   return (
@@ -35,6 +36,7 @@ export default () => {
             </DrawerProvider>
           </Sticky>
           <BannerSection />
+          <TeamSection />
         </ContentWrapper>
       </Fragment>
     </ThemeProvider>
