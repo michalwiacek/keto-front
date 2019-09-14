@@ -4,16 +4,17 @@ export const FooterWrapper = styled.footer`
   position: relative;
   overflow: hidden;
   background-color: #D3D3D3;
-  padding: 70px 0;
+  padding: 40px 0px 0px 0px;
+  margin: 0px
   color: #111;
   @media (max-width: 990px) {
-    padding: 80px 0;
+    padding: 40px 0 0 0;
   }
   @media (max-width: 767px) {
-    padding: 70px 0 50px 0;
+    padding: 40px 0 0 0;
   }
   @media (max-width: 575px) {
-    padding: 70px 0 0 0;
+    padding: 30px 0 0 0;
   }
 
 
@@ -39,7 +40,7 @@ export const Newsletter = styled.div`
   align-items: stretch;
   background: #111;
   border-radius: 6px;
-  height: 60px;
+  height: 50px;
 
   .reusecore__input {
     flex-grow: 1;
@@ -58,6 +59,8 @@ export const Newsletter = styled.div`
   .reusecore__button {
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 15px
     color: #fff
   }
 `;
@@ -65,9 +68,11 @@ export const Newsletter = styled.div`
 export const FooterNav = styled.ul`
   margin: 0;
   padding: 0;
-  margin-left: auto;
+  width: 100%;
+  height: 50px;
+  background-color: #111;
   @media (max-width: 575px) {
-    margin-left: 0;
+    
   }
 `;
 

@@ -8,10 +8,10 @@ import Button from '../../../components/elements/Button';
 import Input from '../../../components/elements/Input';
 import Container from '../../../components/Container';
 import SocialProfile from '../FooterSocialProfile/';
-
 import {
   FooterWrapper,
   Newsletter,
+  FooterNav,
 } from './footer.style';
 import { SOCIAL_PROFILES } from '../../../common/src/data';
 
@@ -29,7 +29,8 @@ const Footer = ({
 }) => {
   return (
     <FooterWrapper>
-      <Container noGutter mobileGutter width="1200px">
+      <Container noGutter mobileGutter width="1200px" {...noMargin}>
+      <Box {...row} {...flexBox}>
       <Box {...col}>
             <Heading as="h3" content="Zapisz się do naszego newsettlera " {...titleStyle} />
             <Text content="Otrzymuj informację o nowych interesujących treściach jako pierwszy"/>
@@ -45,11 +46,6 @@ const Footer = ({
               <Button {...newsletterButton} title="Zapisz się" />
             </Newsletter>
       </Box>
-        <Box {...row}>
-          <Box {...col}>
-           
-          </Box>
-          <Box {...col} {...flexBox}>
             <Box {...contactItem}>
               <Text content="+ 44 345 678 903" {...contactInfo} />
               <Text content="ADOBBEXD@MAIL.COM" {...contactInfo} />
@@ -60,7 +56,7 @@ const Footer = ({
               <Text content="Polityka Prywatności" {...contactInfo} />
               <Text content="FAQ" {...contactInfo} />
             </Box>
-            <Box>
+            <Box {...contactItem}>
               <Text content="About adobe XD kit" {...contactInfo} />
               <Text content="work with us" {...contactInfo} />
               <Text content="privacy policy" {...contactInfo} />
@@ -69,9 +65,10 @@ const Footer = ({
 
             </Box>
           </Box>
-        </Box>
-
-        <Box {...row} {...noMargin}>
+    
+      </Container>
+      <FooterNav>
+        <Box {...row} >
         <Box {...col}>
             <Text
               as="span"
@@ -82,11 +79,10 @@ const Footer = ({
             <SocialProfile
               className="footer_social"
               items={SOCIAL_PROFILES}
-              iconSize={40}
-            />
-            
+              iconSize={30}
+            /> 
         </Box>
-      </Container>
+        </FooterNav>
     </FooterWrapper>
   );
 };
@@ -121,7 +117,7 @@ Footer.defaultProps = {
     mb: ['40px', '0', '0', '0', '0', '0'],
   },
   titleStyle: {
-    fontSize: ['16px', '18px'],
+    fontSize: ['18px', '22px'],
     fontWeight: '600',
     mb: ['20px', '25px'],
   },
@@ -141,6 +137,7 @@ Footer.defaultProps = {
   copyrightStyle: {
     fontSize: '20px',
     color: '#fff',
+    p: '20px',
   },
   flexBox: {
     flexBox: true,
@@ -159,11 +156,11 @@ Footer.defaultProps = {
     fontSize: ['16x', '16px', '18px', '18px', '20px'],
     fontWeight: '500',
     pl: '10px',
-    pt: '10px',
-    mb: 0,
+    pt: '2px',
+    m: '0px',
   },
   noMargin: {
-    mb: '0',
+    m: '0',
   },
 };
 
