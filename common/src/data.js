@@ -665,3 +665,180 @@ export const FOOTER_MENU = [
     path: '#',
   },
 ];
+export const FOOTER_WIDGET = [
+  {
+    title: 'About Us',
+    menuItems: [
+      {
+        url: '#',
+        text: 'Support Center',
+      },
+      {
+        url: '#',
+        text: 'Customer Support',
+      },
+      {
+        url: '#',
+        text: 'About Us',
+      },
+      {
+        url: '#',
+        text: 'Copyright',
+      },
+      {
+        url: '#',
+        text: 'Popular Campaign',
+      },
+    ],
+  },
+  {
+    title: 'Our Information',
+    menuItems: [
+      {
+        url: '#',
+        text: 'Return Policy',
+      },
+      {
+        url: '#',
+        text: 'Privacy Policy',
+      },
+      {
+        url: '#',
+        text: 'Terms & Conditions',
+      },
+      {
+        url: '#',
+        text: 'Site Map',
+      },
+      {
+        url: '#',
+        text: 'Store Hours',
+      },
+    ],
+  },
+  {
+    title: 'My Account',
+    menuItems: [
+      {
+        url: '#',
+        text: 'Press inquiries',
+      },
+      {
+        url: '#',
+        text: 'Social media directories',
+      },
+      {
+        url: '#',
+        text: 'Images & B-roll',
+      },
+      {
+        url: '#',
+        text: 'Permissions',
+      },
+      {
+        url: '#',
+        text: 'Speaker requests',
+      },
+    ],
+  },
+  {
+    title: 'Policy',
+    menuItems: [
+      {
+        url: '#',
+        text: 'Application security',
+      },
+      {
+        url: '#',
+        text: 'Software principles',
+      },
+      {
+        url: '#',
+        text: 'Unwanted software policy',
+      },
+      {
+        url: '#',
+        text: 'Responsible supply chain',
+      },
+    ],
+  },
+];
+
+export const MONTHLY_PRICING_TABLE = [
+  {
+    freePlan: true,
+    name: 'Basic Account',
+    description: 'For Small teams or group who need to build website ',
+    price: '$0',
+    priceLabel: 'Only for first month',
+    buttonLabel: 'CREATE FREE ACCOUNT',
+    url: '#',
+    listItems: [
+      {
+        content: 'Drag & Drop Builder',
+      },
+      {
+        content: '1,000s of Templates Ready',
+      },
+      {
+        content: 'Blog Tools',
+      },
+      {
+        content: 'eCommerce Store ',
+      },
+      {
+        content: '30+ Webmaster Tools',
+      },
+    ],
+  },
+  {
+    name: 'Business Account',
+    description: 'For Mediums teams or group who need to build website ',
+    price: '$9.87',
+    priceLabel: 'Per month & subscription yearly',
+    buttonLabel: 'START FREE TRIAL',
+    url: '#',
+    listItems: [
+      {
+        content: 'Drag & Drop Builder',
+      },
+      {
+        content: '1,000s of Templates Ready',
+      },
+      {
+        content: 'Blog Tools',
+      },
+      {
+        content: 'eCommerce Store ',
+      },
+      {
+        content: '30+ Webmaster Tools',
+      },
+    ],
+  },
+  {
+    name: 'Premium Account',
+    description: 'For Large teams or group who need to build website ',
+    price: '$12.98',
+    priceLabel: 'Per month & subscription yearly',
+    buttonLabel: 'START FREE TRIAL',
+    url: '#',
+    listItems: [
+      {
+        content: 'Drag & Drop Builder',
+      },
+      {
+        content: '1,000s of Templates Ready',
+      },
+      {
+        content: 'Blog Tools',
+      },
+      {
+        content: 'eCommerce Store ',
+      },
+      {
+        content: '30+ Webmaster Tools',
+      },
+    ],
+  },
+];
