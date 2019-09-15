@@ -665,3 +665,101 @@ export const FOOTER_MENU = [
     path: '#',
   },
 ];
+export const FOOTER_WIDGET = [
+  {
+    title: 'About Us',
+    menuItems: [
+      {
+        url: '#',
+        text: 'Support Center',
+      },
+      {
+        url: '#',
+        text: 'Customer Support',
+      },
+      {
+        url: '#',
+        text: 'About Us',
+      },
+      {
+        url: '#',
+        text: 'Copyright',
+      },
+      {
+        url: '#',
+        text: 'Popular Campaign',
+      },
+    ],
+  },
+  {
+    title: 'Our Information',
+    menuItems: [
+      {
+        url: '#',
+        text: 'Return Policy',
+      },
+      {
+        url: '#',
+        text: 'Privacy Policy',
+      },
+      {
+        url: '#',
+        text: 'Terms & Conditions',
+      },
+      {
+        url: '#',
+        text: 'Site Map',
+      },
+      {
+        url: '#',
+        text: 'Store Hours',
+      },
+    ],
+  },
+  {
+    title: 'My Account',
+    menuItems: [
+      {
+        url: '#',
+        text: 'Press inquiries',
+      },
+      {
+        url: '#',
+        text: 'Social media directories',
+      },
+      {
+        url: '#',
+        text: 'Images & B-roll',
+      },
+      {
+        url: '#',
+        text: 'Permissions',
+      },
+      {
+        url: '#',
+        text: 'Speaker requests',
+      },
+    ],
+  },
+  {
+    title: 'Policy',
+    menuItems: [
+      {
+        url: '#',
+        text: 'Application security',
+      },
+      {
+        url: '#',
+        text: 'Software principles',
+      },
+      {
+        url: '#',
+        text: 'Unwanted software policy',
+      },
+      {
+        url: '#',
+        text: 'Responsible supply chain',
+      },
+    ],
+  },
+];
