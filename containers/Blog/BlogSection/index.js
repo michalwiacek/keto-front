@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Container from '../../../components/Container';
 import Heading from '../../../components/elements/Heading';
 import BlogPost from '../../../components/BlogPost';
+
 import SectionWrapper, {
   SectionHeader,
   TitleArea,
@@ -45,10 +46,12 @@ const BlogSection = () => {
               title={item.title}
               excerpt={item.excerpt}
               link={
-                <a className="learn__more-btn" href={item.btnUrl}>
-                  <span className="hyphen"></span>
-                  <span className="btn_text">{item.btnText}</span>
-                </a>
+                <Link href="/p/[id]" as={`/p/${item.id}`}>
+                  <a className="learn__more-btn">
+                    <span className="hyphen"></span>
+                    <span className="btn_text">{item.btnText}</span>
+                  </a>
+                </Link>
               }
             />
           ))}
