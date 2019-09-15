@@ -45,13 +45,13 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
             logoStyle={logoStyle}
             className="logo-alt"
           />
-          <SocialProfile items={SOCIAL_PROFILES} />
           <Box {...menuWrapper}>
             <ScrollSpyMenu
               className="main_menu"
               menuItems={MENU_ITEMS}
-              offset={-100}
+              offset={-70}
             />
+            <SocialProfile items={SOCIAL_PROFILES} />
             <Drawer
               width="420px"
               placement="right"
@@ -65,8 +65,8 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
                 drawerClose={true}
                 offset={-100}
               />
+            <SocialProfile items={SOCIAL_PROFILES} />
             </Drawer>
-            
           </Box>
         </Box>
       </Container>
