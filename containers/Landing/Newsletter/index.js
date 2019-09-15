@@ -45,7 +45,7 @@ const Newsletter = () => {
     <SectionWrapper>
       <Fade bottom>
         <SectionHeader>
-          <Heading as="h5" content={title} />
+          {/*<Heading as="h5" content={title} />*/}
           <Heading content={slogan} />
         </SectionHeader>
       </Fade>

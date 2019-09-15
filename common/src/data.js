@@ -36,11 +36,11 @@ import Reviewer1 from '../src/assets/images/1.png';
 import Reviewer2 from '../src/assets/images/1.png';
 import Reviewer3 from '../src/assets/images/1.png';
 
-import Member1 from '../src/assets/images/placeholders/345x500.jpg';
-import Member2 from '../src/assets/images/placeholders/345x500.jpg';
-import Member3 from '../src/assets/images/placeholders/345x500.jpg';
+import Member1 from '../src/assets/images/team/photo1.jpg';
+import Member2 from '../src/assets/images/team/photo2.jpg';
+import Member3 from '../src/assets/images/team/photo3.jpg';
 
-import project1 from '../src/assets/images/1.png';
+import project1 from '../src/assets/images/Photo.png';
 
 export const SOCIAL_PROFILES = [
   {
@@ -683,8 +683,8 @@ export const newsletterData = {
 /* ------------------------------------ */
 
 export const projectData = {
-  title: 'WORK PROCEDURE',
-  slogan: 'How We Do Our Projects',
+  title: 'WIEDZA',
+  slogan: 'Dowiedz się czym jest dieta ketogeniczna',
   thumb_url: project1,
   projects: [
     {

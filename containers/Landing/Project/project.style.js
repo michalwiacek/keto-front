@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
-import curvBg from '../../../common/src/assets/images/curv-bg.svg';
-import curvBg2 from '../../../common/src/assets/images/curveBG2.svg';
+import curvBg from '../../../common/src/assets/images/project-bg.svg';
 
 const SectionWrapper = styled.section`
   padding: 130px 0 260px;
   margin-top: 140px;
   background-image: url(${curvBg});
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top left;
+  background-size: contain;
+  background-position: top right;
   position: relative;
   @media only screen and (max-width: 1440px) {
     padding: 120px 0 190px;
@@ -39,13 +38,13 @@ export const ProjectWrapper = styled.div`
   }
   @media only screen and (max-width: 991px) {
     padding: 0;
-    background-color: transparent;
+    // background-color: transparent;
   }
   @media only screen and (max-width: 667px) {
     flex-wrap: wrap;
     padding: 0;
     flex-direction: column;
-    background-color: transparent;
+    // background-color: transparent;
   }
 
   #project_carousel {

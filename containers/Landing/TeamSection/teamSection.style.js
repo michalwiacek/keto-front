@@ -9,10 +9,10 @@ const TeamSectionWrapper = styled.section`
 
   .team__member {
     .icon__wrapper {
-      /* display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; */
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
     }
   }
 `;
