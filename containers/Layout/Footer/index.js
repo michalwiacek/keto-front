@@ -32,7 +32,7 @@ const Footer = ({
     <FooterWrapper>
       <Box {...row} {...flexBox} >
         <Box {...col} {...pad}>
-          <Heading as="h3" content="Zapisz się do naszego newsettlera " {...titleStyle} />
+          <Heading as="h3" content="Zapisz się do naszego newslettera " {...titleStyle} />
           <Text content="Otrzymuj informację o nowych interesujących treściach jako pierwszy"/>
           <Newsletter>
             <Input

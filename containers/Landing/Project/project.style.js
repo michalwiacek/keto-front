@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 import curvBg from '../../../common/src/assets/images/curv-bg.svg';
+import curvBg2 from '../../../common/src/assets/images/curveBG2.svg';
 
 const SectionWrapper = styled.section`
   padding: 130px 0 260px;

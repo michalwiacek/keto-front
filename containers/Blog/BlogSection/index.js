@@ -46,7 +46,7 @@ const BlogSection = () => {
               title={item.title}
               excerpt={item.excerpt}
               link={
-                <Link href="/p/[id]" as={`/p/${item.id}`}>
+                <Link href="/blog/[id]" as={`/blog/${item.id}`}>
                   <a className="learn__more-btn">
                     <span className="hyphen"></span>
                     <span className="btn_text">{item.btnText}</span>

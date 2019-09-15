@@ -15,6 +15,7 @@ const colors = {
   yellow: '#fdb32a', // 12
   yellowHover: '#F29E02', // 13
   borderColor: '#1b1e25', //14
+  grey: '#D6D6D6',
   primaryBoxShadow: '0px 8px 20px -6px rgba(235,77,75,0.6)',
 };
 

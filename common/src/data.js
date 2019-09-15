@@ -673,7 +673,8 @@ export const FOOTER_MENU = [
 /* ------------------------------------ */
 export const newsletterData = {
   title: 'SUBSCRIBE NEWSLETTER',
-  slogan: 'Don’t Miss Out Any Offer',
+  slogan: 'Otrzymuj ciekawe treści\n' +
+    'prosto na swoją skrzynkę',
   note:
     'Note: Please call us at 12pm to 8am. otherwise our customer supporter will not available to reach your call, but you can drop mail anytime.',
 };

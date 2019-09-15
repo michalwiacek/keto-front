@@ -3,10 +3,14 @@ import { themeGet } from '@styled-system/theme-get';
 
 import error from '../../../common/src/assets/images/error.svg';
 import success from '../../../common/src/assets/images/success.svg';
+import curvBg2 from '../../../common/src/assets/images/curveBG2.svg';
 
 const SectionWrapper = styled.section`
-  padding: 51px 0 130px;
-  background-color: ${themeGet('colors.lightBg', '#fbfafe')};
+  border: 2px solid ${themeGet('colors.grey', '#D6D6D6')};
+  padding: 140px 0 130px;
+  max-width: 760px;
+  margin: auto;
+  background-color: ${themeGet('colors.transparent', '#fbfafe')};
   @media only screen and (max-width: 1440px) {
     padding: 20px 0 100px;
   }
@@ -38,6 +42,7 @@ export const FormGroup = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 64px;
+  justify-content: center;
   @media only screen and (max-width: 667px) {
     margin-bottom: 40px;
     flex-direction: column;

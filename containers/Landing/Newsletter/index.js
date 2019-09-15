@@ -55,14 +55,14 @@ const Newsletter = () => {
             <Input
               className={state.valid}
               type="email"
-              placeholder="Enter email address"
+              placeholder="wprowadź adres email"
               icon={<Icon icon={iosEmailOutline} />}
               iconPosition="left"
               required={true}
               onChange={handleOnChange}
               aria-label="email"
             />
-            <Button type="submit" colors="primaryWithBg" title="Join Us" />
+            <Button type="submit" colors="primaryWithBg" title="Zapisz się" />
           </FormGroup>
           <Text content={note} />
         </FormWrapper>
