@@ -30,57 +30,57 @@ const Footer = ({
 }) => {
   return (
     <FooterWrapper>
-        <Box {...row} {...flexBox} >
-          <Box {...col} {...pad}>
-            <Heading as="h3" content="Zapisz się do naszego newsettlera " {...titleStyle} />
-            <Text content="Otrzymuj informację o nowych interesujących treściach jako pierwszy"/>
-            <Newsletter>
-              <Input
-                inputType="email"
-                placeholder="Adres Email"
-                iconPosition="right"
-                isMaterial={false}
-                className="email_input"
-                aria-label="email"
-              />
-              <Button {...newsletterButton} title="Zapisz się" />
-            </Newsletter>
-          </Box>
-          <Box {...contactItem} {...pad}>
-            <Text content="+ 44 345 678 903" {...contactInfo} />
-            <Text content="ADOBBEXD@MAIL.COM" {...contactInfo} />
-            <Text content="FIND A STORE" {...contactInfo} />
-          </Box>
-          <Box {...contactItem} {...pad}>
-            <Text content="Kontakt" {...contactInfo} />
-            <Text content="Polityka Prywatności" {...contactInfo} />
-            <Text content="FAQ" {...contactInfo} />
-          </Box>
-          <Box {...contactItem} {...pad}>
-            <Text content="About adobe XD kit" {...contactInfo} />
-            <Text content="work with us" {...contactInfo} />
-            <Text content="privacy policy" {...contactInfo} />
-            <Text content="Terms and conditions" {...contactInfo} />
-            <Text content="PRESS ENQUIRIES" {...contactInfo} />
-          </Box>
+      <Box {...row} {...flexBox} >
+        <Box {...col} {...pad}>
+          <Heading as="h3" content="Zapisz się do naszego newsettlera " {...titleStyle} />
+          <Text content="Otrzymuj informację o nowych interesujących treściach jako pierwszy"/>
+          <Newsletter>
+            <Input
+              inputType="email"
+              placeholder="Adres Email"
+              iconPosition="right"
+              isMaterial={false}
+              className="email_input"
+              aria-label="email"
+            />
+            <Button {...newsletterButton} title="Zapisz się" />
+          </Newsletter>
         </Box>
-      <FooterNav>
-        <Box {...row} >
-          <Box {...col}>
-              <Text
-                as="span"
-                content="©DietMaister.com"
-                {...copyrightStyle}
-              />
-          </Box >
-              <SocialProfile
-                className="footer_social"
-                items={SOCIAL_PROFILES}
-                iconSize={30}
-                {...copyrightStyle}
-              /> 
-          </Box>
-        </FooterNav>
+        <Box {...contactItem} {...pad}>
+          <Text content="+ 44 345 678 903" {...contactInfo} />
+          <Text content="ADOBBEXD@MAIL.COM" {...contactInfo} />
+          <Text content="FIND A STORE" {...contactInfo} />
+        </Box>
+        <Box {...contactItem} {...pad}>
+          <Text content="Kontakt" {...contactInfo} />
+          <Text content="Polityka Prywatności" {...contactInfo} />
+          <Text content="FAQ" {...contactInfo} />
+        </Box>
+        <Box {...contactItem} {...pad}>
+          <Text content="About adobe XD kit" {...contactInfo} />
+          <Text content="work with us" {...contactInfo} />
+          <Text content="privacy policy" {...contactInfo} />
+          <Text content="Terms and conditions" {...contactInfo} />
+          <Text content="PRESS ENQUIRIES" {...contactInfo} />
+        </Box>
+      </Box>
+    <FooterNav>
+      <Box {...row} >
+        <Box {...col}>
+            <Text
+              as="span"
+              content="©DietMaister.com"
+              {...copyrightStyle}
+            />
+        </Box >
+            <SocialProfile
+              className="footer_social"
+              items={SOCIAL_PROFILES}
+              iconSize={30}
+              {...copyrightStyle}
+            /> 
+        </Box>
+      </FooterNav>
     </FooterWrapper>
   );
 };
