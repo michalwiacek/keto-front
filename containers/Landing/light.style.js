@@ -1,6 +1,18 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 import Line from '../../common/src/assets/images/dotted-line.png';
+
+const shake = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
 
 export const GlobalStyle = createGlobalStyle`
   body{
@@ -20,7 +32,6 @@ export const GlobalStyle = createGlobalStyle`
   section {
     position: relative;
   }
-
 
   .drawer-content-wrapper{
     @media (max-width: 767px) {
@@ -306,6 +317,118 @@ export const ContentWrapper = styled.div`
       }
     }
   }
+   
+  /* ------------------------------- */
+  /* Glide controls style */
+  /* ------------------------------- */
+  .glide {
+    .glide__controls {
+      margin-top: 30px;
+    }
+
+    .glide__controls > div,
+    .glide__arrows > button {
+      height: 18px;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: transparent;
+
+      .prev_arrow,
+      .next_arrow {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: ${themeGet('colors.label', '#C6C6C6')};
+        transition: width 0.3s ease;
+        position: relative;
+        @media only screen and (max-width: 667px) {
+          width: 20px;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          width: 14px;
+          height: 2px;
+          border-radius: 4px;
+          background-color: ${themeGet('colors.label', '#C6C6C6')};
+          position: absolute;
+          z-index: 1;
+          transition: all 0.3s ease;
+        }
+
+        &.next_arrow {
+          &::before {
+            right: 0;
+            transform: rotate(0);
+            transform-origin: top right;
+          }
+          &::after {
+            right: 0;
+            transform: rotate(0);
+            transform-origin: 14px 2px;
+          }
+        }
+
+        &.prev_arrow {
+          &::before {
+            left: 0;
+            transform: rotate(0);
+            transform-origin: top left;
+          }
+          &::after {
+            left: 0;
+            transform: rotate(0);
+            transform-origin: 0 2px;
+          }
+        }
+      }
+
+      .next_arrow {
+        margin-left: 15px;
+      }
+
+      &:hover {
+        > span {
+          width: 45px;
+          border-radius: 4px;
+          background-color: ${themeGet('colors.primary', '#FDEF00')};
+          @media only screen and (max-width: 667px) {
+            width: 30px;
+          }
+
+          &::before,
+          &::after {
+            background-color: ${themeGet('colors.primary', '#FDEF00')};
+          }
+
+          &.prev_arrow {
+            &::before {
+              transform: rotate(-42deg);
+            }
+            &::after {
+              transform: rotate(42deg);
+            }
+          }
+
+          &.next_arrow {
+            &::before {
+              transform: rotate(42deg);
+            }
+            &::after {
+              transform: rotate(-42deg);
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const PrevButton = styled.div`
@@ -398,4 +521,56 @@ export const ButtonWrapper = styled.div`
   position: relative;
   z-index: 1;
   display: inline-block;
+`;
+
+export const SectionHeader = styled.header`
+  text-align: center;
+  padding-bottom: 70px;
+  @media only screen and (max-width: 1440px) {
+    padding-bottom: 56px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding-bottom: 50px;
+  }
+  @media only screen and (max-width: 991px) {
+    padding-bottom: 40px;
+  }
+  @media only screen and (max-width: 480px) {
+    text-align: left;
+  }
+
+  h5 {
+    color: ${themeGet('colors.link', '#352FD9')};
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+    @media only screen and (max-width: 1200px) {
+      font-size: 14px;
+    }
+    @media only screen and (max-width: 480px) {
+      font-size: 13px;
+    }
+  }
+
+  h2 {
+    color: ${themeGet('colors.heading', '#191919')};
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 600;
+    margin: 0;
+    @media only screen and (max-width: 1440px) {
+      font-size: 30px;
+      line-height: 46px;
+    }
+    @media only screen and (max-width: 1200px) {
+      font-size: 28px;
+      line-height: 42px;
+    }
+    @media only screen and (max-width: 767px) {
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
 `;

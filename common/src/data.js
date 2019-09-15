@@ -40,6 +40,8 @@ import Member1 from '../src/assets/images/placeholders/345x500.jpg';
 import Member2 from '../src/assets/images/placeholders/345x500.jpg';
 import Member3 from '../src/assets/images/placeholders/345x500.jpg';
 
+import project1 from '../src/assets/images/1.png';
+
 export const SOCIAL_PROFILES = [
   {
     icon: socialTwitter,
@@ -665,101 +667,45 @@ export const FOOTER_MENU = [
     path: '#',
   },
 ];
-export const FOOTER_WIDGET = [
-  {
-    title: 'About Us',
-    menuItems: [
-      {
-        url: '#',
-        text: 'Support Center',
-      },
-      {
-        url: '#',
-        text: 'Customer Support',
-      },
-      {
-        url: '#',
-        text: 'About Us',
-      },
-      {
-        url: '#',
-        text: 'Copyright',
-      },
-      {
-        url: '#',
-        text: 'Popular Campaign',
-      },
-    ],
-  },
-  {
-    title: 'Our Information',
-    menuItems: [
-      {
-        url: '#',
-        text: 'Return Policy',
-      },
-      {
-        url: '#',
-        text: 'Privacy Policy',
-      },
-      {
-        url: '#',
-        text: 'Terms & Conditions',
-      },
-      {
-        url: '#',
-        text: 'Site Map',
-      },
-      {
-        url: '#',
-        text: 'Store Hours',
-      },
-    ],
-  },
-  {
-    title: 'My Account',
-    menuItems: [
-      {
-        url: '#',
-        text: 'Press inquiries',
-      },
-      {
-        url: '#',
-        text: 'Social media directories',
-      },
-      {
-        url: '#',
-        text: 'Images & B-roll',
-      },
-      {
-        url: '#',
-        text: 'Permissions',
-      },
-      {
-        url: '#',
-        text: 'Speaker requests',
-      },
-    ],
-  },
-  {
-    title: 'Policy',
-    menuItems: [
-      {
-        url: '#',
-        text: 'Application security',
-      },
-      {
-        url: '#',
-        text: 'Software principles',
-      },
-      {
-        url: '#',
-        text: 'Unwanted software policy',
-      },
-      {
-        url: '#',
-        text: 'Responsible supply chain',
-      },
-    ],
-  },
-];
+
+/* ------------------------------------ */
+// Newsletter data
+/* ------------------------------------ */
+export const newsletterData = {
+  title: 'SUBSCRIBE NEWSLETTER',
+  slogan: 'Don’t Miss Out Any Offer',
+  note:
+    'Note: Please call us at 12pm to 8am. otherwise our customer supporter will not available to reach your call, but you can drop mail anytime.',
+};
+/* ------------------------------------ */
+// Projects section data
+/* ------------------------------------ */
+
+export const projectData = {
+  title: 'WORK PROCEDURE',
+  slogan: 'How We Do Our Projects',
+  thumb_url: project1,
+  projects: [
+    {
+      id: 1,
+      text:
+        'Create a mind map to brainstorm your project to inspire new ideas. Use a simple piece of paper, poster, or whiteboard for your mind map and we write the destination of your project in the middle.We  Write down related topics, subtopics, and relevant concepts around the goal and branch from them to create and follow different tangents.',
+      text2:
+        'When you conduct a group project, each group member can benefit from the ideas of others and gain new insights by brainstorming together.',
+    },
+    {
+      id: 2,
+      text:
+        'Schedule a brainstorming session in a quiet place with few distractions. If you are working on a project alone, you can use group discussions with friends or colleagues to gain a new perspective on the topic. When you conduct a group project, each group member can benefit from the ideas of others and gain new insights by brainstorming together.',
+      text2:
+        'Completing a successful project requires a significant amount of time and work, which means evaluating your priorities and planning your course of action.',
+    },
+    {
+      id: 3,
+      text:
+        'Create a mind map to brainstorm your project to inspire new ideas. Use a simple piece of paper, poster, or whiteboard for your mind map and we write the destination of your project in the middle.We  Write down related topics, subtopics, and relevant concepts around the goal and branch from them to create and follow different tangents.',
+      text2:
+        'When you conduct a group project, each group member can benefit from the ideas of others and gain new insights by brainstorming together.',
+    },
+  ],
+};

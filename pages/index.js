@@ -8,9 +8,11 @@ import { GlobalStyle, ContentWrapper } from '../containers/Landing/light.style'
 
 import Navbar from "../containers/Landing/Navbar";
 import BannerSection from '../containers/Landing/Banner';
+import Newsletter from "../containers/Landing/Newsletter";
 import TeamSection from "../containers/Landing/TeamSection";
 import Footer from "../containers/Landing/Footer";
 import { DrawerProvider } from '../common/src/contexts/DrawerContext';
+import Project from "../containers/Landing/Project";
 
 export default () => {
   return (
@@ -37,6 +39,8 @@ export default () => {
             </DrawerProvider>
           </Sticky>
           <BannerSection />
+          <Project />
+          <Newsletter />
           <TeamSection />
           <Footer />
         </ContentWrapper>
