@@ -1,13 +1,13 @@
-import {lightTheme} from "../common/src/theme/light";
-import {ThemeProvider} from "styled-components";
-import React, { Fragment } from "react";
+import React, {Fragment} from 'react'
+import BlogSection from '../containers/Blog/BlogSection';
+import withLayout from '../components/MainLayout';
 
-export default () => {
+const Blog = () => {
   return (
-    <ThemeProvider theme={lightTheme}>
-      <Fragment>
-        blog
-      </Fragment>
-    </ThemeProvider>
+    <Fragment>
+      <BlogSection/>
+    </Fragment>
   )
-}
+};
+
+export default withLayout(Blog);

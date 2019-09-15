@@ -6,7 +6,7 @@ import Input from '../../../components/elements/Input';
 import Button from "../../../components/elements/Button";
 import Text from '../../../components/elements/Text';
 import Heading from '../../../components/elements/Heading';
-import { SectionHeader } from '../light.style'
+import { SectionHeader } from '../../Layout/light.style'
 import SectionWrapper, { FormWrapper, FormGroup } from './newsletter.style';
 
 import { newsletterData } from "../../../common/src/data";

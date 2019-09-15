@@ -709,3 +709,24 @@ export const projectData = {
     },
   ],
 };
+
+export const posts = [
+  {
+    id: 1,
+    title: 'Uganda Embraces South Sudanese Refugees, For Now',
+    excerpt:
+      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
+    thumbUrl: Member1,
+    btnText: 'Learn More ',
+    btnUrl: '#1',
+  },
+  {
+    id: 2,
+    title: 'BRITs Week 2019 together with O2 is here',
+    excerpt:
+      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
+    thumbUrl: Member2,
+    btnText: 'Learn More ',
+    btnUrl: '#1',
+  },
+];
