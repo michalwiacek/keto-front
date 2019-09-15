@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FooterWrapper = styled.footer`
   position: relative;
   overflow: hidden;
-  background-color: #D3D3D3;
+  background-color: #D6D6D6;
   padding: 40px 0px 0px 0px;
   margin: 0px
   color: #111;
@@ -67,7 +67,8 @@ export const Newsletter = styled.div`
 
 export const FooterNav = styled.ul`
   margin: 0;
-  padding: 0;
+  padding-top: 10px;
+  padding-right: 15px;
   width: 100%;
   height: 50px;
   background-color: #111;

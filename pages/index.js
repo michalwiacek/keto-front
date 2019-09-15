@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme } from '../common/src/theme/light';
 import { ResetCSS } from '../common/src/assets/css/style';
 import { GlobalStyle, ContentWrapper } from '../containers/Landing/light.style'
+
 import Navbar from "../containers/Landing/Navbar";
 import BannerSection from '../containers/Landing/Banner';
 import TeamSection from "../containers/Landing/TeamSection";
@@ -28,6 +29,7 @@ export default () => {
 
         <ResetCSS/>
         <GlobalStyle />
+        
         <ContentWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
@@ -36,8 +38,8 @@ export default () => {
           </Sticky>
           <BannerSection />
           <TeamSection />
+          <Footer />
         </ContentWrapper>
-        <Footer />
       </Fragment>
     </ThemeProvider>
   )
