@@ -10,6 +10,7 @@ import Navbar from "../containers/Landing/Navbar";
 import BannerSection from '../containers/Landing/Banner';
 import Newsletter from "../containers/Landing/Newsletter";
 import TeamSection from "../containers/Landing/TeamSection";
+import Footer from "../containers/Landing/Footer";
 import { DrawerProvider } from '../common/src/contexts/DrawerContext';
 import Project from "../containers/Landing/Project";
 
@@ -30,7 +31,7 @@ export default () => {
 
         <ResetCSS/>
         <GlobalStyle />
-
+        
         <ContentWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
@@ -41,6 +42,7 @@ export default () => {
           <Project />
           <Newsletter />
           <TeamSection />
+          <Footer />
         </ContentWrapper>
       </Fragment>
     </ThemeProvider>
