@@ -32,14 +32,14 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
       <Container noGutter mobileGutter width="1200px">
         <Box {...row}>
           <Logo
-            href="#"
+            href="/"
             logoSrc={LogoImage}
             title="Portfolio"
             logoStyle={logoStyle}
             className="main-logo"
           />
           <Logo
-            href="#"
+            href="/"
             logoSrc={LogoImageAlt}
             title="Portfolio"
             logoStyle={logoStyle}

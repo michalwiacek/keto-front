@@ -36,11 +36,11 @@ import Reviewer1 from '../src/assets/images/1.png';
 import Reviewer2 from '../src/assets/images/1.png';
 import Reviewer3 from '../src/assets/images/1.png';
 
-import Member1 from '../src/assets/images/placeholders/345x500.jpg';
-import Member2 from '../src/assets/images/placeholders/345x500.jpg';
-import Member3 from '../src/assets/images/placeholders/345x500.jpg';
+import Member1 from '../src/assets/images/team/photo1.jpg';
+import Member2 from '../src/assets/images/team/photo2.jpg';
+import Member3 from '../src/assets/images/team/photo3.jpg';
 
-import project1 from '../src/assets/images/1.png';
+import project1 from '../src/assets/images/Photo.png';
 
 export const SOCIAL_PROFILES = [
   {
@@ -673,7 +673,8 @@ export const FOOTER_MENU = [
 /* ------------------------------------ */
 export const newsletterData = {
   title: 'SUBSCRIBE NEWSLETTER',
-  slogan: 'Don’t Miss Out Any Offer',
+  slogan: 'Otrzymuj ciekawe treści\n' +
+    'prosto na swoją skrzynkę',
   note:
     'Note: Please call us at 12pm to 8am. otherwise our customer supporter will not available to reach your call, but you can drop mail anytime.',
 };
@@ -682,8 +683,8 @@ export const newsletterData = {
 /* ------------------------------------ */
 
 export const projectData = {
-  title: 'WORK PROCEDURE',
-  slogan: 'How We Do Our Projects',
+  title: 'WIEDZA',
+  slogan: 'Dowiedz się czym jest dieta ketogeniczna',
   thumb_url: project1,
   projects: [
     {
@@ -709,3 +710,24 @@ export const projectData = {
     },
   ],
 };
+
+export const posts = [
+  {
+    id: 1,
+    title: 'Uganda Embraces South Sudanese Refugees, For Now',
+    excerpt:
+      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
+    thumbUrl: Member1,
+    btnText: 'Learn More ',
+    btnUrl: '#1',
+  },
+  {
+    id: 2,
+    title: 'BRITs Week 2019 together with O2 is here',
+    excerpt:
+      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
+    thumbUrl: Member2,
+    btnText: 'Learn More ',
+    btnUrl: '#1',
+  },
+];

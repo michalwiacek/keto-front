@@ -1,6 +1,12 @@
 import styled from 'styled-components';
+import bannerBg from '../../../common/src/assets/images/banner-bg.svg';
 
 const BannerWrapper = styled.section`
+  position: relative;
+  background-image: url(${bannerBg});
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
   position: relative;
   background-color: #ffffff;
   display: flex;
@@ -8,7 +14,7 @@ const BannerWrapper = styled.section`
   padding-top: 80px;
   //align-items: flex-end;
   @media (min-width: 991px) {
-    min-height: 100vh;
+    min-height: 80vh;
   }
   
   .image-area {

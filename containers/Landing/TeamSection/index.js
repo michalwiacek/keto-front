@@ -18,14 +18,15 @@ const TeamSection = ({
   memberName,
   designation,
   contentStyle,
+  photo,
 }) => {
   return (
     <TeamSectionWrapper id="teamSection">
       <Container>
         <Box {...sectionHeader}>
-          <Text content="TEAM MEMBER" {...sectionSubTitle} />
+          {/*<Text content="TEAM MEMBER" {...sectionSubTitle} />*/}
           <Heading
-            content="Meet with team member behind scense"
+            content="Poznaj naszych majstrów"
             {...sectionTitle}
           />
         </Box>
@@ -39,7 +40,7 @@ const TeamSection = ({
                   <Image
                     src={member.thumbnail_url}
                     alt={`Team member photo ${member.id}`}
-                    className="member__photo"
+                    className="member__photo" {...photo}
                   />
                 }
                 contentStyle={contentStyle}
@@ -132,6 +133,10 @@ TeamSection.defaultProps = {
     lineHeight: '1.5',
     mb: '8px',
     letterSpacing: '-0.020em',
+  },
+  photo: {
+    width: '150px',
+    m: 'auto',
   },
   // Team member description default style
   designation: {

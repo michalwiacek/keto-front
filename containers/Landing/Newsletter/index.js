@@ -6,7 +6,7 @@ import Input from '../../../components/elements/Input';
 import Button from "../../../components/elements/Button";
 import Text from '../../../components/elements/Text';
 import Heading from '../../../components/elements/Heading';
-import { SectionHeader } from '../light.style'
+import { SectionHeader } from '../../Layout/light.style'
 import SectionWrapper, { FormWrapper, FormGroup } from './newsletter.style';
 
 import { newsletterData } from "../../../common/src/data";
@@ -45,7 +45,7 @@ const Newsletter = () => {
     <SectionWrapper>
       <Fade bottom>
         <SectionHeader>
-          <Heading as="h5" content={title} />
+          {/*<Heading as="h5" content={title} />*/}
           <Heading content={slogan} />
         </SectionHeader>
       </Fade>
@@ -55,14 +55,14 @@ const Newsletter = () => {
             <Input
               className={state.valid}
               type="email"
-              placeholder="Enter email address"
+              placeholder="wprowadź adres email"
               icon={<Icon icon={iosEmailOutline} />}
               iconPosition="left"
               required={true}
               onChange={handleOnChange}
               aria-label="email"
             />
-            <Button type="submit" colors="primaryWithBg" title="Join Us" />
+            <Button type="submit" colors="primaryWithBg" title="Zapisz się" />
           </FormGroup>
           <Text content={note} />
         </FormWrapper>

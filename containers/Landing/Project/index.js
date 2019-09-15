@@ -6,7 +6,7 @@ import Image from '../../../components/elements/Image';
 import Container from '../../../components/Container';
 import GlideCarousel from '../../../components/GlideCarousel';
 import GlideSlide from '../../../components/GlideCarousel/glideSlide';
-import { SectionHeader } from '../light.style';
+import { SectionHeader } from '../../Layout/light.style';
 import SectionWrapper, {
   ProjectWrapper,
   TextWrapper,
