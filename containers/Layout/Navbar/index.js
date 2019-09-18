@@ -13,8 +13,8 @@ import { DrawerContext } from '../../../common/src/contexts/DrawerContext';
 import {MENU_ITEMS, SOCIAL_PROFILES} from '../../../common/src/data';
 import ScrollSpyMenu from '../../../components/ScrollSpyMenu';
 
-import LogoImage from '../../../common/src/assets/images/1@2x.png';
-import LogoImageAlt from '../../../common/src/assets/images/1.png';
+import LogoImage from '../../../common/src/assets/images/1.svg';
+import LogoImageAlt from '../../../common/src/assets/images/1.svg';
 import SocialProfile from "../SocialProfile";
 
 const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
@@ -29,7 +29,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
 
   return (
     <NavbarWrapper {...navbarStyle} className="light_navbar">
-      <Container noGutter mobileGutter width="1200px">
+      <Container noGutter mobileGutter width="1680px">
         <Box {...row}>
           <Logo
             href="/"
@@ -94,7 +94,7 @@ Navbar.defaultProps = {
     width: '100%',
   },
   logoStyle: {
-    maxWidth: ['150px', '130px'],
+    maxWidth: ['150px', '231px'],
   },
   button: {
     type: 'button',
