@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "next build"
   },
   "dependencies": {
     "@clay.global/react-content-loader": "^1.7.7",
@@ -41,7 +42,12 @@
     "react-stickynode": "^2.1.1",
     "redux-saga": "^1.0.5",
     "styled-components": "^4.3.2",
-    "styled-system": "^5.1.2"
+    "styled-system": "^5.1.2",
+    "babel-plugin-styled-components": "^1.10.6",
+    "docz": "^0.13.7",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^6.0.0",
+    "imagemin-svgo": "^7.0.0"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",
