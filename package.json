@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "heroku-postbuild": "yarn build"
+    "heroku-postbuild": "next build"
   },
   "dependencies": {
     "@clay.global/react-content-loader": "^1.7.7",
