@@ -1,18 +1,6 @@
-import styled, { createGlobalStyle, keyframes } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 import Line from '../../common/src/assets/images/dotted-line.png';
-
-const shake = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(7px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-`;
 
 export const GlobalStyle = createGlobalStyle`
   body{
@@ -25,13 +13,14 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: 'Georgia', sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin-top: 0;
   }
 
   section {
     position: relative;
   }
+
 
   .drawer-content-wrapper{
     @media (max-width: 767px) {
@@ -193,7 +182,7 @@ export const ContentWrapper = styled.div`
       display: none;
     }
     .main_menu {
-      margin-right: 140px;
+      margin-right: 50px;
       li {
         display: inline-block;
         padding-left: 13px;
@@ -216,12 +205,11 @@ export const ContentWrapper = styled.div`
         }
         a {
           padding: 5px;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 700;
           color: black;
           position: relative;
-          font-family: 'Georgia', sans-serif;
-          line-height: 1.14;
+          font-family: 'Raleway', sans-serif;
           transition: 0.15s ease-in-out;
           &:hover {
             color: black;

@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
-import Link from 'next/link';
 import PropTypes from 'prop-types';
 import NavbarWrapper from '../../../components/elements/Navbar';
 import Drawer from '../../../components/elements/Drawer';
-import Button from '../../../components/elements/Button';
 import Logo from '../../../components/elements/Logo';
 import Box from '../../../components/elements/Box';
 import HamburgMenu from '../../../components/HamburgMenu';
@@ -17,7 +15,7 @@ import LogoImage from '../../../common/src/assets/images/1.svg';
 import LogoImageAlt from '../../../common/src/assets/images/1.svg';
 import SocialProfile from "../SocialProfile";
 
-const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
+const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);
 
   // Toggle drawer
@@ -29,7 +27,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
 
   return (
     <NavbarWrapper {...navbarStyle} className="light_navbar">
-      <Container noGutter mobileGutter width="1680px">
+      <Container noGutter mobileGutter width="1200px">
         <Box {...row}>
           <Logo
             href="/"

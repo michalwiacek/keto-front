@@ -1,15 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from 'react-icons-kit';
-import Link from 'next/link';
 import Box from '../../../components/elements/Box';
-import Button from "../../../components/elements/Button";
-import Text from '../../../components/elements/Text';
 import Heading from '../../../components/elements/Heading';
 import Image from '../../../components/elements/Image';
 import Container from "../../../components/Container";
 
-import { cornerDownRight } from 'react-icons-kit/feather/cornerDownRight'
 import PersonImage from '../../../common/src/assets/images/keto-hero-04@2x.png';
 
 import BannerWrapper from "./banner.style";
@@ -18,26 +13,16 @@ const BannerSection = ({
                          row,
                          contentArea,
                          imageArea,
-                         greetingStyle,
                          nameStyle,
                          designationStyle,
-                         aboutStyle,
-                         roleStyle,
-                         roleWrapper,
-                         button,
                        }) => {
   return (
     <BannerWrapper id="banner_section">
-      <Container noGutter mobileGutter width="1680px">
+      <Container noGutter mobileGutter width="1200px">
         <Box {...row}>
           <Box {...contentArea}>
             <Heading content="Odkryj w sobie moc" {...nameStyle} />
             <Heading content="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt" {...designationStyle} />
-            {/*<Link href="#">*/}
-            {/*  <a className="navbar_drawer_button">*/}
-            {/*    <Button {...button} title="NORMAL" />*/}
-            {/*  </a>*/}
-            {/*</Link>*/}
           </Box>
           <Box {...imageArea} className="image_area">
             <Image src={PersonImage} alt="Runner" />
@@ -92,7 +77,6 @@ BannerSection.defaultProps = {
     mb: '1.7rem',
     padding: '55px 0 0 26px',
     borderRadius: '15px',
-    // backgroundColor: 'rgba(255, 255, 255, 0.5)',
   },
   designationStyle: {
     as: 'h3',
@@ -104,7 +88,6 @@ BannerSection.defaultProps = {
     mb: ['30px', '30px', '25px', '30px', '50px'],
     ml: ['0', '0', '0', '0'],
     padding: '0 25px 0px 25px',
-    // backgroundColor: 'rgba(255, 255, 255, 0.4)',
   },
   roleWrapper: {
     flexBox: true,
