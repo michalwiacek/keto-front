@@ -1,17 +1,16 @@
 import React, {Fragment} from 'react'
-import BannerSection from '../containers/Landing/Banner';
-import Newsletter from "../containers/Landing/Newsletter";
-import TeamSection from "../containers/Landing/TeamSection";
-import Project from "../containers/Landing/Project";
 import withLayout from '../components/MainLayout';
-
+import BannerSection from "../containers/Landing/Banner";
+import FeatureSection from "../containers/Landing/Feature";
+import RideOption from "../containers/Landing/RideOption";
+//import TestimonialSection from "../containers/Landing/TestimonialSection";
 const Page = () => {
   return (
     <Fragment>
       <BannerSection />
-      <Project />
-      <Newsletter />
-      <TeamSection />
+      <RideOption />
+
+      <FeatureSection />
     </Fragment>
   )
 };

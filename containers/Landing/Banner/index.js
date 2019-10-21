@@ -1,46 +1,81 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from 'react-icons-kit';
 import Link from 'next/link';
 import Box from '../../../components/elements/Box';
-import Button from "../../../components/elements/Button";
 import Text from '../../../components/elements/Text';
 import Heading from '../../../components/elements/Heading';
 import Image from '../../../components/elements/Image';
-import Container from "../../../components/Container";
-
-import { cornerDownRight } from 'react-icons-kit/feather/cornerDownRight'
-import PersonImage from '../../../common/src/assets/images/keto-hero-04@2x.png';
-
-import BannerWrapper from "./banner.style";
+import Button from '../../../components/elements/Button';
+import Input from '../../../components/elements/Input';
+import Fade from 'react-reveal/Fade';
+import Container from '../../../components/Container';
+import { BannerWrapper, EmailInputWrapper } from './banner.style';
+import PeopleImage from '../../../common/src/assets/images/people.svg';
+import ManImage from '../../../common/src/assets/images/man.png';
+import bannerApp from '../../../common/src/assets/images/bannerApp.png';
+import bannerPlay from '../../../common/src/assets/images/bannerPlay.png';
 
 const BannerSection = ({
-                         row,
-                         contentArea,
-                         imageArea,
-                         greetingStyle,
-                         nameStyle,
-                         designationStyle,
-                         aboutStyle,
-                         roleStyle,
-                         roleWrapper,
-                         button,
-                       }) => {
+  row,
+  contentArea,
+  imageArea,
+  greetingStyle,
+  aboutStyle,
+  greetingStyleTwo,
+  button,
+}) => {
   return (
     <BannerWrapper id="banner_section">
-      <Container noGutter mobileGutter width="1680px">
+      <Container noGutter mobileGutter width="1200px" className="container">
         <Box {...row}>
-          <Box {...contentArea}>
-            <Heading content="Odkryj w sobie moc" {...nameStyle} />
-            <Heading content="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt" {...designationStyle} />
-            {/*<Link href="#">*/}
-            {/*  <a className="navbar_drawer_button">*/}
-            {/*    <Button {...button} title="NORMAL" />*/}
-            {/*  </a>*/}
-            {/*</Link>*/}
+          <Box {...contentArea} className="contentArea">
+            <Heading
+              content="Get to where you want to be."
+              {...greetingStyle}
+            />
+            <Heading content="It's in your hand. " {...greetingStyleTwo} />
+            <EmailInputWrapper>
+              <Input
+                inputType="email"
+                placeholder="Enter Email Address"
+                iconPosition="left"
+                aria-label="email"
+              />
+              <Link href="#fare_section">
+                <a>
+                  <Button title="Text me a link" {...button} />
+                </a>
+              </Link>
+            </EmailInputWrapper>
+            <Text
+              content="We’ll send you a text with a link to download the app."
+              {...aboutStyle}
+            />
+            <Fade up>
+              <div className="bannerImageBtn">
+                <Link href="#1">
+                  <a>
+                    <Image
+                      src={bannerApp}
+                      className="app_image_area"
+                      alt="App Image"
+                    />
+                  </a>
+                </Link>
+                <Link href="#1">
+                  <a>
+                    <Image
+                      src={bannerPlay}
+                      className="play_image_area"
+                      alt="GooglePlay Image"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </Fade>
           </Box>
           <Box {...imageArea} className="image_area">
-            <Image src={PersonImage} alt="Runner" />
+            <Image src={PeopleImage} className="people_image_area" alt="People Image" />
           </Box>
         </Box>
       </Container>
@@ -58,53 +93,53 @@ BannerSection.propTypes = {
   aboutStyle: PropTypes.object,
   roleStyle: PropTypes.object,
   roleWrapper: PropTypes.object,
+  greetingStyleTwo: PropTypes.object,
+  button: PropTypes.object,
 };
 
 BannerSection.defaultProps = {
   row: {
     flexBox: true,
     flexWrap: 'wrap',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    alignItems: 'stretch',
   },
   contentArea: {
-    width: ['100%', '100%', '45%', '45%'],
-    p: ['65px 0 80px 0', '65px 0 80px 0', '80px 0 60px 0', '0'],
+    width: ['100%', '100%', '50%', '50%'],
+    p: [
+      '150px 0 0px 0',
+      '150px 0 0px 0',
+      '150px 0 0px 0',
+      '150px 0 0px 0',
+      '100px 0 0px 0',
+    ],
     flexBox: true,
     flexWrap: 'wrap',
-    ml: '40px',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     flexDirection: 'column',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    borderRadius: '15px',
-    maxHeight: ['600px', '600px', '360px', '260px'],
   },
   imageArea: {
-    width: ['100%', '100%', '45%', '45%'],
+    width: ['100%', '100%', '50%', '50%'],
     flexBox: true,
     alignItems: 'flex-end',
+    position: 'relative',
   },
-  nameStyle: {
-    as: 'h2',
-    color: '#222222',
-    fontSize: ['36px', '36px', '38px', '40px', '40px'],
-    fontWeight: '800',
-    mb: '1.7rem',
-    padding: '55px 0 0 26px',
-    borderRadius: '15px',
-    // backgroundColor: 'rgba(255, 255, 255, 0.5)',
+  greetingStyle: {
+    as: 'h1',
+    color: '#15172c',
+    fontSize: ['30px', '36px', '48px', '52px', '72px'],
+    fontWeight: '600',
+    fontFamily: 'Poppins',
+    lineHeight: ['40px', '48px', '60px', '65px', '98px'],
+    mb: '0px',
   },
-  designationStyle: {
-    as: 'h3',
-    color: '#222222',
-    fontFamily: 'Arial',
-    fontSize: ['16px', '18px', '18px', '20px', '20px'],
-    fontWeight: '500',
-    lineHeight: '1.5',
-    mb: ['30px', '30px', '25px', '30px', '50px'],
-    ml: ['0', '0', '0', '0'],
-    padding: '0 25px 0px 25px',
-    // backgroundColor: 'rgba(255, 255, 255, 0.4)',
+  greetingStyleTwo: {
+    as: 'h1',
+    color: '#15172c',
+    fontSize: ['30px', '36px', '48px', '60px', '72px'],
+    fontWeight: '400',
+    fontFamily: 'Poppins',
+    lineHeight: ['40px', '48px', '60px', '72px', '98px'],
+    mb: '8px',
   },
   roleWrapper: {
     flexBox: true,
@@ -114,25 +149,32 @@ BannerSection.defaultProps = {
     as: 'h4',
     fontSize: ['18px', '18px', '18px', '18px', '20px'],
     fontWeight: '500',
-    color: '#222222',
+    color: '#fff',
     mb: '0',
     ml: '10px',
   },
   aboutStyle: {
     fontSize: ['15px', '15px', '15px', '16px', '16px'],
+    fontFamily: 'Lato',
     fontWeight: '400',
-    color: '#222222',
+    color: '#15172c',
     lineHeight: '1.5',
-    mb: '50px',
+    mb: '30px',
+    mt: '30px',
   },
   button: {
     type: 'button',
-    fontSize: '16px',
-    ml: '20px',
-    pl: '6px',
-    pr: '6px',
-    colors: 'secondaryWithBg',
-    minHeight: 'auto',
+    fontSize: '14px',
+    fontWeight: '700',
+    fontFamily: 'Lato',
+    color: '#fff',
+    borderRadius: '4px',
+    pl: '22px',
+    pr: '22px',
+    colors: 'primaryWithBg',
+    minHeight: '55px',
+    pt: '0px',
+    pb: '0',
   },
 };
 

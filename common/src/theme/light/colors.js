@@ -1,26 +1,20 @@
 const colors = {
   transparent: 'transparent', // 0
-
-  grey: '#D6D6D6',
-  primaryBoxShadow: '0px 8px 20px -6px rgba(235,77,75,0.6)',
-  labelColor: '#767676',
-  lightBorder: '#f1f4f6',
-  inactiveField: '#f2f2f2',
-  inactiveButton: '#b7dbdd',
-  inactiveIcon: '#EBEBEB',
-  primaryHover: '#006b70',
-  secondary: '#ff5b60',
-  secondaryHover: '#FF282F',
-  yellow: '#fdb32a',
-  yellowHover: '#F29E02',
-  borderColor: '#dadada',
-  black: '#000000',
-  white: '#ffffff',
-  primary: '#10ac84',
+  black: '#000000', // 1
+  white: '#ffffff', // 2
   headingColor: '#0f2137',
-  quoteText: '#343d48',
-  textColor: 'rgba(52, 61, 72, 0.8)',
-  linkColor: '#2b9eff',
+  textColor: '#5d646d', // 3
+  labelColor: '#767676', // 4
+  inactiveField: '#f2f2f2', // 5
+  inactiveButton: '#b7dbdd', // 6
+  inactiveIcon: '#EBEBEB', // 7
+  primary: '#ff5b60', // 8
+  primaryHover: '#FF282F', // 9
+  secondary: '#8454FF', // 10
+  secondaryHover: '#8454FF', // 11
+  yellow: '#fdb32a', // 12
+  yellowHover: '#F29E02', // 13
+  primaryBoxShadow: ' 0px 9px 19.74px 1.26px rgba(82, 104, 219, 0.57) ',
 };
 
 export default colors;
