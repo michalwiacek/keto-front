@@ -1,10 +1,9 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
-import Line from '../../common/src/assets/images/dotted-line.png';
 
 export const GlobalStyle = createGlobalStyle`
-  body{
-    font-family: 'Arial', sans-serif;
+  body {
+    font-family: 'Lato', sans-serif;
   }
 
   h1,
@@ -13,8 +12,11 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-top: 0;
+  }
+  p{
+    font-family: 'Lato', sans-serif;
   }
 
   section {
@@ -48,7 +50,7 @@ export const GlobalStyle = createGlobalStyle`
           a{
             font-size: 20px;
             font-weight: 500;
-            color: #343d48;
+            color: #000;
             position: relative;
             font-family: 'Raleway', sans-serif;
             transition: 0.15s ease-in-out;
@@ -122,11 +124,20 @@ export const GlobalStyle = createGlobalStyle`
 
 export const ContentWrapper = styled.div`
   overflow: hidden;
+  .menuLeft {
+    margin-left: 105px;
+  }
+  .menuRight {
+    margin-left: auto;
+  }
   .sticky-nav-active {
-    .light_navbar {
+    .hosting_navbar {
       background: #fff;
       box-shadow: 0px 3px 8px 0px rgba(43, 83, 135, 0.08);
       padding: 15px 0;
+      @media (min-width: 1440px) {
+        padding: 25px 0;
+      }
 
       .main-logo {
         display: none;
@@ -136,8 +147,7 @@ export const ContentWrapper = styled.div`
       }
     }
   }
-
-  .light_button {
+  .portfolio_button {
     border-radius: 0;
     border: 2px solid ${themeGet('colors.borderColor', '#1b1e25')};
     background-color: transparent;
@@ -168,25 +178,26 @@ export const ContentWrapper = styled.div`
     }
   }
 
-  .light_navbar {
+  .hosting_navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     transition: 0.35s ease-in-out;
-    padding: 17px 0 30px 0;
+    padding: 35px 0 30px 0;
     @media (max-width: 990px) {
-      padding: 15px 0;
+      padding: 30px 0;
     }
     .logo-alt {
       display: none;
     }
     .main_menu {
-      margin-right: 50px;
+      margin-right: 40px;
       li {
         display: inline-block;
-        padding-left: 13px;
-        padding-right: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #000;
         &:first-child {
           padding-left: 0;
         }
@@ -195,7 +206,7 @@ export const ContentWrapper = styled.div`
         }
         &.is-current {
           a {
-            color: black;
+            color: #000;
             &:after {
               transform: scaleX(1);
               transform-origin: left center 0;
@@ -204,15 +215,15 @@ export const ContentWrapper = styled.div`
           }
         }
         a {
-          padding: 5px;
+          padding: 5px 0;
           font-size: 16px;
-          font-weight: 700;
-          color: black;
+          font-weight: 500;
+          font-family: 'Poppins', sans-serif;
+          color: #15172c;
           position: relative;
-          font-family: 'Raleway', sans-serif;
           transition: 0.15s ease-in-out;
           &:hover {
-            color: black;
+            color: #15172c;
             &:after {
               transform: scaleX(1);
               transform-origin: left center 0;
@@ -222,11 +233,11 @@ export const ContentWrapper = styled.div`
           &:after {
             content: '';
             position: absolute;
-            width: calc(100% - 8px);
-            height: 11px;
-            background: #ff5b60;
-            bottom: 6px;
-            left: 0;
+            width: 100%;
+            height: 9px;
+            background: linear-gradient(to left, #ff5b60, #F29E02);
+            bottom: 5px;
+            left: 6px;
             z-index: -1;
             transform: scaleX(0);
             transform-origin: right center 0;
@@ -259,159 +270,13 @@ export const ContentWrapper = styled.div`
   }
 
   .sticky-nav-active {
-    .light_navbar {
+    .hosting_navbar {
       .main_menu {
         li {
           a {
             color: #302b4e;
             &:after {
-              background: #c2c7fb;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .process_item_col {
-    &:nth-child(2),
-    &:nth-child(3) {
-      .process_item {
-        &:before {
-          content: '';
-          background-image: url(${Line});
-          width: 165px;
-          height: 35px;
-          display: block;
-          background-repeat: no-repeat;
-          background-position: center;
-          position: absolute;
-          left: -165px;
-          top: 20px;
-          @media (max-width: 990px) {
-            width: 100px;
-            left: -80px;
-          }
-          @media (max-width: 767px) {
-            display: none;
-          }
-        }
-      }
-    }
-    &:nth-child(3) {
-      .process_item {
-        &:before {
-          transform: rotate(180deg);
-        }
-      }
-    }
-  }
-   
-  /* ------------------------------- */
-  /* Glide controls style */
-  /* ------------------------------- */
-  .glide {
-    .glide__controls {
-      margin-top: 30px;
-    }
-
-    .glide__controls > div,
-    .glide__arrows > button {
-      height: 18px;
-      padding: 0;
-      border: 0;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      background-color: transparent;
-
-      .prev_arrow,
-      .next_arrow {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background-color: ${themeGet('colors.label', '#C6C6C6')};
-        transition: width 0.3s ease;
-        position: relative;
-        @media only screen and (max-width: 667px) {
-          width: 20px;
-        }
-
-        &::before,
-        &::after {
-          content: '';
-          display: block;
-          width: 14px;
-          height: 2px;
-          border-radius: 4px;
-          background-color: ${themeGet('colors.label', '#C6C6C6')};
-          position: absolute;
-          z-index: 1;
-          transition: all 0.3s ease;
-        }
-
-        &.next_arrow {
-          &::before {
-            right: 0;
-            transform: rotate(0);
-            transform-origin: top right;
-          }
-          &::after {
-            right: 0;
-            transform: rotate(0);
-            transform-origin: 14px 2px;
-          }
-        }
-
-        &.prev_arrow {
-          &::before {
-            left: 0;
-            transform: rotate(0);
-            transform-origin: top left;
-          }
-          &::after {
-            left: 0;
-            transform: rotate(0);
-            transform-origin: 0 2px;
-          }
-        }
-      }
-
-      .next_arrow {
-        margin-left: 15px;
-      }
-
-      &:hover {
-        > span {
-          width: 45px;
-          border-radius: 4px;
-          background-color: ${themeGet('colors.primary', '#FDEF00')};
-          @media only screen and (max-width: 667px) {
-            width: 30px;
-          }
-
-          &::before,
-          &::after {
-            background-color: ${themeGet('colors.primary', '#FDEF00')};
-          }
-
-          &.prev_arrow {
-            &::before {
-              transform: rotate(-42deg);
-            }
-            &::after {
-              transform: rotate(42deg);
-            }
-          }
-
-          &.next_arrow {
-            &::before {
-              transform: rotate(42deg);
-            }
-            &::after {
-              transform: rotate(-42deg);
+              background: linear-gradient(to left, #ff5b60, #F29E02);
             }
           }
         }

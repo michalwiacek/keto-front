@@ -7,13 +7,10 @@ import Box from '../../../components/elements/Box';
 import HamburgMenu from '../../../components/HamburgMenu';
 import Container from '../../../components/Container';
 import { DrawerContext } from '../../../common/src/contexts/DrawerContext';
-
-import {MENU_ITEMS, SOCIAL_PROFILES} from '../../../common/src/data';
+import {MENU_ITEMS, MENU_LEFT_ITEMS, MENU_RIGHT_ITEMS} from '../../../common/src/data';
 import ScrollSpyMenu from '../../../components/ScrollSpyMenu';
 
 import LogoImage from '../../../common/src/assets/images/1.svg';
-import LogoImageAlt from '../../../common/src/assets/images/1.svg';
-import SocialProfile from "../SocialProfile";
 
 const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -26,30 +23,35 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
   };
 
   return (
-    <NavbarWrapper {...navbarStyle} className="light_navbar">
+    <NavbarWrapper {...navbarStyle}>
       <Container noGutter mobileGutter width="1200px">
         <Box {...row}>
           <Logo
-            href="/"
+            href="#"
             logoSrc={LogoImage}
             title="Portfolio"
             logoStyle={logoStyle}
             className="main-logo"
           />
           <Logo
-            href="/"
-            logoSrc={LogoImageAlt}
+            href="#"
+            logoSrc={LogoImage}
             title="Portfolio"
             logoStyle={logoStyle}
             className="logo-alt"
           />
           <Box {...menuWrapper}>
             <ScrollSpyMenu
-              className="main_menu"
-              menuItems={MENU_ITEMS}
+              className="main_menu menuLeft"
+              menuItems={MENU_LEFT_ITEMS}
               offset={-70}
             />
-            <SocialProfile items={SOCIAL_PROFILES} />
+            <ScrollSpyMenu
+              className="main_menu menuRight"
+              menuItems={MENU_RIGHT_ITEMS}
+              offset={-70}
+            />
+
             <Drawer
               width="420px"
               placement="right"
@@ -63,7 +65,6 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
                 drawerClose={true}
                 offset={-100}
               />
-            <SocialProfile items={SOCIAL_PROFILES} />
             </Drawer>
           </Box>
         </Box>
@@ -82,17 +83,18 @@ Navbar.propTypes = {
 
 Navbar.defaultProps = {
   navbarStyle: {
+    className: 'hosting_navbar',
     minHeight: '70px',
     display: 'block',
   },
   row: {
     flexBox: true,
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     width: '100%',
   },
   logoStyle: {
-    maxWidth: ['150px', '231px'],
+    maxWidth: ['120px', '200px'],
   },
   button: {
     type: 'button',
@@ -105,6 +107,8 @@ Navbar.defaultProps = {
   menuWrapper: {
     flexBox: true,
     alignItems: 'center',
+    width: '100%',
+    justifyContent: 'flex-end',
   },
 };
 
