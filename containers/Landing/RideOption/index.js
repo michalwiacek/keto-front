@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import Box from '../../../components/elements/Box';
-import Text from '../../../components/elements/Text';
-import Heading from '../../../components/elements/Heading';
-import Image from '../../../components/elements/Image';
-import Container from '../../../components/Container';
-import Button from '../../../components/elements/Button';
+import Box from 'components/elements/Box';
+import Text from 'components/elements/Text';
+import Heading from 'components/elements/Heading';
+import Image from 'components/elements/Image';
+import Container from 'components/Container';
+import Button from 'components/elements/Button';
 import { OptionWrapper } from './rideOption.style';
-import BlogImage from '../../../common/src/assets/images/blog-side.svg';
-import ChefImage from '../../../common/src/assets/images/chef-side.svg';
-import colors from 'styled-system';
+import BlogImage from 'common/src/assets/images/blog-side.svg';
+import ChefImage from 'common/src/assets/images/chef-side.svg';
 
 const SkillSection = ({
   sectionWrapper,

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImageGallery from 'react-image-gallery';
-import Box from 'reusecore/src/elements/Box';
-import Text from 'reusecore/src/elements/Text';
+import Box from 'components/elements/Box';
+import Text from 'components/elements/Text';
 import Fade from 'react-reveal/Fade';
-import Heading from 'reusecore/src/elements/Heading';
+import Heading from 'components/elements/Heading';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import Container from 'common/src/components/UI/Container';
 import FeatureSliderWrapper from './featureSlider.style';

@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import Fade from 'react-reveal/Fade';
-import Text from '../../../components/elements/Text';
-import Heading from '../../../components/elements/Heading';
-import Image from '../../../components/elements/Image';
-import Container from '../../../components/Container';
-import GlideCarousel from '../../../components/GlideCarousel';
-import GlideSlide from '../../../components/GlideCarousel/glideSlide';
+import Text from 'components/elements/Text';
+import Heading from 'components/elements/Heading';
+import Image from 'components/elements/Image';
+import Container from 'components/Container';
+import GlideCarousel from 'components/GlideCarousel';
+import GlideSlide from 'components/GlideCarousel/glideSlide';
 import { SectionHeader } from '../../Layout/light.style';
 import SectionWrapper, {
   ProjectWrapper,
@@ -13,7 +13,7 @@ import SectionWrapper, {
   ImageWrapper,
 } from './project.style';
 
-import { projectData } from '../../../common/src/data';
+import { projectData } from 'common/src/data';
 
 const Project = () => {
   const { title, slogan, thumb_url, projects } = projectData;

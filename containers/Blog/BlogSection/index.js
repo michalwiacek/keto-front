@@ -19,24 +19,7 @@ const BlogSection = () => {
     <SectionWrapper id="blog">
       <Container width="1260px">
         <SectionHeader>
-          <TitleArea>
-            <Heading content="Blog & News Updates" />
-            <Text>
-              People around the world are raising money for what they are
-              passionate about. Get The Latest PayBear Updates
-              <Link href="#1">
-                <a className="link">Join us on Community</a>
-              </Link>
-            </Text>
-          </TitleArea>
-          <LinkArea>
-            <Link href="#1">
-              <a className="text__btn">
-                <span className="text">View all blog posts</span>
-                <span className="arrow" />
-              </a>
-            </Link>
-          </LinkArea>
+
         </SectionHeader>
         <PostArea>
           {posts.map(item => (
