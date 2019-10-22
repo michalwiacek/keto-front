@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import Box from 'reusecore/src/elements/Box';
-import Text from 'reusecore/src/elements/Text';
-import Heading from 'reusecore/src/elements/Heading';
-import Button from 'reusecore/src/elements/Button';
+import Box from 'components/elements/Box';
+import Text from 'components/elements/Text';
+import Heading from 'components/elements/Heading';
+import Button from 'components/elements/Button';
 import Container from 'common/src/components/UI/Container';
 import { HowWrapper, BtnWrapper } from './how.style';
 

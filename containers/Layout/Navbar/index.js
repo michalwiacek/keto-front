@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import NavbarWrapper from '../../../components/elements/Navbar';
-import Drawer from '../../../components/elements/Drawer';
-import Logo from '../../../components/elements/Logo';
-import Box from '../../../components/elements/Box';
-import HamburgMenu from '../../../components/HamburgMenu';
-import Container from '../../../components/Container';
-import { DrawerContext } from '../../../common/src/contexts/DrawerContext';
-import {MENU_ITEMS, MENU_LEFT_ITEMS, MENU_RIGHT_ITEMS} from '../../../common/src/data';
-import ScrollSpyMenu from '../../../components/ScrollSpyMenu';
+import NavbarWrapper from 'components/elements/Navbar';
+import Drawer from 'components/elements/Drawer';
+import Logo from 'components/elements/Logo';
+import Box from 'components/elements/Box';
+import HamburgMenu from 'components/HamburgMenu';
+import Container from 'components/Container';
+import { DrawerContext } from 'common/src/contexts/DrawerContext';
+import {MENU_ITEMS, MENU_LEFT_ITEMS, MENU_RIGHT_ITEMS} from 'common/src/data';
+import ScrollSpyMenu from 'components/ScrollSpyMenu';
 
-import LogoImage from '../../../common/src/assets/images/1.svg';
+import LogoImage from 'common/src/assets/images/1.svg';
 
 const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);

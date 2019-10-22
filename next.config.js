@@ -3,13 +3,22 @@ const withTM = require('next-transpile-modules');
 const withOptimizedImages = require('next-optimized-images');
 const withFonts = require('next-fonts');
 const withCSS = require('@zeit/next-css');
+const path = require('path');
+
+const nextConfig = {
+  webpack: (config, options) => {
+    config.resolve.modules.push(path.resolve('./'))
+    return config;
+  },
+};
+
 module.exports = withPlugins(
   [
     [
-    withTM,
-    {
-      transpileModules: ['common'],
-    },
+      withTM,
+      {
+        transpileModules: ['common'],
+      },
     ],
     [
       withOptimizedImages,
@@ -25,5 +34,5 @@ module.exports = withPlugins(
     ],
     withFonts,
     withCSS,
-  ],
+  ], nextConfig
 );

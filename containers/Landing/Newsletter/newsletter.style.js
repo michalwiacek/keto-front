@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
-import error from '../../../common/src/assets/images/error.svg';
-import success from '../../../common/src/assets/images/success.svg';
-import curvBg2 from '../../../common/src/assets/images/curveBG2.svg';
+import error from 'common/src/assets/images/error.svg';
+import success from 'common/src/assets/images/success.svg';
+import curvBg2 from 'common/src/assets/images/curveBG2.svg';
 
 const SectionWrapper = styled.section`
   border: 2px solid ${themeGet('colors.grey', '#D6D6D6')};

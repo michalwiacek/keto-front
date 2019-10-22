@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Icon } from 'react-icons-kit'
 import { iosEmailOutline } from 'react-icons-kit/ionicons/iosEmailOutline'
 import Fade from 'react-reveal/Fade';
-import Input from '../../../components/elements/Input';
-import Button from "../../../components/elements/Button";
-import Text from '../../../components/elements/Text';
-import Heading from '../../../components/elements/Heading';
+import Input from 'components/elements/Input';
+import Button from "components/elements/Button";
+import Text from 'components/elements/Text';
+import Heading from 'components/elements/Heading';
 import { SectionHeader } from '../../Layout/light.style'
 import SectionWrapper, { FormWrapper, FormGroup } from './newsletter.style';
 
-import { newsletterData } from "../../../common/src/data";
+import { newsletterData } from "common/src/data";
 
 const Newsletter = () => {
   const { title, slogan, note } = newsletterData;

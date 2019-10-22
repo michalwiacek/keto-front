@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import Box from 'reusecore/src/elements/Box';
-import Text from 'reusecore/src/elements/Text';
-import Heading from 'reusecore/src/elements/Heading';
-import Button from 'reusecore/src/elements/Button';
-import Image from 'reusecore/src/elements/Image';
+import Box from 'components/elements/Box';
+import Text from 'components/elements/Text';
+import Heading from 'components/elements/Heading';
+import Button from 'components/elements/Button';
+import Image from 'components/elements/Image';
 import { Testimonial } from 'common/src/data/Ride';
 import Container from 'common/src/components/UI/Container';
 import GlideCarousel from 'common/src/components/GlideCarousel';

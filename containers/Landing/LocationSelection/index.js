@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
-import Box from 'reusecore/src/elements/Box';
-import Text from 'reusecore/src/elements/Text';
-import Button from 'reusecore/src/elements/Button';
-import Card from 'reusecore/src/elements/Card';
-import Image from 'reusecore/src/elements/Image';
-import Input from 'reusecore/src/elements/Input';
+import Box from 'components/elements/Box';
+import Text from 'components/elements/Text';
+import Button from 'components/elements/Button';
+import Card from 'components/elements/Card';
+import Image from 'components/elements/Image';
+import Input from 'components/elements/Input';
 import { Icon } from 'react-icons-kit';
 import { iosNavigate } from 'react-icons-kit/ionicons/iosNavigate';
 import FeatureBlock from 'common/src/components/FeatureBlock';

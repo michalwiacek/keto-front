@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import Box from '../../../components/elements/Box';
-import Text from '../../../components/elements/Text';
-import Heading from '../../../components/elements/Heading';
-import Image from '../../../components/elements/Image';
-import FeatureBlock from '../../../components/FeatureBlock';
-import { TEAM_MEMBER } from '../../../common/src/data';
-import Container from '../../../components/Container';
+import Box from 'components/elements/Box';
+import Text from 'components/elements/Text';
+import Heading from 'components/elements/Heading';
+import Image from 'components/elements/Image';
+import FeatureBlock from 'components/FeatureBlock';
+import { TEAM_MEMBER } from 'common/src/data';
+import Container from 'components/Container';
 import TeamSectionWrapper, { SocialLinks } from './teamSection.style';
 
 const TeamSection = ({
