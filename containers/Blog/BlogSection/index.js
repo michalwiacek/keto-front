@@ -25,14 +25,23 @@ const BlogSection = () => {
               <div className="thumbnail">
                 <img src={featured_post.thumbUrl} alt={featured_post.title} />
               </div>
-              <div className="content">
-                <h3 className="title">{featured_post.title}</h3>
-                <p className="excerpt">{featured_post.excerpt}</p>
-                {featured_post.link && <div className="learn_more">{featured_post.link}</div>}
+              <div className='text'>
+                <a href={featured_post.categoryUrl}>
+                  <h5>{featured_post.category}</h5>
+                </a>
+                <a href={'title'}>
+                  <h3 className="title">
+                    <span className="hover-line">
+                      {featured_post.title}
+                    </span>
+                  </h3>
+                  <p className="excerpt">{featured_post.excerpt}</p>
+                </a>
+                <h6 className="hover-fade">By&nbsp;<a href={featured_post.authorUrl}>{featured_post.author}</a></h6>
               </div>
           </div>
         </FeaturedArea>
-        <PostArea>
+        <PostArea id='recent-stories'>
           <h3>Recent stories</h3>
           {posts.map(item => (
             <Link href="/blog/[id]" as={`/blog/${item.id}`}>

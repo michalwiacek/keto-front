@@ -22,6 +22,10 @@ export const GlobalStyle = createGlobalStyle`
   section {
     position: relative;
   }
+  
+  *, ::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: border-box;
 
 
   .drawer-content-wrapper{

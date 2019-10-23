@@ -39,12 +39,57 @@ export const FeaturedArea = styled.div`
   width: 50%;
   display: inline-block;
   position: sticky;
-  top: 160px;
+  top: 200px;
   max-width: 810px;
   margin: 0px;
   //padding: 130px 0px 25px;
   .featured_post {
     width: 98%;
+    &:hover{
+      span.hover-line{
+        background-size: 100% 2px;
+      }
+    }
+  }
+
+  h5 {
+    color: rgb(255, 51, 102);
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    font: bold 12px/12px "Maison Neue", sans-serif;
+  }
+
+  h3 {
+    color: ${themeGet('colors.black', '#000000')};
+    letter-spacing: -0.1px;
+    font: 700 48px/1.33em Eina03, sans-serif;
+    margin: 12px 0px 16px;
+  }
+  h3 > span {
+    background-image: linear-gradient(to right, ${themeGet('colors.black', '#000000')} 0%, ${themeGet('colors.black', '#000000')} 100%);
+    background-size: 0px 3px;
+    background-position: 0px 90%;
+    transition: background-size 0.8s cubic-bezier(0.19, 1, 0.155, 1.01) 0s;
+  }
+  p {
+    color: ${themeGet('colors.black', '#000000')};
+    font: 300 16px/28px "Maison Neue", sans-serif;
+    margin: 0px 125px 16px 0px;
+  }
+  h6 {
+    color: rgb(153, 153, 153);
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    font: bold 10px/10px "Maison Neue", sans-serif;
+  }
+  h6 > a {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
   }
 `;
 
@@ -180,6 +225,12 @@ export const PostArea = styled.div`
   vertical-align: top;
   margin-left: auto;
 
+  h3 {
+    color: ${themeGet('colors.black', '#000000')};
+    font: bold 24px/28px Eina03, sans-serif;
+    margin: 0px 0px 28px;
+  }
+
   .blog_post {
     position: relative;
     display: flex;
@@ -187,7 +238,7 @@ export const PostArea = styled.div`
     margin: 0 -50px 30px 0px;
     overflow: hidden;
     // border-radius: 10px;
-    box-shadow: 0 0 100px rgba(175, 182, 194, 0.2);
+    // box-shadow: 0 0 100px rgba(175, 182, 194, 0.2);
     background-color: ${themeGet('colors.white', '#ffffff')};
     @media only screen and (max-width: 1440px) {
       // width: calc(50% - 70px);
@@ -204,16 +255,19 @@ export const PostArea = styled.div`
     @media only screen and (max-width: 667px) {
       width: 100%;
     }
+    &:hover{
+      span.hover-line{
+        background-size: 100% 2px;
+      }
+    }
     
-    // a {
-    //   position: relative;
-    //   display: inline-block;
-    //   width: 28%;
-    //   vertical-align: top;
-    //   overflow: hidden;
-    // }
 
     .thumbnail {
+      position: relative;
+      display: inline-block;
+      width: 28%;
+      vertical-align: top;
+      overflow: hidden;
       img {
         width: 100%;
         object-fit: cover;
@@ -235,20 +289,7 @@ export const PostArea = styled.div`
         margin: 0px;
         transition: all 0.05s ease-in-out;
         position: relative;
-        &:before,
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -10px;
-          width: 0px;
-          height: 5px;
-          margin: 5px 0 0;
-          transition: all 0.05s ease-in-out;
-          transition-duration: 0.75s;
-          opacity: 0;
-          background-color: darken(orange,5%);
-          left: 0;
-        }
+        
       
       }
 
@@ -283,7 +324,13 @@ export const PostArea = styled.div`
           text-decoration: underline !important;
         }
       }
+      h6 > a {
+        color: inherit;
+        display: inline-block;
+        text-decoration: none;
+      }
     }
+
     .hover-line {
       background-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
       background-size: 0px 2px;
@@ -365,7 +412,8 @@ export const PostArea = styled.div`
         }
       }
     }
-    blog_post > a {
+
+    .blog_post > a {
       position: relative;
       display: inline-block;
       width: 28%;
