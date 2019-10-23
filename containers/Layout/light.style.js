@@ -123,7 +123,6 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const ContentWrapper = styled.div`
-  overflow: hidden;
   .menuLeft {
     margin-left: 105px;
   }
