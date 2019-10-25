@@ -1,5 +1,6 @@
 import React from 'react';
 import ContainerWrapper from './style';
+import PropTypes from "prop-types";
 
 const Container = ({
                      children,
@@ -29,5 +30,15 @@ const Container = ({
     </ContainerWrapper>
   );
 };
+Container.propTypes = {
+  children: PropTypes.object,
+};
+
+Container.defaultProps = {
+    children: {},
+    id: {},
+    fullWidth: false,
+};
+
 
 export default Container;

@@ -14,13 +14,11 @@ const BlogPost = ({ className, author, authorUrl, category, categoryUrl, thumbUr
           <a href={categoryUrl}>
             <h5>{category}</h5>
           </a>
-          <a href={'title'}>
             <h3 className="title">
               <span className="hover-line">
                 {title}
               </span>
             </h3>
-          </a>
           <h6 className="hover-fade">By&nbsp;<a href={authorUrl}>{author}</a></h6>
         </div>
     </div>

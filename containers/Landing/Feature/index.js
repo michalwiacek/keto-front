@@ -138,6 +138,7 @@ FeatureSection.defaultProps = {
     color: '#15172C',
     fontFamily: 'Lato',
   },
+  iconStyle: {}
 };
 
 export default FeatureSection;
