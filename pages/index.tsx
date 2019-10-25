@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react'
+import { connect } from 'react-redux'
 
 import withLayout from 'components/MainLayout';
 import BannerSection from "containers/Landing/Banner";
@@ -15,4 +16,4 @@ const Page = () => {
   )
 };
 
-export default withLayout(Page);
+export default connect()(withLayout(Page));

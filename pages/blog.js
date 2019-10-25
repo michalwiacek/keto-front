@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react'
+import { connect } from 'react-redux';
 import BlogSection from 'containers/Blog/BlogSection';
 import withLayout from 'components/MainLayout';
 
@@ -10,4 +11,4 @@ const Blog = () => {
   )
 };
 
-export default withLayout(Blog);
+export default connect()(withLayout(Blog));

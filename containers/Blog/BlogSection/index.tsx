@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import Container from 'components/Container';
 import BlogPost from 'components/BlogPost';
+import { loadData } from 'lib/posts/actions';
+import withApollo from 'lib/withApollo';
+import withReduxSaga from 'lib/withReduxSaga';
 
 import SectionWrapper, {
   FeaturedArea,
@@ -9,7 +12,6 @@ import SectionWrapper, {
 } from './blogSection.style';
 
 import { posts, featured_post } from 'common/src/data';
-
 const BlogSection = () => {
   return (
     <SectionWrapper id="blog">
@@ -63,6 +65,10 @@ const BlogSection = () => {
     </SectionWrapper>
   );
 };
-BlogSection.defaultProps = {}
+BlogSection.defaultProps = {};
 
-export default BlogSection;
+// BlogSection.getInitialProps = async ({ ctx: {store} }) => {
+//     store.dispatch(loadData())
+// };
+
+export default withReduxSaga(withApollo(BlogSection));

@@ -10,7 +10,7 @@ import createStore from 'lib/store'
 
 class DietMaisterApp extends App {
   static async getInitialProps ({Component, ctx}) {
-    let pageProps = {}
+    let pageProps = {};
 
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps({ ctx })
@@ -19,13 +19,11 @@ class DietMaisterApp extends App {
   }
 
   render () {
-  const { Component, pageProps, store } = this.props
+  const { Component, pageProps, store } = this.props;
     return (
       <Provider store={store}>
-        <Fragment>
           <Modal />
           <Component {...pageProps} />
-        </Fragment>
       </Provider>
     )
   }
