@@ -9,12 +9,12 @@ import Image from 'components/elements/Image';
 import Input from 'components/elements/Input';
 import { Icon } from 'react-icons-kit';
 import { iosNavigate } from 'react-icons-kit/ionicons/iosNavigate';
-import FeatureBlock from 'common/src/components/FeatureBlock';
-import Container from 'common/src/components/UI/Container';
+import FeatureBlock from 'components/FeatureBlock';
+import Container from 'components/Container';
 import { LocationSelectorWrap } from './locationSelection.style';
-import ImageOne from 'common/src/assets/image/ride/estimate.svg';
-import CarImage from 'common/src/assets/image/ride/car.svg';
-import VejpaImage from 'common/src/assets/image/ride/vejpa.svg';
+import ImageOne from 'common/src/assets/images/my_way.svg';
+import CarImage from 'common/src/assets/images/car.svg';
+import VejpaImage from 'common/src/assets/images/vejpa.svg';
 
 const LocationSection = ({
   sectionWrapper,

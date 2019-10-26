@@ -33,45 +33,6 @@ const BannerSection = ({
               {...greetingStyle}
             />
             <Heading content="It's in your hand. " {...greetingStyleTwo} />
-            <EmailInputWrapper>
-              <Input
-                inputType="email"
-                placeholder="Enter Email Address"
-                iconPosition="left"
-                aria-label="email"
-              />
-              <Link href="#fare_section">
-                <a>
-                  <Button title="Text me a link" {...button} />
-                </a>
-              </Link>
-            </EmailInputWrapper>
-            <Text
-              content="We’ll send you a text with a link to download the app."
-              {...aboutStyle}
-            />
-            <Fade up>
-              <div className="bannerImageBtn">
-                <Link href="#1">
-                  <a>
-                    <Image
-                      src={bannerApp}
-                      className="app_image_area"
-                      alt="App Image"
-                    />
-                  </a>
-                </Link>
-                <Link href="#1">
-                  <a>
-                    <Image
-                      src={bannerPlay}
-                      className="play_image_area"
-                      alt="GooglePlay Image"
-                    />
-                  </a>
-                </Link>
-              </div>
-            </Fade>
           </Box>
           <Box {...imageArea} className="image_area">
             <Image src={PeopleImage} className="people_image_area" alt="People Image" />

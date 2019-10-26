@@ -55,22 +55,17 @@ const SkillSection = ({
                 {...desTitleWrapper}
                 className="desTitleWrapper desTitleWrapperLeft"
               >
-                <Heading {...rideTitle} content="Learn" className="desTitle" />
+                <Heading {...rideTitle} content="Czytaj." className="desTitle" />
                 <Box {...desOnHover} className="desOnHover desOnHoverLeft">
                   <Text
                     {...desDetails}
                     className="desDetailsFirst"
-                    content="Read at any time."
+                    content="Czytaj nasze artykuły!"
                   />
-                  <Text {...desDetails} content="Find knowledge around you!" />
+                  <Text {...desDetails} content="Odzyskaj kontrolę nad swoim organizmem." />
                   <Link href="#services">
                     <a className="buttonStyle">
                       <Button title="Learn More" {...button1} />
-                    </a>
-                  </Link>
-                  <Link href="#services">
-                    <a className="buttonStyle signupBtn">
-                      <Button title="Sign up for articles" {...button2} />
                     </a>
                   </Link>
                 </Box>
@@ -97,25 +92,20 @@ const SkillSection = ({
                 alt="Chef Image"
               />
               <Box {...desTitleWrapper} className="desTitleWrapper">
-                <Heading {...rideTitle} content="Recipes" className="desTitle" />
+                <Heading {...rideTitle} content="Gotuj." className="desTitle" />
                 <Box {...desOnHover} className="desOnHover ">
                   <Text
                     {...desDetails}
                     className="desDetailsFirst"
-                    content="Cook when you want."
+                    content="Sprawdź nasze przepisy!"
                   />
                   <Text
                     {...desDetails}
-                    content="Find opportunities around you!"
+                    content="Gotuj dla siebie najsmaczniejsze potrawy."
                   />
                   <Link href="#services">
                     <a className="buttonStyle">
                       <Button title="Learn More" {...button1} />
-                    </a>
-                  </Link>
-                  <Link href="#services">
-                    <a className="buttonStyle signupBtn">
-                      <Button title="Sign up for recipes" {...button2} />
                     </a>
                   </Link>
                 </Box>

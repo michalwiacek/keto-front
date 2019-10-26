@@ -47,7 +47,7 @@ const BannerWrapper = styled.section`
     margin-bottom: 0px;
     overflow: hidden;
     background-image: none;
-    background: Honeydew;
+    background: #FEBB01;
     padding-bottom: 100px;
   }
   @media (max-width: 480px) {

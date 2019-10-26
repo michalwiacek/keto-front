@@ -7,10 +7,11 @@ import Box from 'components/elements/Box';
 import HamburgMenu from 'components/HamburgMenu';
 import Container from 'components/Container';
 import { DrawerContext } from 'common/src/contexts/DrawerContext';
-import {MENU_ITEMS, MENU_LEFT_ITEMS, MENU_RIGHT_ITEMS} from 'common/src/data';
+import {MENU_ITEMS, MENU_LEFT_ITEMS, SOCIAL_PROFILES} from 'common/src/data';
 import ScrollSpyMenu from 'components/ScrollSpyMenu';
 
 import LogoImage from 'common/src/assets/images/1.svg';
+import SocialProfile from "../SocialProfile";
 
 const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -46,12 +47,11 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
               menuItems={MENU_LEFT_ITEMS}
               offset={-70}
             />
-            <ScrollSpyMenu
-              className="main_menu menuRight"
-              menuItems={MENU_RIGHT_ITEMS}
-              offset={-70}
+            <SocialProfile
+              className="navbar_social"
+              items={SOCIAL_PROFILES}
+              iconSize={18}
             />
-
             <Drawer
               width="420px"
               placement="right"
@@ -64,6 +64,11 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
                 menuItems={MENU_ITEMS}
                 drawerClose={true}
                 offset={-100}
+              />
+              <SocialProfile
+                style={'visibility: hidden'}
+                items={SOCIAL_PROFILES}
+                iconSize={18}
               />
             </Drawer>
           </Box>
