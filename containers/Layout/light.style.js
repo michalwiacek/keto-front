@@ -252,6 +252,12 @@ export const ContentWrapper = styled.div`
         display: none;
       }
     }
+    .navbar_social {
+      margin-left: 6em;
+      @media (max-width: 990px) {
+        display: none;
+      }
+    }
     .navbar_button {
       button {
         font-family: 'Raleway', sans-serif;

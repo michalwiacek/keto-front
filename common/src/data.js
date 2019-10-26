@@ -2,6 +2,7 @@ import { socialTwitter } from 'react-icons-kit/ionicons/socialTwitter';
 import { socialFacebook } from 'react-icons-kit/ionicons/socialFacebook';
 import { socialDribbbleOutline } from 'react-icons-kit/ionicons/socialDribbbleOutline';
 import { socialGithub } from 'react-icons-kit/ionicons/socialGithub';
+import { socialInstagram } from 'react-icons-kit/ionicons/socialInstagram';
 import { socialGoogleplusOutline } from 'react-icons-kit/ionicons/socialGoogleplusOutline';
 import Image1 from '../src/assets/images/feature-2.svg';
 import Image2 from '../src/assets/images/feature-1.svg';
@@ -24,17 +25,9 @@ export const SOCIAL_PROFILES = [
     url: '#',
   },
   {
-    icon: socialDribbbleOutline,
+    icon: socialInstagram,
     url: '#',
-  },
-  {
-    icon: socialGithub,
-    url: '#',
-  },
-  {
-    icon: socialGoogleplusOutline,
-    url: '#',
-  },
+  }
 ];
 
 export const TEAM_MEMBER = [
