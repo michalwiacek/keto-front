@@ -29,10 +29,10 @@ const BannerSection = ({
         <Box {...row}>
           <Box {...contentArea} className="contentArea">
             <Heading
-              content="Get to where you want to be."
+              content="Osiągaj swoje cele z nami."
               {...greetingStyle}
             />
-            <Heading content="It's in your hand. " {...greetingStyleTwo} />
+            <Heading content="Zacznij juz dziś!" {...greetingStyleTwo} />
           </Box>
           <Box {...imageArea} className="image_area">
             <Image src={PeopleImage} className="people_image_area" alt="People Image" />
