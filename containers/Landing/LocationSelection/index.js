@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import Box from 'components/elements/Box';
 import Text from 'components/elements/Text';
-import Button from 'components/elements/Button';
 import Card from 'components/elements/Card';
 import Image from 'components/elements/Image';
 import FeatureBlock from 'components/FeatureBlock';
 import Container from 'components/Container';
 import { LocationSelectorWrap } from './locationSelection.style';
 import ImageOne from 'common/src/assets/images/my_way.png';
-import CarImage from 'common/src/assets/images/car.svg';
-import VejpaImage from 'common/src/assets/images/vejpa.svg';
 
 const LocationSection = ({
   sectionWrapper,
@@ -25,12 +22,11 @@ const LocationSection = ({
   imageOne,
   imageWrapperOne,
   sectionSubTitle,
-  estimateBtnStyle,
+
 }) => {
-  const [state, setState] = useState({
+  const [] = useState({
     active: true,
   });
-  const activeStatus = state.active;
   return (
     <LocationSelectorWrap id="fare_section">
       <Box {...sectionWrapper} id="control">
@@ -43,7 +39,7 @@ const LocationSection = ({
                 </Fade>
               </Card>
             </Box>
-
+            
             <Box {...col} {...textArea} className="textArea">
               <Text content="Where to ?" {...sectionSubTitle} />
               <FeatureBlock
@@ -54,38 +50,6 @@ const LocationSection = ({
                   />
                 }
               />
-             
-              <Box className="derviceSelector">
-                <div className="deviceSelectorWrapper">
-                  <Box
-                    className={
-                      activeStatus ? 'vejpaImage active-item' : 'vejpaImage'
-                    }
-                    onClick={() => setState({ active: true })}
-                  >
-                    <Image src={VejpaImage} alt="Vejpa Image" />
-                  </Box>
-                  <Box
-                    className="carImage"
-                    className={
-                      activeStatus === false
-                        ? 'carImage active-item'
-                        : 'carImage'
-                    }
-                    onClick={() => setState({ active: false })}
-                  >
-                    <Image src={CarImage} alt="Car Image" />
-                  </Box>
-                </div>
-                <div className="derviceSelectorBtn">
-                  <Button
-                    title="Get Estimate"
-                    variant="textButton"
-                    icon={<i className="flaticon-next" />}
-                    {...estimateBtnStyle}
-                  />
-                </div>
-              </Box>
             </Box>
           </Box>
         </Container>
@@ -159,20 +123,6 @@ LocationSection.defaultProps = {
     fontWeight: '400',
     color: '#15172C',
     fontFamily: 'Lato',
-  },
-  estimateBtnStyle: {
-    type: 'button',
-    minWidth: '160px',
-    minHeight: '47px',
-    fontSize: '14px',
-    fontWeight: '700',
-    fontFamily: 'Lato',
-    color: '#fff',
-    borderRadius: '4px',
-    pl: '22px',
-    pr: '22px',
-    pb: '2px',
-    colors: 'primaryWithBg',
   },
 };
 
