@@ -42,7 +42,7 @@ const LocationSection = ({
             </Box>
             
             <Box {...col} {...textArea} className="textArea">
-              <Text content="Jaki Masz Cel?" {...sectionSubTitle} />
+              <Text content="Jaki masz cel?" {...sectionSubTitle} />
               <FeatureBlock
                 description={
                   <Text
