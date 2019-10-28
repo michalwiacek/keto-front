@@ -5,6 +5,7 @@ import Box from 'components/elements/Box';
 import Text from 'components/elements/Text';
 import Card from 'components/elements/Card';
 import Image from 'components/elements/Image';
+import Button from 'components/elements/Button';
 import FeatureBlock from 'components/FeatureBlock';
 import Container from 'components/Container';
 import { LocationSelectorWrap } from './locationSelection.style';
@@ -22,7 +23,7 @@ const LocationSection = ({
   imageOne,
   imageWrapperOne,
   sectionSubTitle,
-
+  estimateBtnStyle,
 }) => {
   const [] = useState({
     active: true,
@@ -50,7 +51,18 @@ const LocationSection = ({
                   />
                 }
               />
+              <Box className="derviceSelector">
+                <div className="derviceSelectorBtn">
+                  <Button
+                    title="Sprawdź"
+                    variant="textButton"
+                    icon={<i className="flaticon-next" />}
+                    {...estimateBtnStyle}
+                  />
+                </div>
+              </Box>
             </Box>
+            
           </Box>
         </Container>
       </Box>
@@ -123,6 +135,20 @@ LocationSection.defaultProps = {
     fontWeight: '400',
     color: '#15172C',
     fontFamily: 'Lato',
+  },
+  estimateBtnStyle: {
+    type: 'button',
+    minWidth: '160px',
+    minHeight: '47px',
+    fontSize: '14px',
+    fontWeight: '700',
+    fontFamily: 'Lato',
+    color: '#fff',
+    borderRadius: '4px',
+    pl: '22px',
+    pr: '22px',
+    pb: '2px',
+    colors: 'primaryWithBg',
   },
 };
 
