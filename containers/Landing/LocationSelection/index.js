@@ -6,9 +6,6 @@ import Text from 'components/elements/Text';
 import Button from 'components/elements/Button';
 import Card from 'components/elements/Card';
 import Image from 'components/elements/Image';
-import Input from 'components/elements/Input';
-import { Icon } from 'react-icons-kit';
-import { iosNavigate } from 'react-icons-kit/ionicons/iosNavigate';
 import FeatureBlock from 'components/FeatureBlock';
 import Container from 'components/Container';
 import { LocationSelectorWrap } from './locationSelection.style';
@@ -57,28 +54,7 @@ const LocationSection = ({
                   />
                 }
               />
-              <Box className="locationSelector">
-                <div className="locationSelectorWrapper">
-                  <Input
-                    inputType="email"
-                    placeholder="Enter pickup Location"
-                    icon={<Icon icon={iosNavigate} />}
-                    iconPosition="right"
-                    aria-label="pickup location"
-                  />
-                  <div className="locationColor" />
-                </div>
-                <div className="locationSelectorWrapper">
-                  <Input
-                    inputType="email"
-                    placeholder="Enter Drop-off Location"
-                    icon={<Icon icon={iosNavigate} />}
-                    iconPosition="right"
-                    aria-label="dropoff location"
-                  />
-                  <div className="locationColor secondChild" />
-                </div>
-              </Box>
+             
               <Box className="derviceSelector">
                 <div className="deviceSelectorWrapper">
                   <Box
