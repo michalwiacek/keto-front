@@ -239,7 +239,7 @@ const LocationSelectorWrap = styled.section`
           font-weight: 700;
         }
         &:hover {
-          box-shadow: 0px 9px 21px rgba(131, 84, 255, 0.25);
+          box-shadow: 0px 9px 21px rgba(250, 115, 39, 0.25);
         }
       }
       .btn-icon {

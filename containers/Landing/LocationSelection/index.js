@@ -42,11 +42,13 @@ const LocationSection = ({
             </Box>
             
             <Box {...col} {...textArea} className="textArea">
-              <Text content="Where to ?" {...sectionSubTitle} />
+              <Text content="Jaki Masz Cel?" {...sectionSubTitle} />
               <FeatureBlock
                 description={
                   <Text
-                    content="How much does GoDrive cost in your city? Calculate a fare estimate for your next trip.Simply enter a pickup location and destination to get started.."
+                    content="Czy jest nim utrata wagi i poprawa samopoczucia? A może potrzebujesz podnieść swoją efektywność i zadbać o zdrowie?
+                    Dowiedz się więcej o diecie ketogenicznej z&nbsp;naszych artykułów."
+                    
                     {...description}
                   />
                 }
