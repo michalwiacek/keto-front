@@ -36,7 +36,7 @@ const Logo = ({
 );
 
 Logo.propTypes = {
-  logoSrc: PropTypes.string,
+  logoSrc: PropTypes.object,
   title: PropTypes.string.isRequired,
   logoWrapperStyle: PropTypes.object,
   logoStyle: PropTypes.object,
