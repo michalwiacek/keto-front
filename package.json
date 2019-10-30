@@ -7,7 +7,14 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "heroku-postbuild": "next build",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test",
+      "pre-push": "npm run lint && npm test"
+    }
   },
   "dependencies": {
     "@clay.global/react-content-loader": "^1.7.7",
