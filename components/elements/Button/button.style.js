@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { variant, alignItems, boxShadow } from 'styled-system';
-import { themeGet } from '@styled-system/theme-get'
+import { themeGet } from '@styled-system/theme-get';
 import { buttonStyle, colorStyle, sizeStyle } from '../../../common/src/theme/light/customVariant';
 import { base } from '../base';
 
@@ -65,9 +65,9 @@ const ButtonStyle = styled.button`
 
 // prop types can also be added from the style functions
 ButtonStyle.propTypes = {
-  ...alignItems.propTypes,
-  ...boxShadow.propTypes,
-  ...variant.propTypes
+    ...alignItems.propTypes,
+    ...boxShadow.propTypes,
+    ...variant.propTypes,
 };
 
 ButtonStyle.displayName = 'ButtonStyle';

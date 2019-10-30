@@ -25,7 +25,7 @@ const LoaderStyle = styled.span`
 
 // prop types can also be added from the style functions
 LoaderStyle.propTypes = {
-  ...variant.propTypes
+    ...variant.propTypes,
 };
 
 LoaderStyle.displayName = 'LoaderStyle';

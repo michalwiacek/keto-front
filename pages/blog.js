@@ -1,13 +1,13 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react';
 import BlogSection from 'containers/Blog/BlogSection';
 import withLayout from 'components/MainLayout';
 
 const Blog = () => {
-  return (
-    <Fragment>
-      <BlogSection/>
-    </Fragment>
-  )
+    return (
+        <>
+            <BlogSection />
+        </>
+    );
 };
 
 export default withLayout(Blog);

@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import {
-  display,
-  alignItems,
-  justifyContent,
-  flexWrap,
-  flexDirection,
-  boxShadow,
-  color,
-  space,
-  borderRadius,
-  width,
-  height
+    display,
+    alignItems,
+    justifyContent,
+    flexWrap,
+    flexDirection,
+    boxShadow,
+    color,
+    space,
+    borderRadius,
+    width,
+    height,
 } from 'styled-system';
 
 const NavbarStyle = styled.nav`
