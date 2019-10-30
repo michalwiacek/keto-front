@@ -199,6 +199,13 @@ export const Features = [
     description:
       'Order food from your favorite Place near you with the convenience of Godrive.',
   },
+  {
+    id: 4,
+    img: `${Image1}`,
+    title: 'Food',
+    description:
+      'Order food from your favorite Place near you with the convenience of Godrive.',
+  },
 ];
 export const LatestNews = [
   {

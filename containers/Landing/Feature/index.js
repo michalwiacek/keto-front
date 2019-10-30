@@ -105,14 +105,14 @@ FeatureSection.defaultProps = {
   },
   // feature col default style
   col: {
-    width: [1, 1 / 2, 1 / 3, 1 / 3],
+    width: [1, 1 / 2, 1 / 4, 1 / 4],
   },
   // feature block wrapper default style
   blockWrapperStyle: {
     p: ['30px', '20px', '20px', '20px'],
   },
   // feature icon default style
-
+  iconStyle: {},
   // feature content default style
   contentStyle: {
     textAlign: 'center',
