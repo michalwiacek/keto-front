@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import Box from 'components/elements/Box';
-import Text from 'components/elements/Text';
-import Image from 'components/elements/Image';
-import Heading from 'components/elements/Heading';
-import Select from 'components/elements/Select';
-import Container from 'components/Container';
+import Box from '../../../components/elements/Box';
+import Text from '../../../components/elements/Text';
+import Image from '../../../components/elements/Image';
+import Heading from '../../../components/elements/Heading';
+import Select from '../../../components/elements/Select';
+import Container from '../../../components/Container';
 import SocialProfile from '../SocialProfile';
 import FooterWrapper, { List, ListItem } from './footer.style';
-import { menuWidget, Language_NAMES } from 'common/src/data';
-import { SOCIAL_PROFILES } from 'common/src/data';
-import AppImage from 'common/src/assets/images/footerapp.svg';
-import PlaystoreImage from 'common/src/assets/images/footerplay.svg';
+import { menuWidget, Language_NAMES } from '../../../common/src/data';
+import { SOCIAL_PROFILES } from '../../../common/src/data';
+import AppImage from '../../../common/src/assets/images/footerapp.svg';
+import PlaystoreImage from '../../../common/src/assets/images/footerplay.svg';
 
 const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
   return (

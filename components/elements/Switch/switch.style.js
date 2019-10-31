@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { themeGet } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
 import { lightenColor } from '../../theme/lightenDarken';
 import { base } from '../base';
 

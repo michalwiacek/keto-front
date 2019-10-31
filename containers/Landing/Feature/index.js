@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Box from 'components/elements/Box';
-import Text from 'components/elements/Text';
-import Heading from 'components/elements/Heading';
+import Box from '../../../components/elements/Box';
+import Text from '../../../components/elements/Text';
+import Heading from '../../../components/elements/Heading';
 import Fade from 'react-reveal/Fade';
-import FeatureBlock from 'components/FeatureBlock';
-import { Features } from 'common/src/data';
-import Container from 'components/Container';
+import FeatureBlock from '../../../components/FeatureBlock';
+import { Features } from '../../../common/src/data';
+import Container from '../../../components/Container';
 import FeatureSectionWrapper from './feature.style';
 
 const FeatureSection = ({

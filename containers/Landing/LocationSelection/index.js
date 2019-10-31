@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
-import Box from 'components/elements/Box';
-import Text from 'components/elements/Text';
-import Button from 'components/elements/Button';
-import Card from 'components/elements/Card';
-import Image from 'components/elements/Image';
-import Input from 'components/elements/Input';
+import Box from '../../../components/elements/Box';
+import Text from '../../../components/elements/Text';
+import Button from '../../../components/elements/Button';
+import Card from '../../../components/elements/Card';
+import Image from '../../../components/elements/Image';
+import Input from '../../../components/elements/Input';
 import { Icon } from 'react-icons-kit';
 import { iosNavigate } from 'react-icons-kit/ionicons/iosNavigate';
-import FeatureBlock from 'components/FeatureBlock';
-import Container from 'components/Container';
+import FeatureBlock from '../../../components/FeatureBlock';
+import Container from '../../../components/Container';
 import { LocationSelectorWrap } from './locationSelection.style';
-import ImageOne from 'common/src/assets/images/my_way.png';
-import CarImage from 'common/src/assets/images/car.svg';
-import VejpaImage from 'common/src/assets/images/vejpa.svg';
+import ImageOne from '../../../common/src/assets/images/my_way.png';
+import CarImage from '../../../common/src/assets/images/car.svg';
+import VejpaImage from '../../../common/src/assets/images/vejpa.svg';
 
 const LocationSection = ({
   sectionWrapper,

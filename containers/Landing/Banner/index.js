@@ -1,18 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
-import Box from 'components/elements/Box';
-import Text from 'components/elements/Text';
-import Heading from 'components/elements/Heading';
-import Image from 'components/elements/Image';
-import Button from 'components/elements/Button';
-import Input from 'components/elements/Input';
-import Fade from 'react-reveal/Fade';
-import Container from 'components/Container';
-import { BannerWrapper, EmailInputWrapper } from './banner.style';
-import PeopleImage from 'common/src/assets/images/people.svg';
-import bannerApp from 'common/src/assets/images/bannerApp.png';
-import bannerPlay from 'common/src/assets/images/bannerPlay.png';
+import Box from '../../../components/elements/Box';
+import Heading from '../../../components/elements/Heading';
+import Image from '../../../components/elements/Image';
+import Container from '../../../components/Container';
+import { BannerWrapper } from './banner.style';
+import PeopleImage from '../../../common/src/assets/images/people.svg';
 
 const BannerSection = ({
   row,

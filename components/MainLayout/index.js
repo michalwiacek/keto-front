@@ -2,13 +2,13 @@ import React, {Fragment} from 'react'
 import Head from 'next/head'
 import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme } from 'common/src/theme/light';
-import { ResetCSS } from 'common/src/assets/css/style';
-import { GlobalStyle, ContentWrapper } from 'containers/Layout/light.style'
+import { lightTheme } from '../../common/src/theme/light';
+import { ResetCSS } from '../../common/src/assets/css/style';
+import { GlobalStyle, ContentWrapper } from '../../containers/Layout/light.style'
 
-import Navbar from "containers/Layout/Navbar";
-import Footer from "containers/Layout/Footer";
-import { DrawerProvider } from "common/src/contexts/DrawerContext";
+import Navbar from "../../containers/Layout/Navbar";
+import Footer from "../../containers/Layout/Footer";
+import { DrawerProvider } from "../../common/src/contexts/DrawerContext";
 
 const withLayout = Page => {
   return () => (

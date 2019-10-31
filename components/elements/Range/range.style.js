@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { themeGet } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
 import { base } from '../base';
 // import ThemedStyleSheet from 'react-with-styles/lib/ThemedStyleSheet';
 // import aphroditeInterface from 'react-with-styles-interface-aphrodite';
