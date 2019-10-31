@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { variant } from 'styled-system';
-import { colorStyle } from 'common/src/theme/light/customVariant';
+import { colorStyle } from '../../../common/src/theme/light/customVariant';
 import { AnimSpinner } from '../Animation';
 import { base } from '../base';
 
@@ -25,7 +25,7 @@ const LoaderStyle = styled.span`
 
 // prop types can also be added from the style functions
 LoaderStyle.propTypes = {
-  ...variant.propTypes
+    ...variant.propTypes,
 };
 
 LoaderStyle.displayName = 'LoaderStyle';

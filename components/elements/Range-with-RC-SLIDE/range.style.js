@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { themeGet } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
 import { base } from '../base';
 
 const RangeBoxStyle = styled.div``;
@@ -10,7 +10,7 @@ RangeBoxStyle.propTypes = {};
 RangeBoxStyle.displayName = 'RangeBoxStyle';
 
 RangeBoxStyle.defaultProps = {
-  as: 'div'
+    as: 'div',
 };
 
 export default RangeBoxStyle;
