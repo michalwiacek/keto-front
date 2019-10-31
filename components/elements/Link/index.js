@@ -10,7 +10,7 @@ const Link = ({ children, ...props }) => <LinkWrapper {...props}>{children}</Lin
 export default Link;
 
 Link.propTypes = {
-    as: PropTypes.oneOfType([PropTypes.string, PropTypes.shape]),
+    as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     children: PropTypes.any.isRequired,
     ...base.propTypes,
 };

@@ -36,7 +36,7 @@ const Tab = ({ active, className, children }) => {
 export const Panel = ({ children }) => <TabPanel className="tab_panel">{children}</TabPanel>;
 
 Tab.propTypes = {
-    children: PropTypes.array,
+    children: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
     active: PropTypes.number.isRequired,
 };
 

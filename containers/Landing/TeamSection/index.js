@@ -18,7 +18,7 @@ const TeamSection = ({ row, col, sectionHeader, sectionTitle, memberName, design
                     <Heading content="Poznaj naszych majstrów" {...sectionTitle} />
                 </Box>
                 <Box className="row" {...row}>
-                    {TEAM_MEMBER.map(member => (
+                    {TEAM_MEMBER.map((member, index) => (
                         <Box className="col" {...col} key={`team_key-${member.id}`}>
                             <FeatureBlock
                                 id={`member-${member.id}`}
@@ -61,15 +61,15 @@ const TeamSection = ({ row, col, sectionHeader, sectionTitle, memberName, design
 
 // TeamSection style props
 TeamSection.propTypes = {
-    sectionHeader: PropTypes.shape,
-    row: PropTypes.shape,
-    col: PropTypes.shape,
-    sectionTitle: PropTypes.shape,
-    sectionSubTitle: PropTypes.shape,
-    memberName: PropTypes.shape,
-    designation: PropTypes.shape,
-    contentStyle: PropTypes.shape,
-    photo: PropTypes.shape,
+    sectionHeader: PropTypes.object,
+    row: PropTypes.object,
+    col: PropTypes.object,
+    sectionTitle: PropTypes.object,
+    sectionSubTitle: PropTypes.object,
+    memberName: PropTypes.object,
+    designation: PropTypes.object,
+    contentStyle: PropTypes.object,
+    photo: PropTypes.object,
 };
 
 // TeamSection default style

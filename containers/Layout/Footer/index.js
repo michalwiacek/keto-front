@@ -54,13 +54,13 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
 
 // Footer style props
 Footer.propTypes = {
-    row: PropTypes.shape,
-    col: PropTypes.shape,
-    colOne: PropTypes.shape,
-    colTwo: PropTypes.shape,
-    titleStyle: PropTypes.shape,
-    textStyle: PropTypes.shape,
-    logoStyle: PropTypes.shape,
+    row: PropTypes.object,
+    col: PropTypes.object,
+    colOne: PropTypes.object,
+    colTwo: PropTypes.object,
+    titleStyle: PropTypes.object,
+    textStyle: PropTypes.object,
+    logoStyle: PropTypes.object,
 };
 
 // Footer default style

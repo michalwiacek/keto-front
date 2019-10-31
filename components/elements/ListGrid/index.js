@@ -43,8 +43,8 @@ LoadMore.propTypes = {
     loaderColor: PropTypes.string,
     loading: PropTypes.bool,
     loadMoreComponent: PropTypes.element,
-    loadMoreWrapperStyle: PropTypes.shape,
-    loadMoreButtonStyle: PropTypes.shape,
+    loadMoreWrapperStyle: PropTypes.object,
+    loadMoreButtonStyle: PropTypes.object,
 };
 
 LoadMore.defaultProps = {
@@ -133,9 +133,9 @@ const ListGrid = ({
 ListGrid.propTypes = {
     postCount: PropTypes.number,
     buttonVariant: PropTypes.string,
-    loadMoreButtonStyle: PropTypes.shape,
+    loadMoreButtonStyle: PropTypes.object,
     loaderColor: PropTypes.string,
-    data: PropTypes.arrayOf.isRequired,
+    data: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])).isRequired,
     totalPost: PropTypes.number,
     component: PropTypes.func.isRequired,
     columnWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -148,12 +148,12 @@ ListGrid.propTypes = {
     loading: PropTypes.bool,
     limit: PropTypes.number,
     buttonText: PropTypes.string,
-    listWrapperStyle: PropTypes.shape,
-    componentWrapperStyle: PropTypes.shape,
-    componentContainerStyle: PropTypes.shape,
-    loadMoreWrapperStyle: PropTypes.shape,
-    loadMoreStyle: PropTypes.shape,
-    paginationWrapperStyle: PropTypes.shape,
+    listWrapperStyle: PropTypes.object,
+    componentWrapperStyle: PropTypes.object,
+    componentContainerStyle: PropTypes.object,
+    loadMoreWrapperStyle: PropTypes.object,
+    loadMoreStyle: PropTypes.object,
+    paginationWrapperStyle: PropTypes.object,
 };
 
 ListGrid.defaultProps = {

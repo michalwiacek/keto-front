@@ -77,9 +77,9 @@ const FeatureSlider = ({ secTitleWrapper, secTitle, secDescription }) => {
 
 // FeatureSlider style props
 FeatureSlider.propTypes = {
-    secTitleWrapper: PropTypes.shape,
-    secTitle: PropTypes.shape,
-    secDescription: PropTypes.shape,
+    secTitleWrapper: PropTypes.object,
+    secTitle: PropTypes.object,
+    secDescription: PropTypes.object,
 };
 
 // FeatureSlider default style

@@ -27,13 +27,13 @@ const Logo = ({ logoWrapperStyle, logoStyle, titleStyle, withAchor, anchorProps,
 );
 
 Logo.propTypes = {
-    logoSrc: PropTypes.shape,
+    logoSrc: PropTypes.object,
     title: PropTypes.string.isRequired,
-    logoWrapperStyle: PropTypes.shape,
-    logoStyle: PropTypes.shape,
-    titleStyle: PropTypes.shape,
+    logoWrapperStyle: PropTypes.object,
+    logoStyle: PropTypes.object,
+    titleStyle: PropTypes.object,
     withAchor: PropTypes.bool,
-    anchorProps: PropTypes.shape,
+    anchorProps: PropTypes.object,
 };
 
 Logo.defaultProps = {

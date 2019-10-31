@@ -71,10 +71,10 @@ Button.propTypes = {
     type: PropTypes.oneOf(['button', 'submit', 'reset']),
 
     /** Add icon */
-    icon: PropTypes.shape,
+    icon: PropTypes.object,
 
     /** Add loader */
-    loader: PropTypes.shape,
+    loader: PropTypes.object,
 
     /** Add Material effect */
     isMaterial: PropTypes.bool,

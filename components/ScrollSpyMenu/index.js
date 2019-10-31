@@ -63,7 +63,7 @@ ScrollSpyMenu.propTypes = {
     /** menuItems is an array of object prop which contain your menu
      * data.
      */
-    menuItems: PropTypes.arrayOf.isRequired,
+    menuItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])).isRequired,
 
     /** Class name that apply to the navigation element paired with the content element in viewport. */
     currentClassName: PropTypes.string,
@@ -75,7 +75,7 @@ ScrollSpyMenu.propTypes = {
     componentTag: PropTypes.string,
 
     /** Style attribute to be passed to the generated <ul/> element [optional]. */
-    style: PropTypes.shape,
+    style: PropTypes.object,
 
     /** Offset value that adjusts to determine the elements are in the viewport [optional]. */
     offset: PropTypes.number,

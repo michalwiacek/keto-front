@@ -40,11 +40,11 @@ const HowItWorksSection = ({ row, contentArea, greetingStyle, aboutStyle, button
 };
 
 HowItWorksSection.propTypes = {
-    row: PropTypes.shape,
-    contentArea: PropTypes.shape,
-    greetingStyle: PropTypes.shape,
-    aboutStyle: PropTypes.shape,
-    button: PropTypes.shape,
+    row: PropTypes.object,
+    contentArea: PropTypes.object,
+    greetingStyle: PropTypes.object,
+    aboutStyle: PropTypes.object,
+    button: PropTypes.object,
 };
 
 HowItWorksSection.defaultProps = {

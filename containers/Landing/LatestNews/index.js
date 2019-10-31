@@ -33,7 +33,7 @@ const FeatureSection = ({
                     />
                 </Box>
                 <Box className="row" {...row}>
-                    {LatestNews.map(latest => (
+                    {LatestNews.map((latest, index) => (
                         <Box className="col" {...col} key={latest.id}>
                             <FeatureBlock
                                 icon={<img src={latest.img} alt={latest.title} />}
@@ -60,16 +60,16 @@ const FeatureSection = ({
 
 // FeatureSection style props
 FeatureSection.propTypes = {
-    secTitleWrapper: PropTypes.shape,
-    row: PropTypes.shape,
-    col: PropTypes.shape,
-    secTitle: PropTypes.shape,
-    secDescription: PropTypes.shape,
-    featureTitle: PropTypes.shape,
-    featureDescription: PropTypes.shape,
-    btnStyle: PropTypes.shape,
-    iconStyle: PropTypes.shape,
-    contentStyle: PropTypes.shape,
+    secTitleWrapper: PropTypes.object,
+    row: PropTypes.object,
+    col: PropTypes.object,
+    secTitle: PropTypes.object,
+    secDescription: PropTypes.object,
+    featureTitle: PropTypes.object,
+    featureDescription: PropTypes.object,
+    btnStyle: PropTypes.object,
+    iconStyle: PropTypes.object,
+    contentStyle: PropTypes.object,
 };
 
 // FeatureSection default style

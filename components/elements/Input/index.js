@@ -188,7 +188,7 @@ Input.propTypes = {
     /** Add icon in input field. This prop will not work with password
      * and textarea field.
      */
-    icon: PropTypes.shape,
+    icon: PropTypes.object,
 
     /** Set input field icon position. Default position is 'left'. */
     iconPosition: PropTypes.oneOf(['left', 'right']),

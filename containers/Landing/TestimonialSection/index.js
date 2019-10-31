@@ -96,18 +96,18 @@ const TestimonialSection = ({
 
 // TestimonialSection style props
 TestimonialSection.propTypes = {
-    sectionHeader: PropTypes.shape,
-    sectionTitle: PropTypes.shape,
-    row: PropTypes.shape,
-    col: PropTypes.shape,
-    btnStyle: PropTypes.shape,
-    btnWrapperStyle: PropTypes.shape,
-    nameStyle: PropTypes.shape,
-    commentStyle: PropTypes.shape,
-    designationStyle: PropTypes.shape,
-    secTitleWrapper: PropTypes.shape,
-    secTitle: PropTypes.shape,
-    secDescription: PropTypes.shape,
+    sectionHeader: PropTypes.object,
+    sectionTitle: PropTypes.object,
+    row: PropTypes.object,
+    col: PropTypes.object,
+    btnStyle: PropTypes.object,
+    btnWrapperStyle: PropTypes.object,
+    nameStyle: PropTypes.object,
+    commentStyle: PropTypes.object,
+    designationStyle: PropTypes.object,
+    secTitleWrapper: PropTypes.object,
+    secTitle: PropTypes.object,
+    secDescription: PropTypes.object,
 };
 
 // TestimonialSection default style

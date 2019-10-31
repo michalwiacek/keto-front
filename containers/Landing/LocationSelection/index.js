@@ -65,18 +65,18 @@ const LocationSection = ({
 };
 
 LocationSection.propTypes = {
-    sectionWrapper: PropTypes.shape,
-    row: PropTypes.shape,
-    col: PropTypes.shape,
-    description: PropTypes.shape,
-    estimateBtnStyle: PropTypes.shape,
-    textArea: PropTypes.shape,
-    imageArea: PropTypes.shape,
-    imageAreaRow: PropTypes.shape,
-    imageWrapper: PropTypes.shape,
-    imageOne: PropTypes.shape,
-    imageWrapperOne: PropTypes.shape,
-    sectionSubTitle: PropTypes.shape,
+    sectionWrapper: PropTypes.object,
+    row: PropTypes.object,
+    col: PropTypes.object,
+    description: PropTypes.object,
+    estimateBtnStyle: PropTypes.object,
+    textArea: PropTypes.object,
+    imageArea: PropTypes.object,
+    imageAreaRow: PropTypes.object,
+    imageWrapper: PropTypes.object,
+    imageOne: PropTypes.object,
+    imageWrapperOne: PropTypes.object,
+    sectionSubTitle: PropTypes.object,
 };
 
 LocationSection.defaultProps = {

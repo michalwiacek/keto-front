@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+/* eslint-disable react/display-name */
+import React from 'react';
 import Head from 'next/head';
 import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme } from '../../common/src/theme/light';
+import lightTheme from '../../common/src/theme/light';
 import { ResetCSS } from '../../common/src/assets/css/style';
 import { GlobalStyle, ContentWrapper } from '../../containers/Layout/light.style';
 

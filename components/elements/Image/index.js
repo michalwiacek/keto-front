@@ -18,7 +18,7 @@ const Image = ({ src, alt, ...props }) => <ImageWrapper src={src} alt={alt} {...
 export default Image;
 
 Image.propTypes = {
-    src: PropTypes.shape.isRequired,
+    src: PropTypes.object.isRequired,
     alt: PropTypes.string.isRequired,
     m: PropTypes.number,
 };

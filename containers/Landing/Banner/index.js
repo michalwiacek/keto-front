@@ -26,15 +26,15 @@ const BannerSection = ({ row, contentArea, imageArea, greetingStyle, greetingSty
 };
 
 BannerSection.propTypes = {
-    row: PropTypes.shape,
-    contentArea: PropTypes.shape,
-    imageArea: PropTypes.shape,
-    greetingStyle: PropTypes.shape,
-    aboutStyle: PropTypes.shape,
-    roleStyle: PropTypes.shape,
-    roleWrapper: PropTypes.shape,
-    greetingStyleTwo: PropTypes.shape,
-    button: PropTypes.shape,
+    row: PropTypes.object,
+    contentArea: PropTypes.object,
+    imageArea: PropTypes.object,
+    greetingStyle: PropTypes.object,
+    aboutStyle: PropTypes.object,
+    roleStyle: PropTypes.object,
+    roleWrapper: PropTypes.object,
+    greetingStyleTwo: PropTypes.object,
+    button: PropTypes.object,
 };
 
 BannerSection.defaultProps = {

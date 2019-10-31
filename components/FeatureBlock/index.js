@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import FeatureBlockWrapper, { IconWrapper, ContentWrapper, ButtonWrapper } from './featureBlock.style';
 
@@ -9,7 +9,6 @@ const FeatureBlock = ({
     button,
     description,
     iconPosition,
-    additionalContent,
     wrapperStyle,
     iconStyle,
     contentStyle,
@@ -51,7 +50,6 @@ const FeatureBlock = ({
                             </ButtonWrapper>
                         )}
                     </ContentWrapper>
-                    {additionalContent}
                 </>
             ) : (
                 ''
@@ -78,33 +76,31 @@ FeatureBlock.propTypes = {
 
     /** wrapperStyle prop contain these style system props:  display, flexWrap, width, height, alignItems,
      * justifyContent, position, overflow, space, color, borders, borderColor, boxShadow and borderRadius. */
-    wrapperStyle: PropTypes.shape,
+    wrapperStyle: PropTypes.object,
 
     /** iconStyle prop contain these style system props: display, width, height, alignItems, justifyContent,
      * position, space, fontSize, color, borders, overflow, borderColor, boxShadow and borderRadius. */
-    iconStyle: PropTypes.shape,
+    iconStyle: PropTypes.object,
 
     /** contentStyle prop contain these style system props: width, textAlign and space. */
-    contentStyle: PropTypes.shape,
+    contentStyle: PropTypes.object,
 
     /** btnWrapperStyle prop contain these style system props: display, space, alignItems,
      * flexDirection and justifyContent. */
-    btnWrapperStyle: PropTypes.shape,
-    additionalContent: PropTypes.shape,
+    btnWrapperStyle: PropTypes.object,
     icon: PropTypes.string,
 };
 
 FeatureBlock.defaultProps = {
     iconPosition: 'top',
     className: '',
-    title: '',
-    description: '',
-    button: '',
-    wrapperStyle: {},
-    iconStyle: {},
-    contentStyle: {},
+    // title: '',
+    // description: '',
+    // button: '',
+    // wrapperStyle: {},
+     iconStyle: {},
+    // contentStyle: {},
     btnWrapperStyle: {},
-    additionalContent: {},
     icon: '',
 };
 
