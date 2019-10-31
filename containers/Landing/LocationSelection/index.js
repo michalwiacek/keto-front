@@ -153,6 +153,8 @@ LocationSection.defaultProps = {
     width: ['0px', '40%', '48%', '55%', '55%'],
     flexBox: true,
   },
+  imageAreaRow: {},
+  
   imageWrapper: {
     boxShadow: 'none',
   },
