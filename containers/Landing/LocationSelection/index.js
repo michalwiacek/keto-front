@@ -30,86 +30,49 @@ const LocationSection = ({
     sectionSubTitle,
     estimateBtnStyle,
 }) => {
-    const [state, setState] = useState({
-        active: true,
-    });
-    const activeStatus = state.active;
-    return (
-        <LocationSelectorWrap id="fare_section">
-            <Box {...sectionWrapper} id="control">
-                <Container fullWidth noGutter className="control-sec-container">
-                    <Box {...row} {...imageAreaRow}>
-                        <Box {...col} {...imageArea}>
-                            <Card {...imageWrapper} {...imageWrapperOne}>
-                                <Fade left>
-                                    <Image src={ImageOne} alt="Info Image One" {...imageOne} />
-                                </Fade>
-                            </Card>
-                        </Box>
-
-                        <Box {...col} {...textArea} className="textArea">
-                            <Text content="Where to ?" {...sectionSubTitle} />
-                            <FeatureBlock
-                                description={
-                                    <Text
-                                        content="How much does GoDrive cost in your city? Calculate a fare estimate for your next trip.Simply enter a pickup location and destination to get started.."
-                                        {...description}
-                                    />
-                                }
-                            />
-                            <Box className="locationSelector">
-                                <div className="locationSelectorWrapper">
-                                    <Input
-                                        inputType="email"
-                                        placeholder="Enter pickup Location"
-                                        icon={<Icon icon={iosNavigate} />}
-                                        iconPosition="right"
-                                        aria-label="pickup location"
-                                    />
-                                    <div className="locationColor" />
-                                </div>
-                                <div className="locationSelectorWrapper">
-                                    <Input
-                                        inputType="email"
-                                        placeholder="Enter Drop-off Location"
-                                        icon={<Icon icon={iosNavigate} />}
-                                        iconPosition="right"
-                                        aria-label="dropoff location"
-                                    />
-                                    <div className="locationColor secondChild" />
-                                </div>
-                            </Box>
-                            <Box className="derviceSelector">
-                                <div className="deviceSelectorWrapper">
-                                    <Box
-                                        className={activeStatus ? 'vejpaImage active-item' : 'vejpaImage'}
-                                        onClick={() => setState({ active: true })}
-                                    >
-                                        <Image src={VejpaImage} alt="Vejpa Image" />
-                                    </Box>
-                                    <Box
-                                        className="carImage"
-                                        className={activeStatus === false ? 'carImage active-item' : 'carImage'}
-                                        onClick={() => setState({ active: false })}
-                                    >
-                                        <Image src={CarImage} alt="Car Image" />
-                                    </Box>
-                                </div>
-                                <div className="derviceSelectorBtn">
-                                    <Button
-                                        title="Get Estimate"
-                                        variant="textButton"
-                                        icon={<i className="flaticon-next" />}
-                                        {...estimateBtnStyle}
-                                    />
-                                </div>
-                            </Box>
-                        </Box>
-                    </Box>
-                </Container>
+  
+  return (
+    <LocationSelectorWrap id="fare_section">
+      <Box {...sectionWrapper} id="control">
+        <Container fullWidth noGutter className="control-sec-container">
+          <Box {...row} {...imageAreaRow}>
+            <Box {...col} {...imageArea}>
+              <Card {...imageWrapper} {...imageWrapperOne}>
+                <Fade left>
+                  <Image src={ImageOne} alt="Info Image One" {...imageOne} />
+                </Fade>
+              </Card>
             </Box>
-        </LocationSelectorWrap>
-    );
+            
+            <Box {...col} {...textArea} className="textArea">
+              <Text content="Jaki masz cel?" {...sectionSubTitle} />
+              <FeatureBlock
+                description={
+                  <Text
+                    content="Czy jest nim utrata wagi i poprawa samopoczucia? A może potrzebujesz podnieść swoją efektywność i zadbać o zdrowie?
+                    Dowiedz się więcej o diecie ketogenicznej z&nbsp;naszych artykułów."
+                    
+                    {...description}
+                  />
+                }
+              />
+              <Box className="derviceSelector">
+                <div className="derviceSelectorBtn">
+                  <Button
+                    title="Sprawdź"
+                    variant="textButton"
+                    icon={<i className="flaticon-next" />}
+                    {...estimateBtnStyle}
+                  />
+                </div>
+              </Box>
+            </Box>
+            
+          </Box>
+        </Container>
+      </Box>
+    </LocationSelectorWrap>
+  );
 };
 
 LocationSection.propTypes = {

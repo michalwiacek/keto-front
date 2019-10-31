@@ -232,22 +232,8 @@ const LocationSelectorWrap = styled.section`
                 }
             }
         }
-        .derviceSelectorBtn {
-            button {
-                > span {
-                    font-weight: 700;
-                }
-                &:hover {
-                    box-shadow: 0px 9px 21px rgba(131, 84, 255, 0.25);
-                }
-            }
-            .btn-icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 2px;
-                margin-left: 10px;
-            }
+        &:hover {
+          box-shadow: 0px 9px 21px rgba(250, 115, 39, 0.25);
         }
     }
 `;
