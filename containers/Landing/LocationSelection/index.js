@@ -25,9 +25,7 @@ const LocationSection = ({
   sectionSubTitle,
   estimateBtnStyle,
 }) => {
-  const [] = useState({
-    active: true,
-  });
+    
   return (
     <LocationSelectorWrap id="fare_section">
       <Box {...sectionWrapper} id="control">
