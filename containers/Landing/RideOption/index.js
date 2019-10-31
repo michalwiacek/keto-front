@@ -25,7 +25,6 @@ const SkillSection = ({
     desOnHover,
     desDetails,
     button1,
-    button2,
 }) => {
     const [state, setState] = useState({
         active: true,
@@ -122,6 +121,11 @@ SkillSection.propTypes = {
 };
 
 SkillSection.defaultProps = {
+    skillTitle: {},
+    skillDescription: {},
+    skillSuccessRate: {},
+    successRateText: {},
+
     sectionWrapper: {
         pt: ['60px', '80px', '100px', '110px', '180px'],
         pb: ['60px', '80px', '100px', '110px', '120px'],

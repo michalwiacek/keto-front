@@ -34,7 +34,7 @@ by country, region, and city.!"
                 </Box>
                 <Box className="row" {...row}>
                     {Features.map((feature, index) => (
-                        <Box className="col" {...col} key={index}>
+                        <Box className="col" {...col} key={feature.id}>
                             <Fade up>
                                 <FeatureBlock
                                     icon={<img src={feature.img} alt={feature.title} />}
@@ -63,6 +63,9 @@ FeatureSection.propTypes = {
     secDescription: PropTypes.object,
     featureTitle: PropTypes.object,
     featureDescription: PropTypes.object,
+    iconStyle: PropTypes.object,
+    contentStyle: PropTypes.object,
+    blockWrapperStyle: PropTypes.object,
 };
 
 // FeatureSection default style

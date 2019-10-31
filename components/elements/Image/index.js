@@ -20,6 +20,7 @@ export default Image;
 Image.propTypes = {
     src: PropTypes.object.isRequired,
     alt: PropTypes.string.isRequired,
+    m: PropTypes.number,
 };
 
 Image.defaultProps = {

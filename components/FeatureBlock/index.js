@@ -9,7 +9,6 @@ const FeatureBlock = ({
     button,
     description,
     iconPosition,
-    additionalContent,
     wrapperStyle,
     iconStyle,
     contentStyle,
@@ -51,7 +50,6 @@ const FeatureBlock = ({
                             </ButtonWrapper>
                         )}
                     </ContentWrapper>
-                    {additionalContent}
                 </>
             ) : (
                 ''
@@ -90,10 +88,20 @@ FeatureBlock.propTypes = {
     /** btnWrapperStyle prop contain these style system props: display, space, alignItems,
      * flexDirection and justifyContent. */
     btnWrapperStyle: PropTypes.object,
+    icon: PropTypes.string,
 };
 
 FeatureBlock.defaultProps = {
     iconPosition: 'top',
+    className: '',
+    // title: '',
+    // description: '',
+    // button: '',
+    // wrapperStyle: {},
+     iconStyle: {},
+    // contentStyle: {},
+    btnWrapperStyle: {},
+    icon: '',
 };
 
 export default FeatureBlock;

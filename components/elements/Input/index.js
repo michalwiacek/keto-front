@@ -214,6 +214,11 @@ Input.propTypes = {
 
 /** Inout default type. */
 Input.defaultProps = {
+    icon: {},
+    passwordShowHide: true,
+    className: '',
+    label: '',
+    value: '',
     inputType: 'text',
     isMaterial: false,
     iconPosition: 'left',

@@ -31,7 +31,13 @@
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".ts", "tsx"] }],
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/explicit-member-accessibility": "off",
-      "react/react-in-jsx-scope": "off"
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-props-no-spreading": "off",
+      "jsx-a11y/anchor-is-valid": [ "error", {
+        "components": [ "Link" ],
+        "specialLink": [ "hrefLeft", "hrefRight" ],
+        "aspects": [ "invalidHref", "preferButton" ]
+      }]
   },
   "globals": {
     "React": "writable"

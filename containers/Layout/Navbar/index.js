@@ -50,12 +50,12 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
 };
 
 Navbar.propTypes = {
-    navbarStyle: PropTypes.shape,
-    logoStyle: PropTypes.shape,
-    button: PropTypes.shape,
-    row: PropTypes.shape,
-    menuWrapper: PropTypes.shape,
-    hiddenStyle: PropTypes.shape,
+    navbarStyle: PropTypes.object,
+    logoStyle: PropTypes.object,
+    button: PropTypes.object,
+    row: PropTypes.object,
+    menuWrapper: PropTypes.object,
+    hiddenStyle: PropTypes.object,
 };
 
 Navbar.defaultProps = {

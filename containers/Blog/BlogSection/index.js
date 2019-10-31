@@ -1,19 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import Container from 'components/Container';
-import Heading from 'components/elements/Heading';
-import BlogPost from 'components/BlogPost';
+import Container from '../../../components/Container';
+import BlogPost from '../../../components/BlogPost';
 
-import { posts, featured_post } from 'common/src/data';
-import SectionWrapper, {
-    SectionHeader,
-    TitleArea,
-    LinkArea,
-    Text,
-    FeaturedArea,
-    PostsFeedArea,
-    PostArea,
-} from './blogSection.style';
+import { posts, featuredPost } from '../../../common/src/data';
+import SectionWrapper, { FeaturedArea, PostArea } from './blogSection.style';
 
 const BlogSection = () => {
     return (
@@ -22,20 +13,20 @@ const BlogSection = () => {
                 <FeaturedArea>
                     <div className="featured_post">
                         <div className="thumbnail">
-                            <img src={featured_post.thumbUrl} alt={featured_post.title} />
+                            <img src={featuredPost.thumbUrl} alt={featuredPost.title} />
                         </div>
                         <div className="text">
-                            <a href={featured_post.categoryUrl}>
-                                <h5>{featured_post.category}</h5>
+                            <a href={featuredPost.categoryUrl}>
+                                <h5>{featuredPost.category}</h5>
                             </a>
                             <a href="title">
                                 <h3 className="title">
-                                    <span className="hover-line">{featured_post.title}</span>
+                                    <span className="hover-line">{featuredPost.title}</span>
                                 </h3>
-                                <p className="excerpt">{featured_post.excerpt}</p>
+                                <p className="excerpt">{featuredPost.excerpt}</p>
                             </a>
                             <h6 className="hover-fade">
-                                By&nbsp;<a href={featured_post.authorUrl}>{featured_post.author}</a>
+                                By&nbsp;<a href={featuredPost.authorUrl}>{featuredPost.author}</a>
                             </h6>
                         </div>
                     </div>
@@ -43,7 +34,7 @@ const BlogSection = () => {
                 <PostArea id="recent-stories">
                     <h3>Recent stories</h3>
                     {posts.map(item => (
-                        <Link href="/blog/[id]" as={`/blog/${item.id}`}>
+                        <Link href="/blog/[id]" as={`/blog/${item.id}`} key={`key-${item.id}`}>
                             <BlogPost
                                 key={`blog__post-key${item.id}`}
                                 thumbUrl={item.thumbUrl}

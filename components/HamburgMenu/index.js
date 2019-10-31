@@ -37,4 +37,10 @@ HamburgMenu.propTypes = {
     wrapperStyle: PropTypes.object,
 };
 
+HamburgMenu.defaultProps = {
+    className: '',
+    barColor: '',
+    wrapperStyle: {},
+};
+
 export default HamburgMenu;

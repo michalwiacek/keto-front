@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Glide from '@glidejs/glide';
 import '@glidejs/glide/dist/css/glide.core.min.css';
@@ -36,7 +36,7 @@ const GlideCarousel = ({
 
     // number of bullets loop
     const totalBullets = [];
-    for (let i = 0; i < numberOfBullets; i++) {
+    for (let i = 0; i < numberOfBullets; i += 1) {
         totalBullets.push(i);
     }
 
@@ -87,6 +87,7 @@ const GlideCarousel = ({
 };
 
 GlideCarousel.propTypes = {
+    carouselSelector: PropTypes.string,
     /** className of the GlideCarousel. */
     className: PropTypes.string,
 
@@ -143,6 +144,18 @@ GlideCarousel.propTypes = {
 
 // GlideCarousel default props
 GlideCarousel.defaultProps = {
+    carouselSelector: '',
+    className: '',
+    children: '',
+    options: {},
+    numberOfBullets: 0,
+    bulletWrapperStyle: {},
+    bulletButtonStyle: {},
+    buttonWrapperStyle: {},
+    nextButton: {},
+    prevButton: {},
+    nextWrapper: {},
+    prevWrapper: {},
     controls: true,
     bullets: false,
 };

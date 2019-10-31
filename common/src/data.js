@@ -1,9 +1,8 @@
+/* eslint-disable @typescript-eslint/camelcase */
+/* eslint-disable import/no-duplicates */
 import { socialTwitter } from 'react-icons-kit/ionicons/socialTwitter';
 import { socialFacebook } from 'react-icons-kit/ionicons/socialFacebook';
-import { socialDribbbleOutline } from 'react-icons-kit/ionicons/socialDribbbleOutline';
-import { socialGithub } from 'react-icons-kit/ionicons/socialGithub';
 import { socialInstagram } from 'react-icons-kit/ionicons/socialInstagram';
-import { socialGoogleplusOutline } from 'react-icons-kit/ionicons/socialGoogleplusOutline';
 import Image1 from './assets/images/feature-2.svg';
 import Image2 from './assets/images/feature-1.svg';
 import Image3 from './assets/images/feature-3.svg';
@@ -59,7 +58,6 @@ export const TEAM_MEMBER = [
             },
         ],
     },
-    ,
     {
         id: 2,
         name: 'Devid Justingul',
@@ -334,7 +332,7 @@ export const menuWidget = [
         ],
     },
 ];
-export const Language_NAMES = [
+export const LANGUAGE_NAMES = [
     {
         label: 'English',
         value: 'eng',
@@ -344,7 +342,7 @@ export const Language_NAMES = [
         value: 'pol',
     },
 ];
-export const featured_post = {
+export const featuredPost = {
     id: 535,
     title: 'Featured Article',
     excerpt:

@@ -35,13 +35,38 @@ const LoadMore = ({
         </>
     );
 };
+LoadMore.propTypes = {
+    handleLoadMore: PropTypes.func,
+    showButton: PropTypes.bool,
+    buttonText: PropTypes.string,
+    buttonVariant: PropTypes.string,
+    loaderColor: PropTypes.string,
+    loading: PropTypes.bool,
+    loadMoreComponent: PropTypes.element,
+    loadMoreWrapperStyle: PropTypes.object,
+    loadMoreButtonStyle: PropTypes.object,
+};
+
+LoadMore.defaultProps = {
+    handleLoadMore: {},
+    showButton: false,
+    buttonText: '',
+    buttonVariant: '',
+    loaderColor: '',
+    loading: false,
+    loadMoreComponent: {},
+    loadMoreWrapperStyle: {},
+    loadMoreButtonStyle: {},
+};
 
 const ListGrid = ({
     data = [],
-    total,
     component,
     columnWidth,
     postCount,
+    buttonVariant,
+    loadMoreButtonStyle,
+    loaderColor,
     totalPost,
     pagination,
     paginationComponent,
@@ -52,17 +77,14 @@ const ListGrid = ({
     loading,
     limit,
     buttonText,
-    buttonVariant,
-    loaderColor,
     componentWrapperStyle,
     componentContainerStyle,
     loadMoreWrapperStyle,
-    loadMoreButtonStyle,
     paginationWrapperStyle,
 }) => {
     const Limit = limit ? Number(limit) : 1;
     const limits = [];
-    for (let i = 0; i < Limit; i++) {
+    for (let i = 0; i < Limit; i += 1) {
         limits.push(i);
     }
     // const grabPostNumber = data.length;
@@ -74,7 +96,7 @@ const ListGrid = ({
                 {data.length ? (
                     <>
                         {data.map((item, index) => (
-                            <Box width={columnWidth} key={index} {...componentContainerStyle}>
+                            <Box width={columnWidth} key={item.id} {...componentContainerStyle}>
                                 {component(item, index)}
                             </Box>
                         ))}
@@ -109,7 +131,11 @@ const ListGrid = ({
 };
 
 ListGrid.propTypes = {
-    data: PropTypes.array.isRequired,
+    postCount: PropTypes.number,
+    buttonVariant: PropTypes.string,
+    loadMoreButtonStyle: PropTypes.object,
+    loaderColor: PropTypes.string,
+    data: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])).isRequired,
     totalPost: PropTypes.number,
     component: PropTypes.func.isRequired,
     columnWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -131,6 +157,24 @@ ListGrid.propTypes = {
 };
 
 ListGrid.defaultProps = {
+    postCount: 0,
+    buttonVariant: '',
+    loadMoreButtonStyle: {},
+    loaderColor: '',
+    totalPost: '',
+    columnWidth: '',
+    pagination: false,
+    paginationComponent: {},
+    handleLoadMore: {},
+    loadMoreComponent: {},
+    infinityScroll: false,
+    placeholder: {},
+    loading: false,
+    limit: 0,
+    buttonText: '',
+    listWrapperStyle: {},
+    loadMoreStyle: {},
+    paginationWrapperStyle: {},
     componentWrapperStyle: {
         flexBox: true,
         flexWrap: 'wrap',

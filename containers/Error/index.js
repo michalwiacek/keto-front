@@ -53,6 +53,10 @@ const ErrorSec = ({ imageWrapper, title, text, reloadButton, homeButton }) => {
 
 ErrorSec.propTypes = {
     imageWrapper: PropTypes.object,
+    title: PropTypes.object,
+    text: PropTypes.object,
+    reloadButton: PropTypes.object,
+    homeButton: PropTypes.object,
 };
 
 ErrorSec.defaultProps = {

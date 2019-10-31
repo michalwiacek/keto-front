@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import Box from 'components/elements/Box';
-import Text from 'components/elements/Text';
-import Heading from 'components/elements/Heading';
-import Button from 'components/elements/Button';
-import Container from 'common/src/components/UI/Container';
+import Box from '../../../components/elements/Box';
+import Text from '../../../components/elements/Text';
+import Heading from '../../../components/elements/Heading';
+import Button from '../../../components/elements/Button';
+import Container from '../../../components/Container';
 import { HowWrapper, BtnWrapper } from './how.style';
 
 const HowItWorksSection = ({ row, contentArea, greetingStyle, aboutStyle, button }) => {

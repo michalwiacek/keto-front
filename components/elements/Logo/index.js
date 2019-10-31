@@ -37,6 +37,10 @@ Logo.propTypes = {
 };
 
 Logo.defaultProps = {
+    logoSrc: {},
+    logoStyle: {},
+    withAchor: false,
+    anchorProps: {},
     logoWrapperStyle: {
         display: 'inline-block',
         mr: '1rem',

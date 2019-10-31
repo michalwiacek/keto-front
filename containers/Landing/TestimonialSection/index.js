@@ -1,15 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import Box from 'components/elements/Box';
-import Text from 'components/elements/Text';
-import Heading from 'components/elements/Heading';
-import Button from 'components/elements/Button';
-import Image from 'components/elements/Image';
-import { Testimonial } from 'common/src/data/Ride';
-import Container from 'common/src/components/UI/Container';
-import GlideCarousel from 'common/src/components/GlideCarousel';
-import GlideSlide from 'common/src/components/GlideCarousel/glideSlide';
-import QuoteImage from 'common/src/assets/image/ride/quote.svg';
+import Box from '../../../components/elements/Box';
+import Text from '../../../components/elements/Text';
+import Heading from '../../../components/elements/Heading';
+import Button from '../../../components/elements/Button';
+import Image from '../../../components/elements/Image';
+import { Testimonial } from '../../../common/src/data';
+import Container from '../../../components/Container';
+import GlideCarousel from '../../../components/GlideCarousel';
+import GlideSlide from '../../../components/GlideCarousel/glideSlide';
+import QuoteImage from '../../../common/src/assets/images/quote.svg';
 import TestimonialSectionWrapper, {
     TextWrapper,
     ImageWrapper,
@@ -66,8 +66,8 @@ const TestimonialSection = ({
                     }
                 >
                     <>
-                        {Testimonial.map((item, index) => (
-                            <GlideSlide key={index}>
+                        {Testimonial.map(item => (
+                            <GlideSlide key={item.id}>
                                 <>
                                     <ImageWrapper>
                                         <RoundWrapper>
@@ -98,7 +98,6 @@ const TestimonialSection = ({
 TestimonialSection.propTypes = {
     sectionHeader: PropTypes.object,
     sectionTitle: PropTypes.object,
-
     row: PropTypes.object,
     col: PropTypes.object,
     btnStyle: PropTypes.object,
@@ -113,6 +112,10 @@ TestimonialSection.propTypes = {
 
 // TestimonialSection default style
 TestimonialSection.defaultProps = {
+    sectionHeader: {},
+    sectionTitle: {},
+    row: {},
+    col: {},
     // sub section default style
     secTitleWrapper: {
         mb: ['60px', '60px', '60px', '60px', '60px'],
