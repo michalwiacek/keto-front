@@ -7,7 +7,7 @@ import Container from '../../../components/Container';
 import { BannerWrapper } from './banner.style';
 import PeopleImage from '../../../common/src/assets/images/people.svg';
 
-const BannerSection = ({ row, contentArea, imageArea, greetingStyle, aboutStyle, greetingStyleTwo, button }) => {
+const BannerSection = ({ row, contentArea, imageArea, greetingStyle, greetingStyleTwo }) => {
     return (
         <BannerWrapper id="banner_section">
             <Container noGutter mobileGutter width="1200px" className="container">
@@ -26,17 +26,15 @@ const BannerSection = ({ row, contentArea, imageArea, greetingStyle, aboutStyle,
 };
 
 BannerSection.propTypes = {
-    row: PropTypes.object,
-    contentArea: PropTypes.object,
-    imageArea: PropTypes.object,
-    greetingStyle: PropTypes.object,
-    nameStyle: PropTypes.object,
-    designationStyle: PropTypes.object,
-    aboutStyle: PropTypes.object,
-    roleStyle: PropTypes.object,
-    roleWrapper: PropTypes.object,
-    greetingStyleTwo: PropTypes.object,
-    button: PropTypes.object,
+    row: PropTypes.shape,
+    contentArea: PropTypes.shape,
+    imageArea: PropTypes.shape,
+    greetingStyle: PropTypes.shape,
+    aboutStyle: PropTypes.shape,
+    roleStyle: PropTypes.shape,
+    roleWrapper: PropTypes.shape,
+    greetingStyleTwo: PropTypes.shape,
+    button: PropTypes.shape,
 };
 
 BannerSection.defaultProps = {

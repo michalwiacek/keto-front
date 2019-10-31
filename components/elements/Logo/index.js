@@ -27,16 +27,20 @@ const Logo = ({ logoWrapperStyle, logoStyle, titleStyle, withAchor, anchorProps,
 );
 
 Logo.propTypes = {
-    logoSrc: PropTypes.object,
+    logoSrc: PropTypes.shape,
     title: PropTypes.string.isRequired,
-    logoWrapperStyle: PropTypes.object,
-    logoStyle: PropTypes.object,
-    titleStyle: PropTypes.object,
+    logoWrapperStyle: PropTypes.shape,
+    logoStyle: PropTypes.shape,
+    titleStyle: PropTypes.shape,
     withAchor: PropTypes.bool,
-    anchorProps: PropTypes.object,
+    anchorProps: PropTypes.shape,
 };
 
 Logo.defaultProps = {
+    logoSrc: {},
+    logoStyle: {},
+    withAchor: false,
+    anchorProps: {},
     logoWrapperStyle: {
         display: 'inline-block',
         mr: '1rem',

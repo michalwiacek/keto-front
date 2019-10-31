@@ -65,14 +65,14 @@ Tooltip.propTypes = {
     tooltipColor: PropTypes.string,
 
     /** triggerStyle prop allow to change tooltip trigger fontSize, fontWeight, margin, padding, color and bg color. */
-    triggerStyle: PropTypes.object,
+    triggerStyle: PropTypes.shape,
 
     /** bubbleSize prop allow to change tooltip's buble width including min and max width.
      * And height including min and max height */
-    BubbleSize: PropTypes.object,
+    BubbleSize: PropTypes.shape,
 
     /** bubbleStyle prop allow to change tooltip's buble boxShadow, color, fontSize, borderRadius */
-    bubbleStyle: PropTypes.object,
+    bubbleStyle: PropTypes.shape,
 
     /** Set tooltip position left || right || top || bottom. */
     position: PropTypes.oneOf(['left', 'right', 'top', 'bottom']),

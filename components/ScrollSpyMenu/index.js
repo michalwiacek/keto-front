@@ -32,8 +32,8 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
 
     return (
         <Scrollspy items={scrollItems} className={addAllClasses.join(' ')} drawerClose={drawerClose} {...props}>
-            {menuItems.map((menu, index) => (
-                <li key={`menu-item-${index}`}>
+            {menuItems.map(menu => (
+                <li key={`menu-item-${menu.id}`}>
                     {menu.staticLink ? (
                         <a href={menu.path}>{menu.label}</a>
                     ) : (
@@ -56,13 +56,14 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
 };
 
 ScrollSpyMenu.propTypes = {
+    drawerClose: PropTypes.bool,
     /** className of the ScrollSpyMenu. */
     className: PropTypes.string,
 
     /** menuItems is an array of object prop which contain your menu
      * data.
      */
-    menuItems: PropTypes.array.isRequired,
+    menuItems: PropTypes.arrayOf.isRequired,
 
     /** Class name that apply to the navigation element paired with the content element in viewport. */
     currentClassName: PropTypes.string,
@@ -74,7 +75,7 @@ ScrollSpyMenu.propTypes = {
     componentTag: PropTypes.string,
 
     /** Style attribute to be passed to the generated <ul/> element [optional]. */
-    style: PropTypes.object,
+    style: PropTypes.shape,
 
     /** Offset value that adjusts to determine the elements are in the viewport [optional]. */
     offset: PropTypes.number,
@@ -85,10 +86,16 @@ ScrollSpyMenu.propTypes = {
     /**
      * Function to be executed when the active item has been updated [optional].
      */
-    onUpdate: PropTypes.func,
+    // onUpdate: PropTypes.func,
 };
 
 ScrollSpyMenu.defaultProps = {
+    drawerClose: true,
+    offset: 0,
+    rootEl: '',
+    style: {},
+    className: '',
+    scrolledPastClassName: '',
     componentTag: 'ul',
     currentClassName: 'is-current',
 };

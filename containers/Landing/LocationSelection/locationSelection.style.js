@@ -180,4 +180,5 @@ const LocationSelectorWrap = styled.section`
 }
 `;
 
+// eslint-disable-next-line import/prefer-default-export
 export { LocationSelectorWrap };

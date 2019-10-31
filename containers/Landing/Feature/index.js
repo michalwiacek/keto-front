@@ -33,8 +33,8 @@ by country, region, and city.!"
                     />
                 </Box>
                 <Box className="row" {...row}>
-                    {Features.map((feature, index) => (
-                        <Box className="col" {...col} key={index}>
+                    {Features.map(feature => (
+                        <Box className="col" {...col} key={feature.id}>
                             <Fade up>
                                 <FeatureBlock
                                     icon={<img src={feature.img} alt={feature.title} />}
@@ -56,13 +56,16 @@ by country, region, and city.!"
 
 // FeatureSection style props
 FeatureSection.propTypes = {
-    secTitleWrapper: PropTypes.object,
-    row: PropTypes.object,
-    col: PropTypes.object,
-    secTitle: PropTypes.object,
-    secDescription: PropTypes.object,
-    featureTitle: PropTypes.object,
-    featureDescription: PropTypes.object,
+    secTitleWrapper: PropTypes.shape,
+    row: PropTypes.shape,
+    col: PropTypes.shape,
+    secTitle: PropTypes.shape,
+    secDescription: PropTypes.shape,
+    featureTitle: PropTypes.shape,
+    featureDescription: PropTypes.shape,
+    iconStyle: PropTypes.shape,
+    contentStyle: PropTypes.shape,
+    blockWrapperStyle: PropTypes.shape,
 };
 
 // FeatureSection default style

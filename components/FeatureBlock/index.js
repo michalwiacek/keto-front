@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import FeatureBlockWrapper, { IconWrapper, ContentWrapper, ButtonWrapper } from './featureBlock.style';
 
@@ -78,22 +78,34 @@ FeatureBlock.propTypes = {
 
     /** wrapperStyle prop contain these style system props:  display, flexWrap, width, height, alignItems,
      * justifyContent, position, overflow, space, color, borders, borderColor, boxShadow and borderRadius. */
-    wrapperStyle: PropTypes.object,
+    wrapperStyle: PropTypes.shape,
 
     /** iconStyle prop contain these style system props: display, width, height, alignItems, justifyContent,
      * position, space, fontSize, color, borders, overflow, borderColor, boxShadow and borderRadius. */
-    iconStyle: PropTypes.object,
+    iconStyle: PropTypes.shape,
 
     /** contentStyle prop contain these style system props: width, textAlign and space. */
-    contentStyle: PropTypes.object,
+    contentStyle: PropTypes.shape,
 
     /** btnWrapperStyle prop contain these style system props: display, space, alignItems,
      * flexDirection and justifyContent. */
-    btnWrapperStyle: PropTypes.object,
+    btnWrapperStyle: PropTypes.shape,
+    additionalContent: PropTypes.shape,
+    icon: PropTypes.string,
 };
 
 FeatureBlock.defaultProps = {
     iconPosition: 'top',
+    className: '',
+    title: '',
+    description: '',
+    button: '',
+    wrapperStyle: {},
+    iconStyle: {},
+    contentStyle: {},
+    btnWrapperStyle: {},
+    additionalContent: {},
+    icon: '',
 };
 
 export default FeatureBlock;

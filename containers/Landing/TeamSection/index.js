@@ -1,25 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import Box from 'components/elements/Box';
-import Text from 'components/elements/Text';
-import Heading from 'components/elements/Heading';
-import Image from 'components/elements/Image';
-import FeatureBlock from 'components/FeatureBlock';
-import { TEAM_MEMBER } from 'common/src/data';
-import Container from 'components/Container';
+import Box from '../../../components/elements/Box';
+import Text from '../../../components/elements/Text';
+import Heading from '../../../components/elements/Heading';
+import Image from '../../../components/elements/Image';
+import FeatureBlock from '../../../components/FeatureBlock';
+import { TEAM_MEMBER } from '../../../common/src/data';
+import Container from '../../../components/Container';
 import TeamSectionWrapper, { SocialLinks } from './teamSection.style';
 
-const TeamSection = ({
-    row,
-    col,
-    sectionHeader,
-    sectionTitle,
-    sectionSubTitle,
-    memberName,
-    designation,
-    contentStyle,
-    photo,
-}) => {
+const TeamSection = ({ row, col, sectionHeader, sectionTitle, memberName, designation, contentStyle, photo }) => {
     return (
         <TeamSectionWrapper id="teamSection">
             <Container>
@@ -28,8 +18,8 @@ const TeamSection = ({
                     <Heading content="Poznaj naszych majstrów" {...sectionTitle} />
                 </Box>
                 <Box className="row" {...row}>
-                    {TEAM_MEMBER.map((member, index) => (
-                        <Box className="col" {...col} key={`team_key-${index}`}>
+                    {TEAM_MEMBER.map(member => (
+                        <Box className="col" {...col} key={`team_key-${member.id}`}>
                             <FeatureBlock
                                 id={`member-${member.id}`}
                                 className="team__member"
@@ -47,13 +37,15 @@ const TeamSection = ({
                                     <>
                                         <Text content={member.designation} {...designation} />
                                         <SocialLinks>
-                                            {member.social_links.map((social, index) => (
+                                            {member.social_links.map(social => (
                                                 <a
                                                     href={social.url}
-                                                    key={`profile_id-${index}`}
+                                                    key={`profile_id-${social.id}`}
                                                     className={social.icon}
                                                     aria-label={social.icon}
-                                                />
+                                                >
+                                                    <Image />
+                                                </a>
                                             ))}
                                         </SocialLinks>
                                     </>
@@ -69,13 +61,15 @@ const TeamSection = ({
 
 // TeamSection style props
 TeamSection.propTypes = {
-    sectionHeader: PropTypes.object,
-    row: PropTypes.object,
-    col: PropTypes.object,
-    sectionTitle: PropTypes.object,
-    sectionSubTitle: PropTypes.object,
-    memberName: PropTypes.object,
-    designation: PropTypes.object,
+    sectionHeader: PropTypes.shape,
+    row: PropTypes.shape,
+    col: PropTypes.shape,
+    sectionTitle: PropTypes.shape,
+    sectionSubTitle: PropTypes.shape,
+    memberName: PropTypes.shape,
+    designation: PropTypes.shape,
+    contentStyle: PropTypes.shape,
+    photo: PropTypes.shape,
 };
 
 // TeamSection default style

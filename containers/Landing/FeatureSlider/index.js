@@ -1,17 +1,18 @@
+/* eslint-disable import/no-duplicates */
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImageGallery from 'react-image-gallery';
-import Box from 'components/elements/Box';
-import Text from 'components/elements/Text';
 import Fade from 'react-reveal/Fade';
-import Heading from 'components/elements/Heading';
+import Box from '../../../components/elements/Box';
+import Text from '../../../components/elements/Text';
+import Heading from '../../../components/elements/Heading';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import Container from 'common/src/components/UI/Container';
-import Image1 from 'common/src/assets/image/ride/mask-1.png';
-import Image2 from 'common/src/assets/image/ride/mask-2.png';
-import Image3 from 'common/src/assets/image/ride/mask-3.png';
-import Image4 from 'common/src/assets/image/ride/mask-1.png';
-import Image5 from 'common/src/assets/image/ride/mask-3.png';
+import Container from '../../../components/Container';
+import Image1 from '../../../common/src/assets/images/mask-1.png';
+import Image2 from '../../../common/src/assets/images/mask-2.png';
+import Image3 from '../../../common/src/assets/images/mask-3.png';
+import Image4 from '../../../common/src/assets/images/mask-1.png';
+import Image5 from '../../../common/src/assets/images/mask-3.png';
 import FeatureSliderWrapper from './featureSlider.style';
 
 const images = [
@@ -76,9 +77,9 @@ const FeatureSlider = ({ secTitleWrapper, secTitle, secDescription }) => {
 
 // FeatureSlider style props
 FeatureSlider.propTypes = {
-    secTitleWrapper: PropTypes.object,
-    secTitle: PropTypes.object,
-    secDescription: PropTypes.object,
+    secTitleWrapper: PropTypes.shape,
+    secTitle: PropTypes.shape,
+    secDescription: PropTypes.shape,
 };
 
 // FeatureSlider default style

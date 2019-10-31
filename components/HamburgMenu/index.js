@@ -34,7 +34,13 @@ HamburgMenu.propTypes = {
     barColor: PropTypes.string,
 
     /** wrapperStyle prop allow to change Hamburg menu bg color, width, height, space, boxShadow, border and borderRadius. */
-    wrapperStyle: PropTypes.object,
+    wrapperStyle: PropTypes.shape,
+};
+
+HamburgMenu.defaultProps = {
+    className: '',
+    barColor: '',
+    wrapperStyle: {},
 };
 
 export default HamburgMenu;

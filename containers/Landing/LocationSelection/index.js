@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import Box from '../../../components/elements/Box';
@@ -49,16 +49,13 @@ const LocationSection = ({
                                     />
                                 }
                             />
-                            <Box className="derviceSelector">
-                                <div className="derviceSelectorBtn">
-                                    <Button
-                                        title="Sprawdź"
-                                        variant="textButton"
-                                        icon={<i className="flaticon-next" />}
-                                        {...estimateBtnStyle}
-                                    />
-                                </div>
-                            </Box>
+                            <Button
+                                className="locationButton"
+                                title="Sprawdź"
+                                variant="textButton"
+                                icon={<i className="flaticon-next" />}
+                                {...estimateBtnStyle}
+                            />
                         </Box>
                     </Box>
                 </Container>
@@ -68,11 +65,18 @@ const LocationSection = ({
 };
 
 LocationSection.propTypes = {
-    sectionWrapper: PropTypes.object,
-    row: PropTypes.object,
-    col: PropTypes.object,
-    description: PropTypes.object,
-    estimateBtnStyle: PropTypes.object,
+    sectionWrapper: PropTypes.shape,
+    row: PropTypes.shape,
+    col: PropTypes.shape,
+    description: PropTypes.shape,
+    estimateBtnStyle: PropTypes.shape,
+    textArea: PropTypes.shape,
+    imageArea: PropTypes.shape,
+    imageAreaRow: PropTypes.shape,
+    imageWrapper: PropTypes.shape,
+    imageOne: PropTypes.shape,
+    imageWrapperOne: PropTypes.shape,
+    sectionSubTitle: PropTypes.shape,
 };
 
 LocationSection.defaultProps = {
@@ -145,7 +149,7 @@ LocationSection.defaultProps = {
         color: '#fff',
         borderRadius: '4px',
         pl: '22px',
-        pr: '22px',
+        pr: '14px',
         colors: 'primaryWithBg',
     },
 };

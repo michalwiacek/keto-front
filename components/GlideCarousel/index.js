@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Glide from '@glidejs/glide';
 import '@glidejs/glide/dist/css/glide.core.min.css';
@@ -36,7 +36,7 @@ const GlideCarousel = ({
 
     // number of bullets loop
     const totalBullets = [];
-    for (let i = 0; i < numberOfBullets; i++) {
+    for (let i = 0; i < numberOfBullets; i += 1) {
         totalBullets.push(i);
     }
 
@@ -87,6 +87,7 @@ const GlideCarousel = ({
 };
 
 GlideCarousel.propTypes = {
+    carouselSelector: PropTypes.string,
     /** className of the GlideCarousel. */
     className: PropTypes.string,
 
@@ -94,7 +95,7 @@ GlideCarousel.propTypes = {
     children: PropTypes.element,
 
     /** You can add your custom glid options using this prop. */
-    options: PropTypes.object,
+    options: PropTypes.shape,
 
     /** Hide || show controls nav. */
     controls: PropTypes.bool,
@@ -109,40 +110,52 @@ GlideCarousel.propTypes = {
      * It's contain display, space, alignItems,
      * justifyContent and flexWrap style-system prop.
      */
-    bulletWrapperStyle: PropTypes.object,
+    bulletWrapperStyle: PropTypes.shape,
 
     /** buttonWrapperStyle is a button control wrapper style object prop.
      * It's contain same as buttonWrapperStyle style-system prop and
      * position, left, right, top and bottom.
      */
-    buttonWrapperStyle: PropTypes.object,
+    buttonWrapperStyle: PropTypes.shape,
 
     /** prevWrapper is a previous button wrapper style object prop.
      * It's contain display, space, bg, borders, boxShadow, borderRadius,
      * position, top, left, right and bottom style-system prop.
      */
-    prevWrapper: PropTypes.object,
+    prevWrapper: PropTypes.shape,
 
     /** nextWrapper is a next button wrapper style object prop.
      * It's contain same as prevWrapper style-system prop.
      */
-    nextWrapper: PropTypes.object,
+    nextWrapper: PropTypes.shape,
 
     /** Set previous button for glide carousel. */
-    prevButton: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    prevButton: PropTypes.oneOfType([PropTypes.string, PropTypes.shape]),
 
     /** Set next button for glide carousel. */
-    nextButton: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    nextButton: PropTypes.oneOfType([PropTypes.string, PropTypes.shape]),
 
     /** bulletButtonStyle is a bullet button style object prop.
      * It's contain  display, width, height, space,
      * bg, borders, boxShadow and borderRadius style-system prop.
      */
-    bulletButtonStyle: PropTypes.object,
+    bulletButtonStyle: PropTypes.shape,
 };
 
 // GlideCarousel default props
 GlideCarousel.defaultProps = {
+    carouselSelector: '',
+    className: '',
+    children: '',
+    options: {},
+    numberOfBullets: 0,
+    bulletWrapperStyle: {},
+    bulletButtonStyle: {},
+    buttonWrapperStyle: {},
+    nextButton: {},
+    prevButton: {},
+    nextWrapper: {},
+    prevWrapper: {},
     controls: true,
     bullets: false,
 };

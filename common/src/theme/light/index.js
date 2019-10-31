@@ -1,6 +1,6 @@
 import colors from './colors';
 
-export const lightTheme = {
+const lightTheme = {
     breakpoints: ['30em', '48em', '62em', '90em'],
     space: [0, 5, 8, 10, 15, 20, 25, 30, 33, 35, 40, 50, 60, 70, 80, 85, 90, 100],
     fontSizes: [10, 12, 14, 15, 16, 18, 20, 22, 24, 36, 48, 80, 96],
@@ -69,10 +69,10 @@ export const lightTheme = {
                 display: 'block',
                 backgroundColor: colors.primary,
             },
-            // '&:hover': {
-            //     backgroundColor: colors.primaryHover,
-            //     borderColor: colors.transparent,
-            // },
+            '&:hover': {
+                backgroundColor: colors.primaryHover,
+                borderColor: colors.transparent,
+            },
         },
         secondaryWithBg: {
             color: colors.white,
@@ -144,3 +144,5 @@ export const lightTheme = {
     //   backgroundColor: 'green'
     // }
 };
+
+export default lightTheme;

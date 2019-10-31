@@ -25,7 +25,6 @@ const SkillSection = ({
     desOnHover,
     desDetails,
     button1,
-    button2,
 }) => {
     const [state, setState] = useState({
         active: true,
@@ -101,27 +100,32 @@ const SkillSection = ({
 };
 
 SkillSection.propTypes = {
-    sectionWrapper: PropTypes.object,
-    secTitleWrapper: PropTypes.object,
-    secTitle: PropTypes.object,
-    secDescription: PropTypes.object,
-    row: PropTypes.object,
-    skillTitle: PropTypes.object,
-    skillDescription: PropTypes.object,
-    skillSuccessRate: PropTypes.object,
-    successRateText: PropTypes.object,
-    col: PropTypes.object,
-    col1: PropTypes.object,
-    col2: PropTypes.object,
-    desTitleWrapper: PropTypes.object,
-    rideTitle: PropTypes.object,
-    desOnHover: PropTypes.object,
-    desDetails: PropTypes.object,
-    button1: PropTypes.object,
-    button2: PropTypes.object,
+    sectionWrapper: PropTypes.shape,
+    secTitleWrapper: PropTypes.shape,
+    secTitle: PropTypes.shape,
+    secDescription: PropTypes.shape,
+    row: PropTypes.shape,
+    skillTitle: PropTypes.shape,
+    skillDescription: PropTypes.shape,
+    skillSuccessRate: PropTypes.shape,
+    successRateText: PropTypes.shape,
+    col: PropTypes.shape,
+    col1: PropTypes.shape,
+    col2: PropTypes.shape,
+    desTitleWrapper: PropTypes.shape,
+    rideTitle: PropTypes.shape,
+    desOnHover: PropTypes.shape,
+    desDetails: PropTypes.shape,
+    button1: PropTypes.shape,
+    button2: PropTypes.shape,
 };
 
 SkillSection.defaultProps = {
+    skillTitle: {},
+    skillDescription: {},
+    skillSuccessRate: {},
+    successRateText: {},
+
     sectionWrapper: {
         pt: ['60px', '80px', '100px', '110px', '180px'],
         pb: ['60px', '80px', '100px', '110px', '120px'],

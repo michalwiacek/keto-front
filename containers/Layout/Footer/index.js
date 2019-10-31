@@ -3,16 +3,12 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Box from '../../../components/elements/Box';
 import Text from '../../../components/elements/Text';
-import Image from '../../../components/elements/Image';
 import Heading from '../../../components/elements/Heading';
 import Select from '../../../components/elements/Select';
 import Container from '../../../components/Container';
 import SocialProfile from '../SocialProfile';
 import FooterWrapper, { List, ListItem } from './footer.style';
-import { menuWidget, Language_NAMES, SOCIAL_PROFILES } from '../../../common/src/data';
-
-import AppImage from '../../../common/src/assets/images/footerapp.svg';
-import PlaystoreImage from '../../../common/src/assets/images/footerplay.svg';
+import { menuWidget, LANGUAGE_NAMES, SOCIAL_PROFILES } from '../../../common/src/data';
 
 const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
     return (
@@ -22,24 +18,11 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
                     <Box {...colOne}>
                         <Heading content="Language" {...titleStyle} />
                         <Select
-                            options={Language_NAMES}
+                            options={LANGUAGE_NAMES}
                             placeholder="English"
                             className="Language_search_select"
                             aria-label="language switcher"
                         />
-                        <Heading content="Download The App" {...titleStyle} className="appDownload" />
-                        <Box className="imageWrapper">
-                            <Link href="#">
-                                <a>
-                                    <Image src={AppImage} alt="App Image" />
-                                </a>
-                            </Link>
-                            <Link href="#">
-                                <a>
-                                    <Image src={PlaystoreImage} alt="PlaystoreImage Image" />
-                                </a>
-                            </Link>
-                        </Box>
                     </Box>
                     {/* End of footer logo column */}
                     <Box {...colTwo}>
@@ -71,12 +54,13 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
 
 // Footer style props
 Footer.propTypes = {
-    row: PropTypes.object,
-    col: PropTypes.object,
-    colOne: PropTypes.object,
-    colTwo: PropTypes.object,
-    titleStyle: PropTypes.object,
-    textStyle: PropTypes.object,
+    row: PropTypes.shape,
+    col: PropTypes.shape,
+    colOne: PropTypes.shape,
+    colTwo: PropTypes.shape,
+    titleStyle: PropTypes.shape,
+    textStyle: PropTypes.shape,
+    logoStyle: PropTypes.shape,
 };
 
 // Footer default style
