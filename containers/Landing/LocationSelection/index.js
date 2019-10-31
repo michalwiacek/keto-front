@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
-import { Icon } from 'react-icons-kit';
-import { iosNavigate } from 'react-icons-kit/ionicons/iosNavigate';
 import Box from '../../../components/elements/Box';
 import Text from '../../../components/elements/Text';
 import Button from '../../../components/elements/Button';
 import Card from '../../../components/elements/Card';
 import Image from '../../../components/elements/Image';
-import Input from '../../../components/elements/Input';
 import FeatureBlock from '../../../components/FeatureBlock';
 import Container from '../../../components/Container';
 import { LocationSelectorWrap } from './locationSelection.style';
 import ImageOne from '../../../common/src/assets/images/my_way.png';
-import CarImage from '../../../common/src/assets/images/car.svg';
-import VejpaImage from '../../../common/src/assets/images/vejpa.svg';
 
 const LocationSection = ({
     sectionWrapper,
@@ -30,49 +25,46 @@ const LocationSection = ({
     sectionSubTitle,
     estimateBtnStyle,
 }) => {
-  
-  return (
-    <LocationSelectorWrap id="fare_section">
-      <Box {...sectionWrapper} id="control">
-        <Container fullWidth noGutter className="control-sec-container">
-          <Box {...row} {...imageAreaRow}>
-            <Box {...col} {...imageArea}>
-              <Card {...imageWrapper} {...imageWrapperOne}>
-                <Fade left>
-                  <Image src={ImageOne} alt="Info Image One" {...imageOne} />
-                </Fade>
-              </Card>
-            </Box>
-            
-            <Box {...col} {...textArea} className="textArea">
-              <Text content="Jaki masz cel?" {...sectionSubTitle} />
-              <FeatureBlock
-                description={
-                  <Text
-                    content="Czy jest nim utrata wagi i poprawa samopoczucia? A może potrzebujesz podnieść swoją efektywność i zadbać o zdrowie?
+    return (
+        <LocationSelectorWrap id="fare_section">
+            <Box {...sectionWrapper} id="control">
+                <Container fullWidth noGutter className="control-sec-container">
+                    <Box {...row} {...imageAreaRow}>
+                        <Box {...col} {...imageArea}>
+                            <Card {...imageWrapper} {...imageWrapperOne}>
+                                <Fade left>
+                                    <Image src={ImageOne} alt="Info Image One" {...imageOne} />
+                                </Fade>
+                            </Card>
+                        </Box>
+
+                        <Box {...col} {...textArea} className="textArea">
+                            <Text content="Jaki masz cel?" {...sectionSubTitle} />
+                            <FeatureBlock
+                                description={
+                                    <Text
+                                        content="Czy jest nim utrata wagi i poprawa samopoczucia? A może potrzebujesz podnieść swoją efektywność i zadbać o zdrowie?
                     Dowiedz się więcej o diecie ketogenicznej z&nbsp;naszych artykułów."
-                    
-                    {...description}
-                  />
-                }
-              />
-              <Box className="derviceSelector">
-                <div className="derviceSelectorBtn">
-                  <Button
-                    title="Sprawdź"
-                    variant="textButton"
-                    icon={<i className="flaticon-next" />}
-                    {...estimateBtnStyle}
-                  />
-                </div>
-              </Box>
+                                        {...description}
+                                    />
+                                }
+                            />
+                            <Box className="derviceSelector">
+                                <div className="derviceSelectorBtn">
+                                    <Button
+                                        title="Sprawdź"
+                                        variant="textButton"
+                                        icon={<i className="flaticon-next" />}
+                                        {...estimateBtnStyle}
+                                    />
+                                </div>
+                            </Box>
+                        </Box>
+                    </Box>
+                </Container>
             </Box>
-            
-          </Box>
-        </Container>
-      </Box>
-    </LocationSelectorWrap>
-  );
+        </LocationSelectorWrap>
+    );
 };
 
 LocationSection.propTypes = {
@@ -147,14 +139,13 @@ LocationSection.defaultProps = {
         type: 'button',
         minWidth: '160px',
         minHeight: '47px',
-        fontSize: '14px',
+        fontSize: '16px',
         fontWeight: '700',
         fontFamily: 'Lato',
         color: '#fff',
         borderRadius: '4px',
         pl: '22px',
         pr: '22px',
-        pb: '2px',
         colors: 'primaryWithBg',
     },
 };

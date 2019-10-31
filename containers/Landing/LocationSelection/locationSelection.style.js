@@ -70,7 +70,7 @@ const LocationSelectorWrap = styled.section`
                 }
                 &.secondChild {
                     &::before {
-                        box-shadow: 0 0 0 0.8px rgba(243, 46, 1, 1);
+                        box-shadow: 0 0 0 0.8px rgba(250, 115, 39, 0.25);
                     }
                     &::after {
                         background: #f32e01;
@@ -166,76 +166,18 @@ const LocationSelectorWrap = styled.section`
             opacity: 0;
         }
     }
+
     .derviceSelector {
         display: flex;
         margin-top: 50px;
-
-        .deviceSelectorWrapper {
-            display: flex;
-            background: #f7f7f7;
-            border-radius: 4px;
-            padding: 5px;
-            margin-right: 15px;
-            .vejpaImage {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                transition: all 0.5s ease;
-                &.active-item {
-                    background: #fff;
-                    cursor: pointer;
-                    z-index: 1;
-                    border-radius: 4px;
-                    box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.08);
-                }
-                img {
-                    padding: 10px 24px;
-                    cursor: pointer;
-                    @media (max-width: 400px) {
-                        padding: 10px 11px;
-                    }
-                    @media (max-width: 360px) {
-                        padding: 10px 6px;
-                    }
-                }
-            }
-            .carImage {
-                margin-left: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: poiner;
-                transition: all 0.5s ease;
-                media(max-width: 400px) {
-                    margin-left: 5px;
-                }
-                @media (max-width: 360px) {
-                    margin-left: 0px;
-                }
-                &.active-item {
-                    background: #fff;
-                    cursor: poiner;
-                    z-index: 1;
-                    border-radius: 4px;
-                    box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.08);
-                }
-                img {
-                    padding: 10px 24px;
-                    cursor: pointer;
-                    @media (max-width: 400px) {
-                        padding: 10px 11px;
-                    }
-                    @media (max-width: 360px) {
-                        padding: 10px 6px;
-                    }
-                }
-            }
-        }
+        width: 160px;
+        height: 47px;
+    
         &:hover {
-          box-shadow: 0px 9px 21px rgba(250, 115, 39, 0.25);
+            box-shadow: 0px 9px 25px rgba(250, 115, 39, 0.25);
         }
     }
+}
 `;
 
 export { LocationSelectorWrap };

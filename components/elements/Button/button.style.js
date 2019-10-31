@@ -20,7 +20,7 @@ const ButtonStyle = styled.button`
   font-weight: ${themeGet('fontWeights.4', '500')};
   text-decoration: none;
   text-transform: capitalize;
-  padding-top: ${themeGet('space.2', '8')}px;
+  padding-top: ${themeGet('space.4', '8')}px;
   padding-bottom: ${themeGet('space.2', '8')}px;
   padding-left: ${themeGet('space.4', '15')}px;
   padding-right: ${themeGet('space.4', '15')}px;
@@ -29,9 +29,14 @@ const ButtonStyle = styled.button`
   span.btn-text {
     padding-left: ${themeGet('space.1', '4')}px;
     padding-right: ${themeGet('space.1', '4')}px;
+    font-weight: bold;
   }
   span.btn-icon {
     display: flex;
+    padding-left: ${themeGet('space.1', '4')}px;
+    padding-right: ${themeGet('space.1', '4')}px;
+    padding-top: 2px;
+    font-weight: bold;
     > div {
       display: flex !important;
     }
