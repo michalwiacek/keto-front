@@ -1,13 +1,5 @@
 import styled from 'styled-components';
-import {
-  width,
-  height,
-  color,
-  space,
-  border,
-  boxShadow,
-  borderRadius,
-} from 'styled-system';
+import { width, height, color, space, border, boxShadow, borderRadius } from 'styled-system';
 
 const HamburgMenuWrapper = styled.button`
   border: 0;
