@@ -1,6 +1,5 @@
 import React from 'react';
 import BlogSection from '../containers/Blog/BlogSection';
-import withLayout from '../components/MainLayout';
 
 const Blog = () => {
     return (
@@ -10,4 +9,4 @@ const Blog = () => {
     );
 };
 
-export default withLayout(Blog);
+export default Blog;

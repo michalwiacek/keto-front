@@ -1,11 +1,10 @@
-import styled, { createGlobalStyle } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
+import styled, { createGlobalStyle } from '../../styled-components.ts';
 
 export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Lato', sans-serif;
   }
-
   h1,
   h2,
   h3,
@@ -26,12 +25,12 @@ export const GlobalStyle = createGlobalStyle`
   *, ::before, ::after {
     background-repeat: no-repeat;
     box-sizing: border-box;
-
-
-  .drawer-content-wrapper{
-    @media (max-width: 767px) {
-      width: 300px!important;
     }
+
+    .drawer-content-wrapper{
+        @media (max-width: 767px) {
+        width: 300px!important;
+        }
     .drawer-content {
       padding: 60px;
       display: flex;
