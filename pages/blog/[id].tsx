@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useRouter } from 'next/router';
-import withLayout from '../../components/MainLayout';
 
 const Content = () => {
     const router = useRouter();
@@ -21,4 +20,4 @@ const Post = () => {
     );
 };
 
-export default withLayout(Post);
+export default Post;
