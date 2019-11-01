@@ -50,7 +50,7 @@ const LocationSection = ({
                                 }
                             />
                             <Button
-                                className="locationButton"
+                                className="derviceSelector"
                                 title="Sprawdź"
                                 variant="textButton"
                                 icon={<i className="flaticon-next" />}

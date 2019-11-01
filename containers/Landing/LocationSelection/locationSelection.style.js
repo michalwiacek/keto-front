@@ -174,7 +174,7 @@ const LocationSelectorWrap = styled.section`
         height: 47px;
     
         &:hover {
-            box-shadow: 0px 9px 25px rgba(250, 115, 39, 0.25);
+            box-shadow: 0px 9px 25px rgba(250, 115, 39, 0.45);
         }
     }
 }
