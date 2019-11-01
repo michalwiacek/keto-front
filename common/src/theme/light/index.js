@@ -57,8 +57,6 @@ const lightTheme = {
             },
         },
         primaryWithBg: {
-            // color: colors.white,
-            // border: '2px solid',
             backgroundColor: colors.primary,
             borderColor: colors.borderColor,
             borderRadius: '0',
@@ -69,10 +67,10 @@ const lightTheme = {
                 display: 'block',
                 backgroundColor: colors.primary,
             },
-            '&:hover': {
-                backgroundColor: colors.primaryHover,
-                borderColor: colors.transparent,
-            },
+            // '&:hover': {
+            //     backgroundColor: colors.primaryHover,
+            //     borderColor: colors.transparent,
+            // },
         },
         secondaryWithBg: {
             color: colors.white,
