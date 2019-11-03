@@ -1,5 +1,6 @@
 import React from 'react';
 import BlogSection from '../containers/Blog/BlogSection';
+import withApollo from '../lib/withApollo';
 
 const Blog = () => {
     return (
@@ -9,4 +10,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default withApollo(Blog);
