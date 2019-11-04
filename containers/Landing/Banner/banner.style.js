@@ -55,18 +55,21 @@ const BannerWrapper = styled.section`
     }
     .image_area {
         position: relative;
-        transform: scale(1.2);
+        transform: scale(1.1);
+        height: 100%;
         img {
             padding-top: 390px;
             object-fit: cover;
             @media (max-width: 1750px) {
+                height: 100%;
                 padding-top: 310px;
             }
             @media (max-width: 1600px) {
+                height: 100%;
                 padding-top: 210px;
             }
             @media (max-width: 1440px) {
-                height: 93%;
+                height: 100%;
                 padding-top: 150px;
             }
             @media (max-width: 1280px) {
@@ -74,6 +77,7 @@ const BannerWrapper = styled.section`
                 padding-top: 30px;
             }
             @media (max-width: 990px) {
+                height: 93%;
                 display: none;
             }
         }
