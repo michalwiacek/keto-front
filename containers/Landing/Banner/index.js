@@ -7,22 +7,33 @@ import Container from '../../../components/Container';
 import { BannerWrapper } from './banner.style';
 import PeopleImage from '../../../common/src/assets/images/people.svg';
 
-const BannerSection = ({ row, contentArea, imageArea, greetingStyle, greetingStyleTwo }) => {
-    return (
-        <BannerWrapper id="banner_section">
-            <Container noGutter mobileGutter width="1200px" className="container">
-                <Box {...row}>
-                    <Box {...contentArea} className="contentArea">
-                        <Heading content="Get to where you want to be." {...greetingStyle} />
-                        <Heading content="It's in your hand. " {...greetingStyleTwo} />
-                    </Box>
-                    <Box {...imageArea} className="image_area">
-                        <Image src={PeopleImage} className="people_image_area" alt="People Image" />
-                    </Box>
-                </Box>
-            </Container>
-        </BannerWrapper>
-    );
+const BannerSection = ({
+  row,
+  contentArea,
+  imageArea,
+  greetingStyle,
+  aboutStyle,
+  greetingStyleTwo,
+  button,
+}) => {
+  return (
+    <BannerWrapper id="banner_section">
+      <Container noGutter mobileGutter width="1200px" className="container">
+        <Box {...row}>
+          <Box {...contentArea} className="contentArea">
+            <Heading
+              content="Osiągaj swoje cele z nami."
+              {...greetingStyle}
+            />
+            <Heading content="Zacznij juz dziś!" {...greetingStyleTwo} />
+          </Box>
+          <Box {...imageArea} className="image_area">
+            <Image src={PeopleImage} className="people_image_area" alt="People Image" />
+          </Box>
+        </Box>
+      </Container>
+    </BannerWrapper>
+  );
 };
 
 BannerSection.propTypes = {

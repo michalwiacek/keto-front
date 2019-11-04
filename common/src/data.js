@@ -117,49 +117,49 @@ export const TEAM_MEMBER = [
 ];
 
 export const MENU_ITEMS = [
-    {
-        label: 'O NAS',
-        path: '/about',
-        offset: '70',
-    },
-    {
-        label: 'PRZEPISY',
-        path: '/recipes',
-        offset: '700',
-    },
-    {
-        label: 'BLOG',
-        path: '/blog',
-        offset: '700',
-    },
-    {
-        label: 'KONTAKT',
-        path: '/contact',
-        offset: '1700',
-    },
+  {
+    label: 'O nas',
+    path: '/about',
+    offset: '70',
+  },
+  {
+    label: 'Przepisy',
+    path: '/recipes',
+    offset: '700',
+  },
+  {
+    label: 'Blog',
+    path: '/blog',
+    offset: '700',
+  },
+  {
+    label: 'Kontakt',
+    path: '/contact',
+    offset: '1700',
+  },
 ];
 
 export const MENU_LEFT_ITEMS = [
-    {
-        label: 'O NAS',
-        path: '/about',
-        offset: '70',
-    },
-    {
-        label: 'PRZEPISY',
-        path: '/recipes',
-        offset: '700',
-    },
-    {
-        label: 'BLOG',
-        path: '/blog',
-        offset: '700',
-    },
-    {
-        label: 'KONTAKT',
-        path: '/contact',
-        offset: '1700',
-    },
+  {
+    label: 'O nas',
+    path: '/about',
+    offset: '70',
+  },
+  {
+    label: 'Przepisy',
+    path: '/recipes',
+    offset: '700',
+  },
+  {
+    label: 'Blog',
+    path: '/blog',
+    offset: '700',
+  },
+  {
+    label: 'Kontakt',
+    path: '/contact',
+    offset: '1700',
+  },
 ];
 
 export const MENU_RIGHT_ITEMS = [
