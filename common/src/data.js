@@ -120,22 +120,22 @@ export const TEAM_MEMBER = [
 
 export const MENU_ITEMS = [
   {
-    label: 'O NAS',
+    label: 'O nas',
     path: '/about',
     offset: '70',
   },
   {
-    label: 'PRZEPISY',
+    label: 'Przepisy',
     path: '/recipes',
     offset: '700',
   },
   {
-    label: 'BLOG',
+    label: 'Blog',
     path: '/blog',
     offset: '700',
   },
   {
-    label: 'KONTAKT',
+    label: 'Kontakt',
     path: '/contact',
     offset: '1700',
   },
@@ -143,22 +143,22 @@ export const MENU_ITEMS = [
 
 export const MENU_LEFT_ITEMS = [
   {
-    label: 'O NAS',
+    label: 'O nas',
     path: '/about',
     offset: '70',
   },
   {
-    label: 'PRZEPISY',
+    label: 'Przepisy',
     path: '/recipes',
     offset: '700',
   },
   {
-    label: 'BLOG',
+    label: 'Blog',
     path: '/blog',
     offset: '700',
   },
   {
-    label: 'KONTAKT',
+    label: 'Kontakt',
     path: '/contact',
     offset: '1700',
   },
