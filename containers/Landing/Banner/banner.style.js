@@ -10,27 +10,9 @@ const BannerWrapper = styled.section`
     background-position: 100% center;
     background-size: 1020px;
     position: relative;
-    img {
-      transform: scale(1.2);
-      padding-top: 390px;
-      object-fit: cover;
-      @media (max-width: 1750px) {
-        padding-top: 310px;
-      }
-      @media (max-width: 1600px) {
-        padding-top: 210px;
-      }
-      @media (max-width: 1440px) {
-        height: 93%;
-        padding-top: 150px;
-      }
-      @media (max-width: 1280px) {
-        height: 100%;
-        padding-top: 30px;
-      }
-      @media (max-width: 990px) {
-        display: none;
-      }
+    margin-top: 0;
+    @media (max-width: 1750px) {
+        background-size: 900px;
     }
     @media (max-width: 1600px) {
         background-position: 102% center;
@@ -58,9 +40,6 @@ const BannerWrapper = styled.section`
         margin-bottom: 0;
         overflow: hidden;
     }
-  }
-  .contentArea {
-    padding-bottom: 50px;
     @media (max-width: 990px) {
         background-position: 100% center;
         background-size: contain;
@@ -76,6 +55,7 @@ const BannerWrapper = styled.section`
     }
     .image_area {
         position: relative;
+        transform: scale(1.2);
         img {
             padding-top: 390px;
             object-fit: cover;
@@ -125,12 +105,12 @@ const BannerWrapper = styled.section`
     .bannerImageBtn {
         display: flex;
         margin-top: 5px;
-
         .app_image_area {
             margin-right: 15px;
         }
     }
     .contentArea {
+        padding-bottom: 50px;
         @media (max-width: 990px) {
             width: 100%;
         }
