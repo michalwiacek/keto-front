@@ -56,6 +56,7 @@ const BannerWrapper = styled.section`
   .image_area {
     position: relative;
     img {
+      transform: scale(1.2);
       padding-top: 390px;
       object-fit: cover;
       @media (max-width: 1750px) {
@@ -110,6 +111,7 @@ const BannerWrapper = styled.section`
     }
   }
   .contentArea {
+    padding-bottom: 50px;
     @media (max-width: 990px) {
       width: 100%;
     }
