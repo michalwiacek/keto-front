@@ -1,235 +1,230 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import InputField, { EyeButton } from './input.style';
+
 const Input = ({
-  label,
-  value,
-  onBlur,
-  onFocus,
-  onChange,
-  inputType,
-  isMaterial,
-  icon,
-  iconPosition,
-  passwordShowHide,
-  className,
-  ...props
+    label,
+    value,
+    onBlur,
+    onFocus,
+    onChange,
+    inputType,
+    isMaterial,
+    icon,
+    iconPosition,
+    passwordShowHide,
+    className,
+    ...props
 }) => {
-  // use toggle hooks
-  const [state, setState] = useState({
-    toggle: false,
-    focus: false,
-    value: ''
-  });
-
-  // toggle function
-  const handleToggle = () => {
-    setState({
-      ...state,
-      toggle: !state.toggle
+    // use toggle hooks
+    const [state, setState] = useState({
+        toggle: false,
+        focus: false,
+        value: '',
     });
-  };
 
-  // add focus class
-  const handleOnFocus = event => {
-    setState({
-      ...state,
-      focus: true
-    });
-    onFocus(event);
-  };
+    // toggle function
+    const handleToggle = () => {
+        setState({
+            ...state,
+            toggle: !state.toggle,
+        });
+    };
 
-  // remove focus class
-  const handleOnBlur = event => {
-    setState({
-      ...state,
-      focus: false
-    });
-    onBlur(event);
-  };
+    // add focus class
+    const handleOnFocus = event => {
+        setState({
+            ...state,
+            focus: true,
+        });
+        onFocus(event);
+    };
 
-  // handle input value
-  const handleOnChange = event => {
-    setState({
-      ...state,
-      value: event.target.value
-    });
-    onChange(event.target.value);
-  };
+    // remove focus class
+    const handleOnBlur = event => {
+        setState({
+            ...state,
+            focus: false,
+        });
+        onBlur(event);
+    };
 
-  // get input focus class
-  const getInputFocusClass = () => {
-    if (state.focus === true || state.value !== '') {
-      return 'is-focus';
-    } else {
-      return '';
+    // handle input value
+    const handleOnChange = event => {
+        setState({
+            ...state,
+            value: event.target.value,
+        });
+        onChange(event.target.value);
+    };
+
+    // get input focus class
+    const getInputFocusClass = () => {
+        if (state.focus === true || state.value !== '') {
+            return 'is-focus';
+        }
+        return '';
+    };
+
+    // init variable
+    let inputElement;
+    let htmlFor;
+
+    // Add all classs to an array
+    const addAllClasses = ['reusecore__input'];
+
+    // Add is-material class
+    if (isMaterial) {
+        addAllClasses.push('is-material');
     }
-  };
 
-  // init variable
-  let inputElement, htmlFor;
+    // Add icon position class if input element has icon
+    if (icon && iconPosition) {
+        addAllClasses.push(`icon-${iconPosition}`);
+    }
 
-  // Add all classs to an array
-  const addAllClasses = ['reusecore__input'];
+    // Add new class
+    if (className) {
+        addAllClasses.push(className);
+    }
 
-  // Add is-material class
-  if (isMaterial) {
-    addAllClasses.push('is-material');
-  }
+    // if lable is not empty
+    if (label) {
+        htmlFor = label.replace(/\s+/g, '_').toLowerCase();
+    }
 
-  // Add icon position class if input element has icon
-  if (icon && iconPosition) {
-    addAllClasses.push(`icon-${iconPosition}`);
-  }
+    // Label position
+    const LabelPosition = isMaterial === true ? 'bottom' : 'top';
 
-  // Add new class
-  if (className) {
-    addAllClasses.push(className);
-  }
+    // Label field
+    const LabelField = label && <label htmlFor={htmlFor}>{label}</label>;
 
-  // if lable is not empty
-  if (label) {
-    htmlFor = label.replace(/\s+/g, '_').toLowerCase();
-  }
+    // Input type check
+    switch (inputType) {
+        case 'textarea':
+            inputElement = (
+                <textarea
+                    {...props}
+                    id={htmlFor}
+                    name={htmlFor}
+                    value={state.value}
+                    onChange={handleOnChange}
+                    onBlur={handleOnBlur}
+                    onFocus={handleOnFocus}
+                />
+            );
+            break;
 
-  // Label position
-  const LabelPosition = isMaterial === true ? 'bottom' : 'top';
+        case 'password':
+            inputElement = (
+                <div className="field-wrapper">
+                    <input
+                        {...props}
+                        id={htmlFor}
+                        name={htmlFor}
+                        type={state.toggle ? 'password' : 'text'}
+                        value={state.value}
+                        onChange={handleOnChange}
+                        onBlur={handleOnBlur}
+                        onFocus={handleOnFocus}
+                    />
+                    {passwordShowHide && (
+                        <EyeButton onClick={handleToggle} className={state.toggle ? 'eye' : 'eye-closed'}>
+                            <span />
+                        </EyeButton>
+                    )}
+                </div>
+            );
+            break;
 
-  // Label field
-  const LabelField = label && <label htmlFor={htmlFor}>{label}</label>;
+        default:
+            inputElement = (
+                <div className="field-wrapper">
+                    <input
+                        {...props}
+                        id={htmlFor}
+                        name={htmlFor}
+                        type={inputType}
+                        value={state.value}
+                        onChange={handleOnChange}
+                        onBlur={handleOnBlur}
+                        onFocus={handleOnFocus}
+                    />
+                    {icon && <span className="input-icon">{icon}</span>}
+                </div>
+            );
+    }
 
-  // Input type check
-  switch (inputType) {
-    case 'textarea':
-      inputElement = (
-        <textarea
-          {...props}
-          id={htmlFor}
-          name={htmlFor}
-          value={state.value}
-          onChange={handleOnChange}
-          onBlur={handleOnBlur}
-          onFocus={handleOnFocus}
-        />
-      );
-      break;
-
-    case 'password':
-      inputElement = (
-        <div className="field-wrapper">
-          <input
-            {...props}
-            id={htmlFor}
-            name={htmlFor}
-            type={state.toggle ? 'password' : 'text'}
-            value={state.value}
-            onChange={handleOnChange}
-            onBlur={handleOnBlur}
-            onFocus={handleOnFocus}
-          />
-          {passwordShowHide && (
-            <EyeButton
-              onClick={handleToggle}
-              className={state.toggle ? 'eye' : 'eye-closed'}
-            >
-              <span />
-            </EyeButton>
-          )}
-        </div>
-      );
-      break;
-
-    default:
-      inputElement = (
-        <div className="field-wrapper">
-          <input
-            {...props}
-            id={htmlFor}
-            name={htmlFor}
-            type={inputType}
-            value={state.value}
-            onChange={handleOnChange}
-            onBlur={handleOnBlur}
-            onFocus={handleOnFocus}
-          />
-          {icon && <span className="input-icon">{icon}</span>}
-        </div>
-      );
-  }
-
-  return (
-    <InputField
-      className={`${addAllClasses.join(' ')} ${getInputFocusClass()}`}
-    >
-      {LabelPosition === 'top' && LabelField}
-      {inputElement}
-      {isMaterial && <span className="highlight" />}
-      {LabelPosition === 'bottom' && LabelField}
-    </InputField>
-  );
+    return (
+        <InputField className={`${addAllClasses.join(' ')} ${getInputFocusClass()}`}>
+            {LabelPosition === 'top' && LabelField}
+            {inputElement}
+            {isMaterial && <span className="highlight" />}
+            {LabelPosition === 'bottom' && LabelField}
+        </InputField>
+    );
 };
 
 /** Inout prop type checking. */
 Input.propTypes = {
-  /** className of the Input component. */
-  className: PropTypes.string,
+    /** className of the Input component. */
+    className: PropTypes.string,
 
-  /** Set input label value. */
-  label: PropTypes.string,
+    /** Set input label value. */
+    label: PropTypes.string,
 
-  /** The input value, required for a controlled component. */
-  value: PropTypes.oneOf(['string', 'number']),
+    /** The input value, required for a controlled component. */
+    value: PropTypes.oneOf(['string', 'number']),
 
-  /** Make default input into material style input. */
-  isMaterial: PropTypes.bool,
+    /** Make default input into material style input. */
+    isMaterial: PropTypes.bool,
 
-  /** Password show hide icon button prop [*only for password field]. */
-  passwordShowHide: PropTypes.bool,
+    /** Password show hide icon button prop [*only for password field]. */
+    passwordShowHide: PropTypes.bool,
 
-  /** Set input type of the input element. Default type is text. */
-  inputType: PropTypes.oneOf([
-    'text',
-    'email',
-    'password',
-    'number',
-    'textarea'
-  ]),
+    /** Set input type of the input element. Default type is text. */
+    inputType: PropTypes.oneOf(['text', 'email', 'password', 'number', 'textarea']),
 
-  /** Add icon in input field. This prop will not work with password
-   * and textarea field.
-   */
-  icon: PropTypes.object,
+    /** Add icon in input field. This prop will not work with password
+     * and textarea field.
+     */
+    icon: PropTypes.object,
 
-  /** Set input field icon position. Default position is 'left'. */
-  iconPosition: PropTypes.oneOf(['left', 'right']),
+    /** Set input field icon position. Default position is 'left'. */
+    iconPosition: PropTypes.oneOf(['left', 'right']),
 
-  /**
-   * @ignore
-   */
-  onBlur: PropTypes.func,
+    /**
+     * @ignore
+     */
+    onBlur: PropTypes.func,
 
-  /**
-   * @ignore
-   */
-  onFocus: PropTypes.func,
+    /**
+     * @ignore
+     */
+    onFocus: PropTypes.func,
 
-  /**
-   * Callback fired when the value is changed.
-   *
-   * @param {object} event The event source of the callback.
-   * You can pull out the new value by accessing `event.target.value`.
-   */
-  onChange: PropTypes.func
+    /**
+     * Callback fired when the value is changed.
+     *
+     * @param {object} event The event source of the callback.
+     * You can pull out the new value by accessing `event.target.value`.
+     */
+    onChange: PropTypes.func,
 };
 
 /** Inout default type. */
 Input.defaultProps = {
-  inputType: 'text',
-  isMaterial: false,
-  iconPosition: 'left',
-  onBlur: () => {},
-  onFocus: () => {},
-  onChange: () => {}
+    icon: {},
+    passwordShowHide: true,
+    className: '',
+    label: '',
+    value: '',
+    inputType: 'text',
+    isMaterial: false,
+    iconPosition: 'left',
+    onBlur: () => {},
+    onFocus: () => {},
+    onChange: () => {},
 };
 
 export default Input;

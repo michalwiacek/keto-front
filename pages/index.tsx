@@ -1,9 +1,10 @@
 import React, {Fragment} from 'react'
-import withLayout from 'components/MainLayout';
-import BannerSection from "containers/Landing/Banner";
-import FeatureSection from "containers/Landing/Feature";
-import RideOption from "containers/Landing/RideOption";
+import BannerSection from "../containers/Landing/Banner";
+import FeatureSection from "../containers/Landing/Feature";
+import RideOption from "../containers/Landing/RideOption";
 import LocationSection from "../containers/Landing/LocationSelection";
+import withReduxSaga from '../lib/withReduxSaga';
+import withApollo from "../lib/withApollo";
 //import TestimonialSection from "../containers/Landing/TestimonialSection";
 const Page = () => {
   return (
@@ -16,4 +17,4 @@ const Page = () => {
   )
 };
 
-export default withLayout(Page);
+export default withReduxSaga(withApollo(Page));

@@ -2,220 +2,224 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.section`
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  vertical-align: baseline;
-  padding: 200px 0 50px;
-  @media only screen and (max-width: 1440px) {
-    padding: 190px 0 50px;
-  }
-  @media only screen and (max-width: 1360px) {
-    padding: 170px 0 30px;
-  }
-  @media only screen and (max-width: 991px) {
-    padding: 150px 0 10px;
-  }
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    vertical-align: baseline;
+    padding: 200px 0 50px;
+    @media only screen and (max-width: 1440px) {
+        padding: 190px 0 50px;
+    }
+    @media only screen and (max-width: 1360px) {
+        padding: 170px 0 30px;
+    }
+    @media only screen and (max-width: 991px) {
+        padding: 150px 0 10px;
+    }
 `;
 
 export const SectionHeader = styled.header`
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 90px;
-  @media only screen and (max-width: 1440px) {
-    margin-bottom: 70px;
-  }
-  @media only screen and (max-width: 991px) {
-    margin-bottom: 54px;
-  }
-  @media only screen and (max-width: 480px) {
-    flex-direction: column;
-    align-items: self-start;
-  }
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 90px;
+    @media only screen and (max-width: 1440px) {
+        margin-bottom: 70px;
+    }
+    @media only screen and (max-width: 991px) {
+        margin-bottom: 54px;
+    }
+    @media only screen and (max-width: 480px) {
+        flex-direction: column;
+        align-items: self-start;
+    }
 `;
 
 export const FeaturedArea = styled.div`
-  width: 50%;
-  display: inline-block;
-  position: sticky;
-  top: 200px;
-  max-width: 810px;
-  margin: 0px;
-  //padding: 130px 0px 25px;
-  .featured_post {
-    width: 98%;
-    &:hover{
-      span.hover-line{
-        background-size: 100% 2px;
-      }
-    }
-  }
-
-  h5 {
-    color: rgb(255, 51, 102);
-    text-transform: uppercase;
-    position: relative;
-    z-index: 10;
-    cursor: pointer;
-    font: bold 12px/12px "Maison Neue", sans-serif;
-  }
-
-  h3 {
-    color: ${themeGet('colors.black', '#000000')};
-    letter-spacing: -0.1px;
-    font: 700 48px/1.33em Eina03, sans-serif;
-    margin: 12px 0px 16px;
-  }
-  h3 > span {
-    background-image: linear-gradient(to right, ${themeGet('colors.black', '#000000')} 0%, ${themeGet('colors.black', '#000000')} 100%);
-    background-size: 0px 3px;
-    background-position: 0px 90%;
-    transition: background-size 0.8s cubic-bezier(0.19, 1, 0.155, 1.01) 0s;
-  }
-  p {
-    color: ${themeGet('colors.black', '#000000')};
-    font: 300 16px/28px "Maison Neue", sans-serif;
-    margin: 0px 125px 16px 0px;
-  }
-  h6 {
-    color: rgb(153, 153, 153);
-    text-transform: uppercase;
-    position: relative;
-    z-index: 10;
-    cursor: pointer;
-    font: bold 10px/10px "Maison Neue", sans-serif;
-  }
-  h6 > a {
-    color: inherit;
+    width: 50%;
     display: inline-block;
-    text-decoration: none;
-  }
+    position: sticky;
+    top: 200px;
+    max-width: 810px;
+    margin: 0px;
+    //padding: 130px 0px 25px;
+    .featured_post {
+        width: 98%;
+        &:hover {
+            span.hover-line {
+                background-size: 100% 2px;
+            }
+        }
+    }
+
+    h5 {
+        color: rgb(255, 51, 102);
+        text-transform: uppercase;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+        font: bold 12px/12px 'Maison Neue', sans-serif;
+    }
+
+    h3 {
+        color: ${themeGet('colors.black', '#000000')};
+        letter-spacing: -0.1px;
+        font: 700 48px/1.33em Eina03, sans-serif;
+        margin: 12px 0px 16px;
+    }
+    h3 > span {
+        background-image: linear-gradient(
+            to right,
+            ${themeGet('colors.black', '#000000')} 0%,
+            ${themeGet('colors.black', '#000000')} 100%
+        );
+        background-size: 0px 3px;
+        background-position: 0px 90%;
+        transition: background-size 0.8s cubic-bezier(0.19, 1, 0.155, 1.01) 0s;
+    }
+    p {
+        color: ${themeGet('colors.black', '#000000')};
+        font: 300 16px/28px 'Maison Neue', sans-serif;
+        margin: 0px 125px 16px 0px;
+    }
+    h6 {
+        color: rgb(153, 153, 153);
+        text-transform: uppercase;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+        font: bold 10px/10px 'Maison Neue', sans-serif;
+    }
+    h6 > a {
+        color: inherit;
+        display: inline-block;
+        text-decoration: none;
+    }
 `;
 
 export const TitleArea = styled.div`
-  max-width: 631px;
-  @media only screen and (max-width: 991px) {
-    max-width: 400px;
-  }
-
-  h2 {
-    font-size: 50px;
-    font-weight: 300;
-    @media only screen and (max-width: 1440px) {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-    @media only screen and (max-width: 1360px) {
-      font-size: 34px;
-    }
+    max-width: 631px;
     @media only screen and (max-width: 991px) {
-      font-size: 30px;
-      margin-bottom: 10px;
+        max-width: 400px;
     }
-    @media only screen and (max-width: 767px) {
-      font-size: 28px;
+
+    h2 {
+        font-size: 50px;
+        font-weight: 300;
+        @media only screen and (max-width: 1440px) {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        @media only screen and (max-width: 1360px) {
+            font-size: 34px;
+        }
+        @media only screen and (max-width: 991px) {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        @media only screen and (max-width: 767px) {
+            font-size: 28px;
+        }
     }
-  }
 `;
 
 export const Text = styled.p`
-  font-size: 18px;
-  line-height: 40px;
-  margin-bottom: 0;
-  @media only screen and (max-width: 1440px) {
-    font-size: 16px;
-    line-height: 32px;
-  }
-  @media only screen and (max-width: 1360px) {
-    font-size: 15px;
-    line-height: 30px;
-  }
-  @media only screen and (max-width: 991px) {
-    font-size: 15px;
-    line-height: 28px;
-  }
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 0;
+    @media only screen and (max-width: 1440px) {
+        font-size: 16px;
+        line-height: 32px;
+    }
+    @media only screen and (max-width: 1360px) {
+        font-size: 15px;
+        line-height: 30px;
+    }
+    @media only screen and (max-width: 991px) {
+        font-size: 15px;
+        line-height: 28px;
+    }
 
-  .link {
-    color: ${themeGet('colors.secondary', '#D50032')};
-    text-decoration: underline;
-    margin-left: 5px;
-  }
+    .link {
+        color: ${themeGet('colors.secondary', '#D50032')};
+        text-decoration: underline;
+        margin-left: 5px;
+    }
 `;
 
 export const LinkArea = styled.div`
-  .text__btn {
-    display: inline-flex;
-    align-items: center;
-    color: ${themeGet('colors.secondary', '#D50032')};
-    font-size: 17px;
-    line-height: 28px;
-    @media only screen and (max-width: 1440px) {
-      font-size: 16px;
-    }
-    @media only screen and (max-width: 1360px) {
-      font-size: 15px;
-    }
-    @media only screen and (max-width: 480px) {
-      margin: 10px 0 0;
-    }
-
-    .arrow {
-      width: 60px;
-      height: 2px;
-      border-radius: 4px;
-      margin-left: 26px;
-      position: relative;
-      background-color: ${themeGet('colors.secondary', '#D50032')};
-      @media only screen and (max-width: 1440px) {
-        width: 50px;
-        margin-left: 20px;
-      }
-      @media only screen and (max-width: 1360px) {
-        width: 35px;
-        margin-left: 15px;
-      }
-
-      &::before,
-      &::after {
-        content: '';
-        display: block;
-        width: 14px;
-        height: 2px;
-        border-radius: 4px;
-        background-color: ${themeGet('colors.secondary', '#D50032')};
-        position: absolute;
-        right: 0;
-        z-index: 1;
-        transition: all 0.3s ease;
-      }
-
-      &::before {
-        transform: rotate(42deg);
-        transform-origin: top right;
-      }
-
-      &::after {
-        transform: rotate(-42deg);
-        transform-origin: 14px 7px;
-        width: 11px;
-      }
-    }
-
-    &:hover {
-      .arrow {
-        &::before {
-          width: 11px;
-          transform-origin: 15px -3px;
+    .text__btn {
+        display: inline-flex;
+        align-items: center;
+        color: ${themeGet('colors.secondary', '#D50032')};
+        font-size: 17px;
+        line-height: 28px;
+        @media only screen and (max-width: 1440px) {
+            font-size: 16px;
+        }
+        @media only screen and (max-width: 1360px) {
+            font-size: 15px;
+        }
+        @media only screen and (max-width: 480px) {
+            margin: 10px 0 0;
         }
 
-        &::after {
-          transform-origin: top right;
-          width: 14px;
+        .arrow {
+            width: 60px;
+            height: 2px;
+            border-radius: 4px;
+            margin-left: 26px;
+            position: relative;
+            background-color: ${themeGet('colors.secondary', '#D50032')};
+            @media only screen and (max-width: 1440px) {
+                width: 50px;
+                margin-left: 20px;
+            }
+            @media only screen and (max-width: 1360px) {
+                width: 35px;
+                margin-left: 15px;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 14px;
+                height: 2px;
+                border-radius: 4px;
+                background-color: ${themeGet('colors.secondary', '#D50032')};
+                position: absolute;
+                right: 0;
+                z-index: 1;
+                transition: all 0.3s ease;
+            }
+
+            &::before {
+                transform: rotate(42deg);
+                transform-origin: top right;
+            }
+
+            &::after {
+                transform: rotate(-42deg);
+                transform-origin: 14px 7px;
+                width: 11px;
+            }
         }
-      }
+
+        &:hover {
+            .arrow {
+                &::before {
+                    width: 11px;
+                    transform-origin: 15px -3px;
+                }
+
+                &::after {
+                    transform-origin: top right;
+                    width: 14px;
+                }
+            }
+        }
     }
-  }
 `;
 
 export const PostArea = styled.div`
@@ -405,10 +409,7 @@ export const PostArea = styled.div`
 
       .learn__more-btn {
         &::before {
-          background-color: ${themeGet(
-            'colors.primary2',
-            'rgba(252, 242, 43, 0.25)'
-          )};
+          background-color: ${themeGet('colors.primary2', 'rgba(252, 242, 43, 0.25)')};
         }
       }
     }
