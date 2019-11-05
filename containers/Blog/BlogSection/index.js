@@ -1,10 +1,29 @@
 import React from 'react';
+import { graphql } from 'react-apollo';
 import Link from 'next/link';
+import gql from 'graphql-tag';
 import Container from '../../../components/Container';
-import BlogPost from '../../../components/BlogPost';
+import RecentStories from '../RecentStories/index.tsx';
 
 import { posts, featuredPost } from '../../../common/src/data';
 import SectionWrapper, { FeaturedArea, PostArea } from './blogSection.style';
+
+const allPosts = gql`
+    query allPosts {
+        articles {
+            id
+            title
+            description
+            mainImageUrl
+            publishedAt
+            user {
+                id
+                name
+                email
+            }
+        }
+    }
+`;
 
 const BlogSection = () => {
     return (
@@ -32,22 +51,7 @@ const BlogSection = () => {
                     </div>
                 </FeaturedArea>
                 <PostArea id="recent-stories">
-                    <h3>Recent stories</h3>
-                    {posts.map(item => (
-                        <Link href="/blog/[id]" as={`/blog/${item.id}`} key={`key-${item.id}`}>
-                            <BlogPost
-                                key={`blog__post-key${item.id}`}
-                                thumbUrl={item.thumbUrl}
-                                title={item.title}
-                                excerpt={item.excerpt}
-                                author={item.author}
-                                authorUrl={item.authorUrl}
-                                category={item.category}
-                                categoryUrl={item.categoryUrl}
-                                id={item.id}
-                            />
-                        </Link>
-                    ))}
+                    <RecentStories />
                 </PostArea>
             </Container>
         </SectionWrapper>
@@ -55,3 +59,9 @@ const BlogSection = () => {
 };
 
 export default BlogSection;
+
+graphql(allPosts, {
+    props: ({ data }) => ({
+        data,
+    }),
+})(PostArea);
