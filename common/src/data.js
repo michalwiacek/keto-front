@@ -3,9 +3,10 @@
 import { socialTwitter } from 'react-icons-kit/ionicons/socialTwitter';
 import { socialFacebook } from 'react-icons-kit/ionicons/socialFacebook';
 import { socialInstagram } from 'react-icons-kit/ionicons/socialInstagram';
-import Image1 from './assets/images/feature-2.svg';
-import Image2 from './assets/images/feature-1.svg';
-import Image3 from './assets/images/feature-3.svg';
+import Image1 from './assets/images/tried_everything.svg';
+import Image2 from './assets/images/for_yourself.svg';
+import Image3 from './assets/images/medics.svg';
+import Image4 from './assets/images/efficiency.svg';
 import Latest1 from './assets/images/blog-1.svg';
 import Latest2 from './assets/images/blog-2.svg';
 import Client1 from './assets/images/1.png';
@@ -179,26 +180,26 @@ export const Features = [
     {
         id: 1,
         img: `${Image1}`,
-        title: 'Delivery',
-        description: 'Documents, accessories, packages and even gifts! Deliver them all within your city, in a jiffy!',
+        title: 'Próbowałeś wszystkiego?',
+        content: 'Sprawdziłeś już niezliczoną ilość diet? Wciąż bez skutku? Spróbuj raz jeszcze...\u00A0 ostatni raz!',
     },
     {
         id: 2,
         img: `${Image2}`,
-        title: 'Bike Share',
-        description: 'All the Riders have been verified by us. Not random people with bikes that we don’t know.',
+        title: 'Chcesz schudnąć dla siebie?',
+        content: 'Zbliża się wyjazd w ciepłe kraje? A\u00A0może nadeszła pora na sukienkę ze studniówki?',
     },
     {
         id: 3,
         img: `${Image3}`,
-        title: 'Food',
-        description: 'Order food from your favorite Place near you with the convenience of Godrive.',
+        title: 'Dieta jako wsparcie w leczeniu?',
+        content: 'Na pewno wiesz jak istotne znaczenie ma dieta w leczeniu chorób. Mówił o tym Twój lekarz.',
     },
     {
         id: 4,
-        img: `${Image1}`,
-        title: 'Food',
-        description: 'Order food from your favorite Place near you with the convenience of Godrive.',
+        img: `${Image4}`,
+        title: 'Dieta jako inwestycja?',
+        content: 'Potrzebujesz utrzymać wysoką efektywność działania? Mamy dla Ciebie coś specjalnego! ',
     },
 ];
 export const LatestNews = [

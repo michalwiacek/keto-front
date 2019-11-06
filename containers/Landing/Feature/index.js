@@ -42,7 +42,7 @@ by country, region, and city.!"
                                     iconStyle={iconStyle}
                                     contentStyle={contentStyle}
                                     title={<Heading content={feature.title} {...featureTitle} />}
-                                    description={<Text content={feature.description} {...featureDescription} />}
+                                    description={<Text content={feature.content} {...featureDescription} />}
                                     className="saasFeature"
                                 />
                             </Fade>
