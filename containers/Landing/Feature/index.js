@@ -25,12 +25,11 @@ const FeatureSection = ({
         <FeatureSectionWrapper id="feature_section">
             <Container noGutter mobileGutter width="1200px" className="container">
                 <Box {...secTitleWrapper}>
-                    <Heading {...secTitle} content="Beyond Ridesharing" />
+                    <Heading {...secTitle} content="Lekarstwo na wszystko?" />
+                    <Heading {...secTitle} content="Nie daj sobie tego wmówić!" />
                     <Text
                         {...secDescription}
-                        content="Certain requirements and features vary
-by country, region, and city.!"
-                    />
+                        content="Dieta ketogeniczna słynie jako niezwykłe narzędzie do redukcji tkanki tłuszczowej.             Sprawdź też inne jej zastosowanie."/>
                 </Box>
                 <Box className="row" {...row}>
                     {Features.map((feature, index) => (
@@ -79,7 +78,7 @@ FeatureSection.defaultProps = {
         fontWeight: '600',
         color: '#15172C',
         lineHeight: '1.34',
-        mb: ['15px', '18px', '18px', '20px', '30px'],
+        mb: ['0px', '0px', '0px', '0px', '0px'],
         textAlign: 'center',
         fontFamily: 'Poppins',
     },
@@ -88,7 +87,7 @@ FeatureSection.defaultProps = {
         fontWeight: '400',
         color: '#15172C',
         lineHeight: '1.5',
-        mb: '0',
+        mt: '30px',
         textAlign: 'center',
         width: '300px',
         maxWidth: '100%',
