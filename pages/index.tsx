@@ -5,8 +5,9 @@ import RideOption from "../containers/Landing/RideOption";
 import LocationSection from "../containers/Landing/LocationSelection";
 import withReduxSaga from '../lib/withReduxSaga';
 import withApollo from "../lib/withApollo";
+import { connect } from 'react-redux';
 //import TestimonialSection from "../containers/Landing/TestimonialSection";
-const Page = () => {
+const IndexPage = () => {
   return (
     <Fragment>
       <BannerSection />
@@ -17,4 +18,4 @@ const Page = () => {
   )
 };
 
-export default withReduxSaga(withApollo(Page));
+export default connect()(IndexPage);

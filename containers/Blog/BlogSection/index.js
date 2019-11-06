@@ -1,29 +1,9 @@
 import React from 'react';
-import { graphql } from 'react-apollo';
-import Link from 'next/link';
-import gql from 'graphql-tag';
 import Container from '../../../components/Container';
-import RecentStories from '../RecentStories/index.tsx';
+import RecentStories from '../RecentStories';
 
 import { posts, featuredPost } from '../../../common/src/data';
 import SectionWrapper, { FeaturedArea, PostArea } from './blogSection.style';
-
-const allPosts = gql`
-    query allPosts {
-        articles {
-            id
-            title
-            description
-            mainImageUrl
-            publishedAt
-            user {
-                id
-                name
-                email
-            }
-        }
-    }
-`;
 
 const BlogSection = () => {
     return (
@@ -59,9 +39,3 @@ const BlogSection = () => {
 };
 
 export default BlogSection;
-
-graphql(allPosts, {
-    props: ({ data }) => ({
-        data,
-    }),
-})(PostArea);
