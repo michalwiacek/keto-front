@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import Link from 'next/link';
 import { graphql } from 'react-apollo';
 import BlogPost from '../../../components/BlogPost';
+import PropTypes from 'prop-types';
 
 // interface Post {
 //   id: number;
@@ -28,7 +29,7 @@ export const articles = gql`
             id
             title
             description
-            # mainImageUrl
+            mainImageUrl
             publishedAt
             user {
                 id
@@ -49,7 +50,7 @@ function RecentStories({ data: { loading, error, articles } }) {
                     <Link href="/blog/[id]" as={`/blog/${item.id}`} key={`key-${item.id}`}>
                         <BlogPost
                             key={`blog__post-key${item.id}`}
-                            // thumbUrl={item.mainImageUrl}
+                            thumbUrl={item.mainImageUrl}
                             title={item.title}
                             excerpt={item.description}
                             author={item.user.name}
@@ -66,3 +67,7 @@ function RecentStories({ data: { loading, error, articles } }) {
     return loading ? <div>Loading ...</div> : '';
 }
 export default graphql(articles)(RecentStories);
+
+RecentStories.propTypes = {
+    data: PropTypes.object,
+};
