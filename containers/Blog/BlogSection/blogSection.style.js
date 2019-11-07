@@ -9,12 +9,15 @@ const SectionWrapper = styled.section`
     padding: 200px 0 50px;
     @media only screen and (max-width: 1440px) {
         padding: 190px 0 50px;
+        flex-direction: row;
     }
     @media only screen and (max-width: 1360px) {
         padding: 170px 0 30px;
+        flex-direction: row;
     }
     @media only screen and (max-width: 991px) {
         padding: 150px 0 10px;
+        flex-direction: column;
     }
 `;
 
@@ -44,12 +47,17 @@ export const FeaturedArea = styled.div`
     margin: 0px;
     //padding: 130px 0px 25px;
     .featured_post {
-        width: 98%;
+        width: 100%;
+        height: 50vw;
         &:hover {
             span.hover-line {
                 background-size: 100% 2px;
             }
         }
+    }
+    @media only screen and (max-width: 991px) {
+        width: 100%;
+        position: inherit;
     }
 
     h5 {
@@ -94,6 +102,32 @@ export const FeaturedArea = styled.div`
         color: inherit;
         display: inline-block;
         text-decoration: none;
+    }
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 45.2vw;
+        max-height: 60vh;
+        margin: 0px 0px 5vh;
+        overflow: hidden;
+        @media (max-height: 1000px) and (min-width: 900px) {
+            max-height: 50vh;
+        }
+    }
+    .image-wrapper img {
+        object-fit: cover;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        transition: transform 0.4s ease-out 0s;
+    }
+    .copy-wrapper {
+        opacity: 1;
+        margin: 0px;
+        transition: opacity 0.4s ease-out 0s;
     }
 `;
 
@@ -225,9 +259,24 @@ export const LinkArea = styled.div`
 export const PostArea = styled.div`
   float: right;
   width: 45%;
-  display: inline-block;
+  display: flex;
+  flex-flow: wrap;
   vertical-align: top;
   margin-left: auto;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+    flex-direction: row;
+  }
+  .articles-wrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 1220px) {
+      flex-direction: row;
+      flex-wrap: wrap;        
+    }
+  }
 
   h3 {
     color: ${themeGet('colors.black', '#000000')};
@@ -241,19 +290,29 @@ export const PostArea = styled.div`
     // width: calc(50% - 100px);
     margin: 0 -50px 30px 0px;
     overflow: hidden;
-    // border-radius: 10px;
+    flex-direction: row;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    border-radius: 10px;
     // box-shadow: 0 0 100px rgba(175, 182, 194, 0.2);
     background-color: ${themeGet('colors.white', '#ffffff')};
+    :nth-child(2) {
+      transition-delay: 0.1s;
+    }
     @media only screen and (max-width: 1440px) {
-      // width: calc(50% - 70px);
+      width: calc(100% - 70px);
       margin: 0 35px 30px 0px;
     }
     @media only screen and (max-width: 1360px) {
-      // width: calc(50% - 60px);
+      width: calc(90% - 60px);
       margin: 0 30px 30px;
     }
+    @media only screen and (max-width: 1220px) {
+      flex-direction: column;
+      width: calc(64% - 60px);
+      margin: 0;
+    }
     @media only screen and (max-width: 991px) {
-      // width: calc(50% - 40px);
+      width: calc(50% - 40px);
       margin: 0 20px 30px;
     }
     @media only screen and (max-width: 667px) {
@@ -265,25 +324,37 @@ export const PostArea = styled.div`
       }
     }
     
-
     .thumbnail {
       position: relative;
       display: inline-block;
-      width: 28%;
       vertical-align: top;
       overflow: hidden;
       img {
-        width: 100%;
+        width: 80%;
         object-fit: cover;
       }
     }
 
     .text {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
       width: 67%;
       max-width: 350px;
       margin: 0px 0px 0px 5%;
       text-decoration: inherit;
+
+      a {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      overflow: hidden;
+
+        @media screen and (max-width: 1024px) {
+          display: block;
+          width: 100%;
+          overflow: hidden;
+        }
+      }
 
       h3 {
         letter-spacing: 0.2px;
@@ -293,8 +364,6 @@ export const PostArea = styled.div`
         margin: 0px;
         transition: all 0.05s ease-in-out;
         position: relative;
-        
-      
       }
 
       h5 {
@@ -332,6 +401,11 @@ export const PostArea = styled.div`
         color: inherit;
         display: inline-block;
         text-decoration: none;
+      }
+      @media (max-width: 1024px) {
+        display: block;
+        width: 100%;
+        margin: 16px 0px 0px;
       }
     }
 

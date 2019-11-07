@@ -2,8 +2,8 @@ import React from 'react';
 import gql from 'graphql-tag';
 import Link from 'next/link';
 import { graphql } from 'react-apollo';
-import BlogPost from '../../../components/BlogPost';
 import PropTypes from 'prop-types';
+import BlogPost from '../../../components/BlogPost';
 
 // interface Post {
 //   id: number;
@@ -46,21 +46,23 @@ function RecentStories({ data: { loading, error, articles } }) {
         return (
             <div>
                 <h3>Recent stories</h3>
-                {articles.map(item => (
-                    <Link href="/blog/[id]" as={`/blog/${item.id}`} key={`key-${item.id}`}>
-                        <BlogPost
-                            key={`blog__post-key${item.id}`}
-                            thumbUrl={item.mainImageUrl}
-                            title={item.title}
-                            excerpt={item.description}
-                            author={item.user.name}
-                            // authorUrl={item.authorUrl}
-                            // category={item.category}
-                            // categoryUrl={item.categoryUrl}
-                            id={item.id}
-                        />
-                    </Link>
-                ))}
+                <div className="articles-wrapper">
+                    {articles.map(item => (
+                        <Link href="/blog/[id]" as={`/blog/${item.id}`} key={`key-${item.id}`}>
+                            <BlogPost
+                                key={`blog__post-key${item.id}`}
+                                thumbUrl={item.mainImageUrl}
+                                title={item.title}
+                                excerpt={item.description}
+                                author={item.user.name}
+                                // authorUrl={item.authorUrl}
+                                // category={item.category}
+                                // categoryUrl={item.categoryUrl}
+                                id={item.id}
+                            />
+                        </Link>
+                    ))}
+                </div>
             </div>
         );
     }
