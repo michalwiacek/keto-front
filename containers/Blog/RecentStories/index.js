@@ -24,52 +24,52 @@ import BlogPost from '../../../components/BlogPost';
 // }
 
 export const articles = gql`
-    query articles {
-        articles {
-            id
-            title
-            description
-            mainImageUrl
-            publishedAt
-            user {
-                id
-                name
-                email
-            }
-        }
+  query articles {
+    articles {
+      id
+      title
+      description
+      mainImageUrl
+      publishedAt
+      user {
+        id
+        name
+        email
+      }
     }
+  }
 `;
 
 function RecentStories({ data: { loading, error, articles } }) {
-    if (error) return <p> Error loading posts</p>;
-    if (articles && articles.length) {
-        return (
-            <div>
-                <h3>Recent stories</h3>
-                <div className="articles-wrapper">
-                    {articles.map(item => (
-                        <Link href="/blog/[id]" as={`/blog/${item.id}`} key={`key-${item.id}`}>
-                            <BlogPost
-                                key={`blog__post-key${item.id}`}
-                                thumbUrl={item.mainImageUrl}
-                                title={item.title}
-                                excerpt={item.description}
-                                author={item.user.name}
-                                // authorUrl={item.authorUrl}
-                                // category={item.category}
-                                // categoryUrl={item.categoryUrl}
-                                id={item.id}
-                            />
-                        </Link>
-                    ))}
-                </div>
-            </div>
-        );
-    }
-    return loading ? <div>Loading ...</div> : '';
+  if (error) return <p> Error loading posts</p>;
+  if (articles && articles.length) {
+    return (
+      <div>
+        <h3>Recent stories</h3>
+        <div className="articles-wrapper">
+          {articles.map(item => (
+            <Link href="/blog/[id]" as={`/blog/${item.id}`} key={`key-${item.id}`}>
+              <BlogPost
+                key={`blog__post-key${item.id}`}
+                thumbUrl={item.mainImageUrl}
+                title={item.title}
+                excerpt={item.description}
+                author={item.user.name}
+                // authorUrl={item.authorUrl}
+                // category={item.category}
+                // categoryUrl={item.categoryUrl}
+                id={item.id}
+              />
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  return loading ? <div>Loading ...</div> : '';
 }
 export default graphql(articles)(RecentStories);
 
 RecentStories.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

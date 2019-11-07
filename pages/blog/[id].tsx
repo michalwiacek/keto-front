@@ -1,23 +1,16 @@
 import React from 'react';
-import { useRouter } from 'next/router';
-
-const Content = () => {
-    const router = useRouter();
-
-    return (
-        <>
-            <h1>{router.query.title}</h1>
-            <p>This is the blog post content.</p>
-        </>
-    );
-};
+import { useRouter, Router } from 'next/router';
+import withApollo from '../../lib/withApollo';
+import PostSection from '../../containers/Blog/PostSection'
 
 const Post = () => {
-    return (
-        <>
-            <Content />
-        </>
-    );
+  const router = useRouter();
+  
+  return (
+    <>
+      <PostSection />
+    </>
+  );
 };
 
-export default Post;
+export default withApollo(Post);

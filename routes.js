@@ -1,3 +1,3 @@
 const routes = (module.exports = require('next-routes')())
 
-routes.add('blog', '/blog/:id')
+routes.add('blog/[id]', '/blog/:id');
