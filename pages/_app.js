@@ -1,5 +1,7 @@
 /* eslint-disable react/display-name */
 import App from 'next/app';
+import Router from 'next/router'
+import withGA from 'next-ga'
 import React from 'react';
 import { Modal } from '@redq/reuse-modal';
 import '@redq/reuse-modal/es/index.css';
@@ -16,17 +18,9 @@ import Navbar from '../containers/Layout/Navbar';
 import Footer from '../containers/Layout/Footer';
 import { DrawerProvider } from '../common/src/contexts/DrawerContext';
 import createStore from '../lib/store';
-import { initGA, logPageView } from '../utils/analytics';
+
 // eslint-disable-next-line react/prop-types
 class DietMaister extends App {
-  componentDidMount() {
-    if (!window.GA_INITIALIZED) {
-      initGA();
-      window.GA_INITIALIZED = true;
-    }
-    logPageView();
-  }
-
   render() {
     const { Component, pageProps, store } = this.props;
     return (
@@ -64,4 +58,4 @@ class DietMaister extends App {
   }
 }
 
-export default withRedux(createStore)(withReduxSaga(DietMaister));
+export default withGA('G-V9C8BSEYQM', Router)withRedux(createStore)(withReduxSaga(DietMaister));
