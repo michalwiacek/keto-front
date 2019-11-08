@@ -11931,14 +11931,10 @@ react-rnd@^9.0.4:
     react-draggable "3.3.0"
     tslib "1.9.3"
 
-react-scroll-progress-bar@^1.1.10:
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/react-scroll-progress-bar/-/react-scroll-progress-bar-1.1.10.tgz#8c070661ec1dadc78bd441b53e4c72d3fb86105b"
-  integrity sha512-2hOFO0z23UJFO9OENxIeA6VYsdCssTIMrXQEsJ/hNqvElJ7ZDE1qUcsNKb8ygolfbtMWw1fB1vuv6KoRP5AQ3A==
-  dependencies:
-    prop-types "^15.7.2"
-    react "^16.8.6"
-    react-dom "^16.8.6"
+react-scroll-progress-read@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/react-scroll-progress-read/-/react-scroll-progress-read-0.0.13.tgz#957fc6eb997647f8211435ae3af901bd5bece8d8"
+  integrity sha512-m/GWN+hMfn/CkGp1LZJPeuOw9PYZu+MMOTWt9b0OH6LQbMC5XEyapeud+yijZaGn3RV/by04XbsBUeePy+M1Wg==
 
 react-scrollspy@^3.4.0:
   version "3.4.0"

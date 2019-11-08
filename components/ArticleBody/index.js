@@ -8,9 +8,10 @@ import Markdown from 'react-remarkable';
 const ArticleBody = ({ className, body }) => {
   return (
     <>
-      <div className="article-body">
+      <div className="article-body" id="article-body">
         <Markdown source={body} />
       </div>
+      <span id="article-end" />
     </>
   );
 };

@@ -17,6 +17,9 @@ export const GlobalStyle = createGlobalStyle`
   p{
     font-family: 'Lato', sans-serif;
   }
+  .fixed {
+    position: fixed;
+  }
 
   section {
     position: relative;

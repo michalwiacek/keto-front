@@ -2,13 +2,10 @@ import React from 'react';
 import { withRouter } from 'next/router';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import Container from '../../../components/Container';
 import ArticleHeader from '../../../components/ArticleHeader';
 import ArticleBody from '../../../components/ArticleBody';
 import SectionWrapper, { HeaderArea, ArticleBodyArea } from './postSection.style';
-import ProgressBar from '../../../components/ScrollProgressBar';
 
 function PostSection({ id, data: { error, article } }) {
   if (error) return <p>Error loading blog post.</p>;
