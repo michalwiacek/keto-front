@@ -162,6 +162,9 @@ export const ArticleBodyArea = styled.section`
     @media screen and (max-width: 720px) {
       margin: 0;
     }
+    img {
+      max-width: 80%;
+    }
     blockquote {
       border-left: 11px solid black;
       padding-left: 11px;
