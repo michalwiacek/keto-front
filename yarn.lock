@@ -4966,7 +4966,7 @@ cssstyle@^1.0.0:
   dependencies:
     cssom "0.3.x"
 
-csstype@^2.2.0, csstype@^2.5.7, csstype@^2.6.4:
+csstype@^2.2.0, csstype@^2.5.7, csstype@^2.6.4, csstype@^2.6.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.7.tgz#20b0024c20b6718f4eda3853a1f5a1cce7f5e4a5"
   integrity sha512-9Mcn9sFbGBAdmimWb2gLVDtFJzeKtDGIr76TUqmjZrw9LFXBMSU70lcs+C0/7fyCd6iBDqmksUcCOUIkisPHsQ==
@@ -11930,6 +11930,15 @@ react-rnd@^9.0.4:
     re-resizable "5.0.1"
     react-draggable "3.3.0"
     tslib "1.9.3"
+
+react-scroll-progress-bar@^1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/react-scroll-progress-bar/-/react-scroll-progress-bar-1.1.10.tgz#8c070661ec1dadc78bd441b53e4c72d3fb86105b"
+  integrity sha512-2hOFO0z23UJFO9OENxIeA6VYsdCssTIMrXQEsJ/hNqvElJ7ZDE1qUcsNKb8ygolfbtMWw1fB1vuv6KoRP5AQ3A==
+  dependencies:
+    prop-types "^15.7.2"
+    react "^16.8.6"
+    react-dom "^16.8.6"
 
 react-scrollspy@^3.4.0:
   version "3.4.0"

@@ -40,7 +40,7 @@ class DietMaister extends App {
                         <GlobalStyle />
 
                         <ContentWrapper>
-                            <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+                            <Sticky top={0} innerZ={9998} activeClass="sticky-nav-active">
                                 <DrawerProvider>
                                     <Navbar />
                                 </DrawerProvider>

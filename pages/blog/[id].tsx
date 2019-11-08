@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter, Router } from 'next/router';
+import ProgressBar from "../../components/ScrollProgressBar";
 import withApollo from '../../lib/withApollo';
 import PostSection from '../../containers/Blog/PostSection'
 
@@ -8,6 +9,7 @@ const Post = () => {
   
   return (
     <>
+      <ProgressBar />
       <PostSection />
     </>
   );

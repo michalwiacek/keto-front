@@ -8,6 +8,7 @@ import Container from '../../../components/Container';
 import ArticleHeader from '../../../components/ArticleHeader';
 import ArticleBody from '../../../components/ArticleBody';
 import SectionWrapper, { HeaderArea, ArticleBodyArea } from './postSection.style';
+import ProgressBar from '../../../components/ScrollProgressBar';
 
 function PostSection({ id, data: { error, article } }) {
   if (error) return <p>Error loading blog post.</p>;
