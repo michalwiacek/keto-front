@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import App from 'next/app';
-import Router from 'next/router'
-import withGA from 'next-ga'
+import Router from 'next/router';
+import withGA from 'next-ga';
 import React from 'react';
 import { Modal } from '@redq/reuse-modal';
 import '@redq/reuse-modal/es/index.css';
@@ -58,4 +58,4 @@ class DietMaister extends App {
   }
 }
 
-export default withRedux(createStore)(withGA('G-V9C8BSEYQM', Router)(withReduxSaga(DietMaister)));
+export default withRedux(createStore)(withGA('UA-151925445-2', Router)(withReduxSaga(DietMaister)));
