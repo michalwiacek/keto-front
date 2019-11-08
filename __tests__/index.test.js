@@ -7,7 +7,7 @@ import '@testing-library/jest-dom/extend-expect';
 import IndexPage from '../pages/index.tsx';
 
 test('index page loads normally', async () => {
-    const { getByText, findByText } = render(<IndexPage />);
+  const { getByText, findByText } = render(<IndexPage />);
 
-    expect(getByText('Get to where you want to be.')).toBeInTheDocument();
+  expect(getByText('Get to where you want to be.')).toBeInTheDocument();
 });

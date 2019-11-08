@@ -2,176 +2,176 @@ import styled from 'styled-components';
 import Background from 'common/src/assets/images/banner_background.png';
 
 const BannerWrapper = styled.section`
-    background-image: url(${Background});
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: 100% center;
-    background-size: 1020px;
-    position: relative;
+  background-image: url(${Background});
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  background-size: 1020px;
+  position: relative;
+  margin-top: 0;
+  @media (max-width: 1750px) {
+    background-size: 900px;
+  }
+  @media (max-width: 1600px) {
+    background-position: 102% center;
+    background-size: 800px;
+    height: 94vh;
+  }
+  @media (max-width: 1440px) {
+    background-position: 106% center;
+    background-size: 700px;
+    height: 93vh;
+    background-size: contain;
     margin-top: 0;
-    @media (max-width: 1750px) {
-        background-size: 900px;
-    }
-    @media (max-width: 1600px) {
-        background-position: 102% center;
-        background-size: 800px;
-        height: 94vh;
-    }
-    @media (max-width: 1440px) {
-        background-position: 106% center;
-        background-size: 700px;
-        height: 93vh;
-        background-size: contain;
-        margin-top: 0;
-    }
-    @media (max-width: 1280px) {
-        background-position: 102% center;
-        background-size: contain;
+  }
+  @media (max-width: 1280px) {
+    background-position: 102% center;
+    background-size: contain;
+    height: 100%;
+    margin-bottom: 60px;
+    margin-top: 0;
+  }
+  @media (max-width: 1024px) {
+    background-position: 100% center;
+    background-size: contain;
+    height: 100%;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  @media (max-width: 990px) {
+    background-position: 100% center;
+    background-size: contain;
+    height: 100%;
+    margin-bottom: 0px;
+    overflow: hidden;
+    background-image: none;
+    background: #febb01;
+    padding-bottom: 100px;
+  }
+  @media (max-width: 480px) {
+    padding-bottom: 70px;
+  }
+  .image_area {
+    position: relative;
+    transform: scale(1.1);
+    height: 100%;
+    img {
+      padding-top: 390px;
+      object-fit: cover;
+      @media (max-width: 1750px) {
         height: 100%;
-        margin-bottom: 60px;
-        margin-top: 0;
-    }
-    @media (max-width: 1024px) {
-        background-position: 100% center;
-        background-size: contain;
+        padding-top: 310px;
+      }
+      @media (max-width: 1600px) {
         height: 100%;
-        margin-bottom: 0;
-        overflow: hidden;
+        padding-top: 210px;
+      }
+      @media (max-width: 1440px) {
+        height: 100%;
+        padding-top: 150px;
+      }
+      @media (max-width: 1280px) {
+        height: 100%;
+        padding-top: 30px;
+      }
+      @media (max-width: 990px) {
+        height: 93%;
+        display: none;
+      }
     }
+    .man_image_area {
+      margin-left: 30px;
+      object-fit: contain;
+      @media (max-width: 1750px) {
+        margin-left: 10px;
+      }
+      @media (max-width: 1440px) {
+        height: 93%;
+        margin-left: 0px;
+      }
+      @media (max-width: 1280px) {
+        margin-left: -20px;
+        height: 65%;
+      }
+    }
+    .people_image_area {
+      object-fit: contain;
+      height: 100%;
+      @media (max-width: 1440px) {
+        height: 60%;
+        padding-top: 30px;
+        margin-left: 30px;
+      }
+    }
+  }
+  .bannerImageBtn {
+    display: flex;
+    margin-top: 5px;
+    .app_image_area {
+      margin-right: 15px;
+    }
+  }
+  .contentArea {
+    padding-bottom: 50px;
     @media (max-width: 990px) {
-        background-position: 100% center;
-        background-size: contain;
-        height: 100%;
-        margin-bottom: 0px;
-        overflow: hidden;
-        background-image: none;
-        background: #febb01;
-        padding-bottom: 100px;
+      width: 100%;
     }
+  }
+  .container {
     @media (max-width: 480px) {
-        padding-bottom: 70px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
-    .image_area {
-        position: relative;
-        transform: scale(1.1);
-        height: 100%;
-        img {
-            padding-top: 390px;
-            object-fit: cover;
-            @media (max-width: 1750px) {
-                height: 100%;
-                padding-top: 310px;
-            }
-            @media (max-width: 1600px) {
-                height: 100%;
-                padding-top: 210px;
-            }
-            @media (max-width: 1440px) {
-                height: 100%;
-                padding-top: 150px;
-            }
-            @media (max-width: 1280px) {
-                height: 100%;
-                padding-top: 30px;
-            }
-            @media (max-width: 990px) {
-                height: 93%;
-                display: none;
-            }
-        }
-        .man_image_area {
-            margin-left: 30px;
-            object-fit: contain;
-            @media (max-width: 1750px) {
-                margin-left: 10px;
-            }
-            @media (max-width: 1440px) {
-                height: 93%;
-                margin-left: 0px;
-            }
-            @media (max-width: 1280px) {
-                margin-left: -20px;
-                height: 65%;
-            }
-        }
-        .people_image_area {
-            object-fit: contain;
-            height: 100%;
-            @media (max-width: 1440px) {
-                height: 60%;
-                padding-top: 30px;
-                margin-left: 30px;
-            }
-        }
-    }
-    .bannerImageBtn {
-        display: flex;
-        margin-top: 5px;
-        .app_image_area {
-            margin-right: 15px;
-        }
-    }
-    .contentArea {
-        padding-bottom: 50px;
-        @media (max-width: 990px) {
-            width: 100%;
-        }
-    }
-    .container {
-        @media (max-width: 480px) {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-    }
+  }
 `;
 const EmailInputWrapper = styled.div`
-    display: flex;
-    margin-top: 25px;
-    .reusecore__input {
-        width: 55%;
-        margin-right: 15px;
-        .field-wrapper {
-            input {
-                height: 56px;
-                background-color: rgb(255, 255, 255);
-                box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.08);
-                border: 0;
-                border-radius: 4px;
-                color: #15172c;
-                font-family: 'Lato';
-                font-size: 16px;
-                font-weight: 500;
-                padding-left: 30px;
-                @media (max-width: 480px) {
-                    height: 50px;
-                }
-                &:placeholder {
-                    color: #15172c;
-                    font-family: 'Lato';
-                    font-size: 16px;
-                    font-weight: 500;
-                    opacity: 1;
-                }
-            }
-        }
-    }
-    button {
+  display: flex;
+  margin-top: 25px;
+  .reusecore__input {
+    width: 55%;
+    margin-right: 15px;
+    .field-wrapper {
+      input {
+        height: 56px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.08);
+        border: 0;
+        border-radius: 4px;
+        color: #15172c;
+        font-family: 'Lato';
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 30px;
         @media (max-width: 480px) {
-            height: 50px;
+          height: 50px;
         }
-        @media (max-width: 400px) {
-            padding-left: 15px;
-            padding-right: 15px;
+        &:placeholder {
+          color: #15172c;
+          font-family: 'Lato';
+          font-size: 16px;
+          font-weight: 500;
+          opacity: 1;
         }
-        > span {
-            font-weight: 700;
-        }
-        &:hover {
-            box-shadow: 0px 9px 21px rgba(131, 84, 255, 0.25);
-        }
+      }
     }
+  }
+  button {
+    @media (max-width: 480px) {
+      height: 50px;
+    }
+    @media (max-width: 400px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    > span {
+      font-weight: 700;
+    }
+    &:hover {
+      box-shadow: 0px 9px 21px rgba(131, 84, 255, 0.25);
+    }
+  }
 `;
 
 export { BannerWrapper, EmailInputWrapper };

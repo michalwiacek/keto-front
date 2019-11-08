@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import { base, themed } from '../base';
 
 const ImageWrapper = styled('img')(
-    {
-        display: 'block',
-        maxWidth: '100%',
-        height: 'auto',
-    },
-    base,
-    themed('Image'),
+  {
+    display: 'block',
+    maxWidth: '100%',
+    height: 'auto',
+  },
+  base,
+  themed('Image'),
 );
 
 const Image = ({ src, alt, ...props }) => <ImageWrapper src={src} alt={alt} {...props} />;
@@ -18,11 +18,11 @@ const Image = ({ src, alt, ...props }) => <ImageWrapper src={src} alt={alt} {...
 export default Image;
 
 Image.propTypes = {
-    src: PropTypes.object.isRequired,
-    alt: PropTypes.string.isRequired,
-    m: PropTypes.number,
+  src: PropTypes.object.isRequired,
+  alt: PropTypes.string.isRequired,
+  m: PropTypes.number,
 };
 
 Image.defaultProps = {
-    m: 0,
+  m: 0,
 };
