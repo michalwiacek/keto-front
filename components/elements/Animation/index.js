@@ -14,7 +14,7 @@ const spinner = keyframes`
 `;
 
 const AnimSpinner = css`
-    animation: ${spinner} 1s linear infinite;
+  animation: ${spinner} 1s linear infinite;
 `;
 
 export { AnimSpinner };

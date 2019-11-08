@@ -144,18 +144,18 @@ const FooterWrapper = styled.section`
 const List = styled.ul``;
 
 const ListItem = styled.li`
-    a {
-        color: #fff;
-        font-size: 14px;
-        line-height: 36px;
-        transition: all 0.2s ease;
-        &:hover,
-        &:focus {
-            outline: 0;
-            text-decoration: none;
-            opacity: 0.85;
-        }
+  a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 36px;
+    transition: all 0.2s ease;
+    &:hover,
+    &:focus {
+      outline: 0;
+      text-decoration: none;
+      opacity: 0.85;
     }
+  }
 `;
 
 export { List, ListItem };

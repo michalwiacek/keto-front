@@ -16,44 +16,52 @@ import Navbar from '../containers/Layout/Navbar';
 import Footer from '../containers/Layout/Footer';
 import { DrawerProvider } from '../common/src/contexts/DrawerContext';
 import createStore from '../lib/store';
-
+import { initGA, logPageView } from '../utils/analytics';
 // eslint-disable-next-line react/prop-types
 class DietMaister extends App {
-    render() {
-        const { Component, pageProps, store } = this.props;
-        return (
-            <Provider store={store}>
-                <ThemeProvider theme={lightTheme}>
-                    <>
-                        <Head>
-                            <title>DietMaister</title>
-                            <meta name="Description" content="DietMaister landing page" />
-                            <meta name="theme-color" content="#ec5555" />
-                            {/* Load google fonts */}
-                            <link
-                                href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Lato:300,400,700"
-                                rel="stylesheet"
-                            />
-                        </Head>
-
-                        <ResetCSS />
-                        <GlobalStyle />
-
-                        <ContentWrapper>
-                            <Sticky top={0} innerZ={9998} activeClass="sticky-nav-active">
-                                <DrawerProvider>
-                                    <Navbar />
-                                </DrawerProvider>
-                            </Sticky>
-                            <Modal />
-                            <Component {...pageProps} />
-                            <Footer />
-                        </ContentWrapper>
-                    </>
-                </ThemeProvider>
-            </Provider>
-        );
+  componentDidMount() {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
     }
+    logPageView();
+  }
+
+  render() {
+    const { Component, pageProps, store } = this.props;
+    return (
+      <Provider store={store}>
+        <ThemeProvider theme={lightTheme}>
+          <>
+            <Head>
+              <title>DietMaister</title>
+              <meta name="Description" content="DietMaister landing page" />
+              <meta name="theme-color" content="#ec5555" />
+              {/* Load google fonts */}
+              <link
+                href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Lato:300,400,700"
+                rel="stylesheet"
+              />
+            </Head>
+
+            <ResetCSS />
+            <GlobalStyle />
+
+            <ContentWrapper>
+              <Sticky top={0} innerZ={9998} activeClass="sticky-nav-active">
+                <DrawerProvider>
+                  <Navbar />
+                </DrawerProvider>
+              </Sticky>
+              <Modal />
+              <Component {...pageProps} />
+              <Footer />
+            </ContentWrapper>
+          </>
+        </ThemeProvider>
+      </Provider>
+    );
+  }
 }
 
 export default withRedux(createStore)(withReduxSaga(DietMaister));

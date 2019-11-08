@@ -17,7 +17,7 @@ DateRangePickerStyle.propTypes = {};
 DateRangePickerStyle.displayName = 'DateRangePickerStyle';
 
 DateRangePickerStyle.defaultProps = {
-    // as: 'div'
+  // as: 'div'
 };
 
 export default DateRangePickerStyle;

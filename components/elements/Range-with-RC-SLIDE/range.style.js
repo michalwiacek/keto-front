@@ -10,7 +10,7 @@ RangeBoxStyle.propTypes = {};
 RangeBoxStyle.displayName = 'RangeBoxStyle';
 
 RangeBoxStyle.defaultProps = {
-    as: 'div',
+  as: 'div',
 };
 
 export default RangeBoxStyle;

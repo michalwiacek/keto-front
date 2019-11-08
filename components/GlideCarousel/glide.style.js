@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 import {
-    width,
-    height,
-    display,
-    space,
-    color,
-    borders,
-    boxShadow,
-    borderRadius,
-    position,
-    top,
-    left,
-    right,
-    bottom,
-    alignItems,
-    justifyContent,
-    flexWrap,
+  width,
+  height,
+  display,
+  space,
+  color,
+  borders,
+  boxShadow,
+  borderRadius,
+  position,
+  top,
+  left,
+  right,
+  bottom,
+  alignItems,
+  justifyContent,
+  flexWrap,
 } from 'styled-system';
 
 // Glide wrapper style
@@ -101,8 +101,8 @@ const BulletButton = styled.button`
 
 // default button style
 const DefaultBtn = styled.button`
-    cursor: pointer;
-    margin: 10px 3px;
+  cursor: pointer;
+  margin: 10px 3px;
 `;
 
 export { GlideSlideWrapper, ButtonControlWrapper, ButtonWrapper, BulletControlWrapper, BulletButton, DefaultBtn };

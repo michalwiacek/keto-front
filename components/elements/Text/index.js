@@ -11,48 +11,48 @@ const Text = ({ content, ...props }) => <TextWrapper {...props}>{content}</TextW
 export default Text;
 
 Text.propTypes = {
-    content: PropTypes.string,
-    as: PropTypes.string,
-    mt: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
-    ]),
-    mb: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
-    ]),
-    fontFamily: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
-    ]),
-    fontWeight: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
-    ]),
-    textAlign: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
-    ]),
-    lineHeight: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
-    ]),
-    letterSpacing: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
-    ]),
-    ...base.propTypes,
+  content: PropTypes.string,
+  as: PropTypes.string,
+  mt: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  ]),
+  mb: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  ]),
+  fontFamily: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  ]),
+  fontWeight: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  ]),
+  textAlign: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  ]),
+  lineHeight: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  ]),
+  letterSpacing: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  ]),
+  ...base.propTypes,
 };
 
 Text.defaultProps = {
-    as: 'p',
-    mt: 0,
-    mb: '1rem',
+  as: 'p',
+  mt: 0,
+  mb: '1rem',
 };

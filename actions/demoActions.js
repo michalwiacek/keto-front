@@ -5,8 +5,8 @@ export const SET_STRING = 'SET_STRING';
  * @return {{type: string, theString: String}}
  */
 export function setString(theString = 'the default string') {
-    return {
-        type: SET_STRING,
-        theString,
-    };
+  return {
+    type: SET_STRING,
+    theString,
+  };
 }
