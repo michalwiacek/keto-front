@@ -58,4 +58,4 @@ class DietMaister extends App {
   }
 }
 
-export default withGA('G-V9C8BSEYQM', Router)withRedux(createStore)(withReduxSaga(DietMaister));
+export default withRedux(createStore)(withGA('G-V9C8BSEYQM', Router)(withReduxSaga(DietMaister)));
