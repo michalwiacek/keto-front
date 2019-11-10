@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Moment from 'react-moment';
 import 'moment/locale/pl';
+import avatarPlaceholder from '../../common/src/assets/images/placeholders/avatar-placeholder.png';
 
 const ArticleHeader = ({ className, title, author, imageUrl, publishedAt, readingTime }) => {
   return (
@@ -22,7 +23,15 @@ const ArticleHeader = ({ className, title, author, imageUrl, publishedAt, readin
             </div>
           </div>
           <div className="author-wrapper">
-            <img className="author-avatar" src={author.avatarUrl} alt="author" />
+            <img
+              className="author-avatar"
+              src={author.avatarUrl}
+              alt="author"
+              onError={e => {
+                e.target.onerror = null;
+                e.target.src = avatarPlaceholder;
+              }}
+            />
             <h6>
               {author.name} • <Moment locale="pl" format="LL" date={publishedAt} />
             </h6>

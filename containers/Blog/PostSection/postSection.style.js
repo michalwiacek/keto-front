@@ -78,7 +78,7 @@ export const HeaderArea = styled.section`
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding-left: 3em;
+        /* padding-left: 3em; */
         @media screen and (max-width: 720px) {
           height: auto;
           display: table-cell;
@@ -125,7 +125,7 @@ export const HeaderArea = styled.section`
         justify-content: space-evenly;
         flex-direction: column;
         align-items: flex-start;
-        padding-left: 3em;
+        padding-left: 10%;
         margin-top: -2.4em;
         max-width: 360px;
         z-index: 10;
@@ -142,7 +142,8 @@ export const HeaderArea = styled.section`
         }
         .author-avatar {
           border-radius: 50%;
-          border: 2px black solid;
+          border: 2px solid white;
+          background-color: white;
           width: 70px;
           height: 70px;
           margin-bottom: 20px;
