@@ -10,6 +10,7 @@ import Sticky from 'react-stickynode';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 import withReduxSaga from 'next-redux-saga';
+import * as Sentry from '@sentry/browser';
 import { ThemeProvider } from '../styled-components.ts';
 import lightTheme from '../common/src/theme/light/index.ts';
 import { ResetCSS } from '../common/src/assets/css/style';
@@ -22,6 +23,7 @@ import createStore from '../lib/store';
 // eslint-disable-next-line react/prop-types
 class DietMaister extends App {
   render() {
+    Sentry.init({ dsn: 'https://99b8217f9dc24cbe9ed1e1901cd690dd@sentry.io/1816201' });
     const { Component, pageProps, store } = this.props;
     return (
       <Provider store={store}>

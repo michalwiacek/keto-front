@@ -21,6 +21,7 @@
     "@glidejs/glide": "^3.4.1",
     "@ninetynine/next-fonts": "^0.10.2",
     "@redq/reuse-modal": "^1.2.4",
+    "@sentry/browser": "^5.8.0",
     "@styled-system/theme-get": "^5.1.1",
     "@types/react-stickynode": "^1.4.0",
     "@types/styled-components": "^4.1.21",
