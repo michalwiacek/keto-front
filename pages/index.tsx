@@ -3,9 +3,7 @@ import BannerSection from "../containers/Landing/Banner";
 import FeatureSection from "../containers/Landing/Feature";
 import RideOption from "../containers/Landing/RideOption";
 import LocationSection from "../containers/Landing/LocationSelection";
-import withReduxSaga from '../lib/withReduxSaga';
-import withApollo from "../lib/withApollo";
-import { connect } from 'react-redux';
+import withApollo from "../lib/apollo";
 //import TestimonialSection from "../containers/Landing/TestimonialSection";
 const IndexPage = () => {
   return (
@@ -18,4 +16,4 @@ const IndexPage = () => {
   )
 };
 
-export default connect()(IndexPage);
+export default withApollo(IndexPage);

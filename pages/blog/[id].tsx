@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter, Router } from 'next/router';
 import PostSection from "../../containers/Blog/PostSection";
-import withApollo from '../../lib/withApollo';
+import withApollo from '../../lib/apollo';
 import ScrollProgressRead from '../../components/ScrollProgressRead';
 
 const Post = () => {
