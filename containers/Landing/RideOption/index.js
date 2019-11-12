@@ -200,7 +200,7 @@ SkillSection.defaultProps = {
     border: '0',
     minHeight: '55px',
     p: '0',
-    bg: 'tarnsperant',
+    bg: 'transparent',
   },
   button2: {
     type: 'button',
