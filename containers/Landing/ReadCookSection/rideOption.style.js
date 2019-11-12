@@ -106,7 +106,7 @@ const OptionWrapper = styled.section`
       padding: 15px;
     }
     @media (max-width: 480px) {
-      background: #faf8ff;
+      background: rgba(252, 244, 239, 0);
       margin-bottom: 15px;
       margin-left: 0 !important;
       padding: 20px;
@@ -121,11 +121,11 @@ const OptionWrapper = styled.section`
       @media (max-width: 480px) {
         display: flex;
         flex-direction: column;
-        background: #faf8ff;
+        background: rgba(252, 244, 239, 0);
       }
     }
     &.active-item {
-      background: #faf8ff;
+      background: rgba(252, 244, 239, 0.5);
       .desTitleWrapper {
         transform: translateY(0%);
       }
@@ -153,6 +153,7 @@ const OptionWrapper = styled.section`
   .driverBlock {
     margin-left: 10px;
     width: 48%;
+    background: rgba(250, 248, 255, 0.4);
     @media (max-width: 1440px) {
       width: 47%;
     }
@@ -162,6 +163,7 @@ const OptionWrapper = styled.section`
   }
   .riderBlock {
     width: calc(48% + 10px);
+    background: rgba(250, 248, 255, 0.4);
     @media (max-width: 1440px) {
       width: calc(48% + 10px);
     }
