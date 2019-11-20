@@ -36,8 +36,11 @@ const SkillSection = ({
       <Box {...sectionWrapper} as="section">
         <Container noGutter mobileGutter width="1200px" className="container">
           <Box {...secTitleWrapper}>
-            <Heading {...secTitle} content="Follow Your Own Path" />
-            <Text {...secDescription} content="You will have the city at your fingertips with some simple touches!" />
+            <Heading {...secTitle} content="Na co masz dzisiaj ochotę?" />
+            <Text
+              {...secDescription}
+              content="Poszerzaj swoją wiedzę na temat diety ketogenicznej lub eksperymentuj kulinarnie korzystając z naszych przepisów!"
+            />
           </Box>
 
           <Box {...row}>
@@ -54,7 +57,7 @@ const SkillSection = ({
                   <Text {...desDetails} content="Odzyskaj kontrolę nad swoim organizmem." />
                   <Link href="#services">
                     <a className="buttonStyle">
-                      <Button title="Learn More" {...button1} />
+                      <Button title="Przejdź" {...button1} />
                     </a>
                   </Link>
                 </Box>
@@ -75,7 +78,7 @@ const SkillSection = ({
                   <Text {...desDetails} content="Gotuj dla siebie najsmaczniejsze potrawy." />
                   <Link href="#services">
                     <a className="buttonStyle">
-                      <Button title="Learn More" {...button1} />
+                      <Button title="Przejdź" {...button1} />
                     </a>
                   </Link>
                 </Box>
