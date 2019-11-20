@@ -36,6 +36,9 @@ export const articles = gql`
         name
         email
       }
+      category {
+        name
+      }
     }
   }
 `;
@@ -55,6 +58,7 @@ function RecentStories({ data: { loading, error, articles } }) {
                 title={item.title}
                 excerpt={item.description}
                 author={item.user.name}
+                category={item.category.name}
                 // authorUrl={item.authorUrl}
                 // category={item.category}
                 // categoryUrl={item.categoryUrl}

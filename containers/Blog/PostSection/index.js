@@ -15,6 +15,7 @@ function PostSection({ id, data: { error, article } }) {
         <Container width="1400px">
           <HeaderArea>
             <ArticleHeader
+              category={article.category.name}
               imageUrl={article.mainImageUrl}
               author={article.user}
               title={article.title}
@@ -46,6 +47,9 @@ const post = gql`
         name
         email
         avatarUrl
+      }
+      category {
+        name
       }
     }
   }

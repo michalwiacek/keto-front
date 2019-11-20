@@ -3,7 +3,7 @@ import Moment from 'react-moment';
 import 'moment/locale/pl';
 import avatarPlaceholder from '../../common/src/assets/images/placeholders/avatar-placeholder.png';
 
-const ArticleHeader = ({ className, title, author, imageUrl, publishedAt, readingTime }) => {
+const ArticleHeader = ({ className, title, category, author, imageUrl, publishedAt, readingTime }) => {
   return (
     <>
       <div className="hero-container">
@@ -13,7 +13,7 @@ const ArticleHeader = ({ className, title, author, imageUrl, publishedAt, readin
         <div className="right">
           <div className="copy-container">
             <div className="text">
-              <h5>category // TODO</h5>
+              <h5>{category}</h5>
               <h1 className="title">{title}</h1>
               {readingTime > 0 && <h6 className="reading-time">{readingTime} minut</h6>}
               <div className="extra-grey" />
