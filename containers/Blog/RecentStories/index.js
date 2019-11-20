@@ -29,7 +29,7 @@ export const articles = gql`
       id
       title
       description
-      mainImageUrl
+      mainImageThumbnailUrl
       publishedAt
       user {
         id
@@ -51,7 +51,7 @@ function RecentStories({ data: { loading, error, articles } }) {
             <Link href="/blog/[id]" as={`/blog/${item.id}`} key={`key-${item.id}`}>
               <BlogPost
                 key={`blog__post-key${item.id}`}
-                thumbUrl={item.mainImageUrl}
+                thumbUrl={item.mainImageThumbnailUrl}
                 title={item.title}
                 excerpt={item.description}
                 author={item.user.name}
