@@ -164,11 +164,36 @@ export const ArticleBodyArea = styled.section`
       margin: 0;
     }
     img {
-      max-width: 80%;
+      max-width: 100%;
+    }
+    h1 {
+      font-size: 2em;
+      line-height: 54px;
+      font-weight: 600;
+      margin: 0;
+      @media only screen and (max-width: 1440px) {
+        font-size: 2.5em;
+        line-height: 46px;
+      }
+      @media only screen and (max-width: 1200px) {
+        font-size: 2.2em;
+        line-height: 42px;
+      }
+      @media only screen and (max-width: 767px) {
+        font-size: 2em;
+        line-height: 35px;
+      }
+    }
+    p {
+      line-height: 2em;
+      @media only screen and (max-width: 767px) {
+        line-height: 1.5em;
+      }
     }
     blockquote {
       border-left: 11px solid black;
       padding-left: 11px;
+      font-style: italic;
     }
   }
 `;

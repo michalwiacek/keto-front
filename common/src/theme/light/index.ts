@@ -146,9 +146,6 @@ const lightTheme: DefaultTheme = {
             justifyContent: 'center',
         },
     },
-    // FlexBox: {
-    //   backgroundColor: 'green'
-    // }
 };
 
 export default lightTheme;
