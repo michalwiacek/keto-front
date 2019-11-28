@@ -18,15 +18,15 @@ import Member3 from './assets/images/team/photo3.jpg';
 export const SOCIAL_PROFILES = [
   {
     icon: socialTwitter,
-    url: '#',
+    url: 'https://twitter.com/',
   },
   {
     icon: socialFacebook,
-    url: '#',
+    url: 'https://facebook.com',
   },
   {
     icon: socialInstagram,
-    url: '#',
+    url: 'https://instagram.com',
   },
 ];
 
@@ -245,21 +245,6 @@ export const menuWidget = [
         url: '#',
         text: 'Customer Support',
       },
-      {
-        id: 3,
-        url: '#',
-        text: 'About Us',
-      },
-      {
-        id: 4,
-        url: '#',
-        text: 'Copyright',
-      },
-      {
-        id: 5,
-        url: '#',
-        text: 'Popular Campaign',
-      },
     ],
   },
   {
@@ -275,21 +260,6 @@ export const menuWidget = [
         id: 2,
         url: '#',
         text: 'Privacy Policy',
-      },
-      {
-        id: 3,
-        url: '#',
-        text: 'Terms & Conditions',
-      },
-      {
-        id: 4,
-        url: '#',
-        text: 'Site Map',
-      },
-      {
-        id: 5,
-        url: '#',
-        text: 'Store Hours',
       },
     ],
   },
@@ -307,151 +277,16 @@ export const menuWidget = [
         url: '#',
         text: 'Social media directories',
       },
-      {
-        id: 3,
-        url: '#',
-        text: 'Images & B-roll',
-      },
-      {
-        id: 4,
-        url: '#',
-        text: 'Permissions',
-      },
-      {
-        id: 5,
-        url: '#',
-        text: 'Speaker requests',
-      },
     ],
   },
 ];
 export const LANGUAGE_NAMES = [
   {
-    label: 'English',
-    value: 'eng',
-  },
-  {
     label: 'Polish',
     value: 'pol',
   },
-];
-export const featuredPost = {
-  id: 535,
-  title: 'Featured Article',
-  excerpt:
-    '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
-  thumbUrl: 'https://picsum.photos/600/400',
-  btnText: 'Learn More ',
-  btnUrl: '#1',
-  category: 'keto',
-  categoryUrl: '/',
-  author: 'Bobek',
-  authorUrl: '/',
-};
-
-export const posts = [
   {
-    id: 1,
-    title: 'Uganda Embraces South Sudanese Refugees, For Now',
-    excerpt:
-      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
-    thumbUrl: 'https://picsum.photos/300',
-    category: 'keto',
-    categoryUrl: '/',
-    author: 'Bobek',
-    authorUrl: '/',
-    btnText: 'Learn More ',
-    btnUrl: '#1',
-  },
-  {
-    id: 2,
-    title: 'BRITs Week 2019 together with O2 is here',
-    excerpt:
-      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
-    thumbUrl: 'https://picsum.photos/300',
-    btnText: 'Learn More ',
-    btnUrl: '#1',
-    category: 'keto',
-    categoryUrl: '/',
-    author: 'Bobek',
-    authorUrl: '/',
-  },
-  {
-    id: 3,
-    title: 'BRITs Week 2019 together with O2 is here',
-    excerpt:
-      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
-    thumbUrl: 'https://picsum.photos/300',
-    btnText: 'Learn More ',
-    btnUrl: '#1',
-    category: 'keto',
-    categoryUrl: '/',
-    author: 'Bobek',
-    authorUrl: '/',
-  },
-  {
-    id: 4,
-    title: 'BRITs Week 2019 together with O2 is here',
-    excerpt:
-      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
-    thumbUrl: 'https://picsum.photos/300',
-    btnText: 'Learn More ',
-    btnUrl: '#1',
-    category: 'keto',
-    categoryUrl: '/',
-    author: 'Bobek',
-    authorUrl: '/',
-  },
-  {
-    id: 5,
-    title: 'BRITs Week 2019 together with O2 is here',
-    excerpt:
-      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
-    thumbUrl: 'https://picsum.photos/300',
-    btnText: 'Learn More ',
-    btnUrl: '#1',
-    category: 'keto',
-    categoryUrl: '/',
-    author: 'Bobek',
-    authorUrl: '/',
-  },
-  {
-    id: 6,
-    title: 'BRITs Week 2019 together with O2 is here',
-    excerpt:
-      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
-    thumbUrl: 'https://picsum.photos/300',
-    btnText: 'Learn More ',
-    btnUrl: '#1',
-    category: 'keto',
-    categoryUrl: '/',
-    author: 'Bobek',
-    authorUrl: '/',
-  },
-  {
-    id: 7,
-    title: 'BRITs Week 2019 together with O2 is here',
-    excerpt:
-      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
-    thumbUrl: 'https://picsum.photos/300',
-    btnText: 'Learn More ',
-    btnUrl: '#1',
-    category: 'keto',
-    categoryUrl: '/',
-    author: 'Bobek',
-    authorUrl: '/',
-  },
-  {
-    id: 8,
-    title: 'BRITs Week 2019 together with O2 is here',
-    excerpt:
-      '72 million children around the world are not enrolled in school. Concern Worldwide focuses on providing basic education to those…',
-    thumbUrl: 'https://picsum.photos/300',
-    btnText: 'Learn More ',
-    btnUrl: '#1',
-    category: 'keto',
-    categoryUrl: '/',
-    author: 'Bobek',
-    authorUrl: '/',
+    label: 'English',
+    value: 'eng',
   },
 ];

@@ -7428,6 +7428,11 @@ https-proxy-agent@^3.0.1:
     agent-base "^4.3.0"
     debug "^3.1.0"
 
+humanize-duration@^3.21.0:
+  version "3.21.0"
+  resolved "https://registry.yarnpkg.com/humanize-duration/-/humanize-duration-3.21.0.tgz#ae5dc7e67640770cbf6a8d03a5d1138d47c7ce38"
+  integrity sha512-7BLsrQZ2nMGeakmGDUl1pDne6/7iAdvwf1RtDLCOPHNFIHjkOVW7lcu7xHkIM9HhZAlSSO5crhC1dHvtl4dIQw==
+
 humanize-string@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/humanize-string/-/humanize-string-2.1.0.tgz#a7d7062e5e514e04f072607ded0df853be8a1f2f"

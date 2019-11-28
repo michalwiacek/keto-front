@@ -15,15 +15,15 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
     <FooterWrapper id="footerSection">
       <Container noGutter mobileGutter width="1200px">
         <Box className="row" {...row}>
-          <Box {...colOne}>
-            <Heading content="Language" {...titleStyle} />
+          {/* <Box {...colOne}>
+            <Heading content="J" {...titleStyle} />
             <Select
               options={LANGUAGE_NAMES}
-              placeholder="English"
+              placeholder="Pol"
               className="Language_search_select"
               aria-label="language switcher"
             />
-          </Box>
+          </Box> */}
           {/* End of footer logo column */}
           <Box {...colTwo}>
             {menuWidget.map(widget => (
@@ -44,7 +44,7 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
           {/* End of footer List column */}
         </Box>
         <Box className="row copyRight" {...row}>
-          <Text content="Copyright 2018 @Godrive Corporation." className="copyRightText" />
+          <Text content="Copyright 2019 @Ketowcy" className="copyRightText" />
           <SocialProfile className="footer_social" items={SOCIAL_PROFILES} iconSize={18} />
         </Box>
       </Container>

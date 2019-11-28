@@ -41,6 +41,7 @@
     "graphql-anywhere": "^4.2.4",
     "graphql-tag": "^2.10.1",
     "https-proxy-agent": "^3.0.1",
+    "humanize-duration": "^3.21.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^6.0.0",
     "imagemin-svgo": "^7.0.0",

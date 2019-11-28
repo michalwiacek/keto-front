@@ -1,6 +1,7 @@
 import React from 'react';
 import Moment from 'react-moment';
 import 'moment/locale/pl';
+import humanizeDuration from 'humanize-duration';
 import avatarPlaceholder from '../../common/src/assets/images/placeholders/avatar-placeholder.png';
 
 const ArticleHeader = ({ className, title, category, author, imageUrl, publishedAt, readingTime }) => {
@@ -15,7 +16,11 @@ const ArticleHeader = ({ className, title, category, author, imageUrl, published
             <div className="text">
               <h5>{category}</h5>
               <h1 className="title">{title}</h1>
-              {readingTime > 0 && <h6 className="reading-time">{readingTime} minut</h6>}
+              {readingTime > 0 && (
+                <h6 className="reading-time">
+                  przeczytasz w {humanizeDuration(readingTime * 60000, { language: 'pl' })}
+                </h6>
+              )}
               <div className="extra-grey" />
             </div>
           </div>
