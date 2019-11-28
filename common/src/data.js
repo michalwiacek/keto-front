@@ -121,22 +121,18 @@ export const MENU_ITEMS = [
   {
     label: 'O nas',
     path: '/about',
-    offset: '70',
   },
   {
     label: 'Przepisy',
     path: '/recipes',
-    offset: '700',
   },
   {
     label: 'Blog',
     path: '/blog',
-    offset: '700',
   },
   {
     label: 'Kontakt',
     path: '/contact',
-    offset: '1700',
   },
 ];
 
@@ -144,22 +140,18 @@ export const MENU_LEFT_ITEMS = [
   {
     label: 'O nas',
     path: '/about',
-    offset: '70',
   },
   {
     label: 'Przepisy',
     path: '/recipes',
-    offset: '700',
   },
   {
     label: 'Blog',
     path: '/blog',
-    offset: '700',
   },
   {
     label: 'Kontakt',
     path: '/contact',
-    offset: '1700',
   },
 ];
 

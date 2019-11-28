@@ -28,7 +28,7 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
       <Container noGutter mobileGutter width="1200px">
         <Box {...row}>
           <Logo href="/" logoSrc={LogoImage} title="Portfolio" logoStyle={logoStyle} className="main-logo" />
-          <Logo href="/" logoSrc={LogoImage} title="Portfolio" logoStyle={logoStyle} className="logo-alt" />
+          <Logo href="/" logoSrc={LogoImage} title="PortfoPlio" logoStyle={logoStyle} className="logo-alt" />
           <Box {...menuWrapper}>
             <ScrollSpyMenu className="main_menu menuLeft" menuItems={MENU_LEFT_ITEMS} offset={-70} />
             <SocialProfile className="navbar_social" items={SOCIAL_PROFILES} iconSize={18} />

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Scrollspy from 'react-scrollspy';
-import Link from 'next/link';
+import Link from '../ActiveLink';
 
 import { DrawerContext } from '../../common/src/contexts/DrawerContext';
 
@@ -24,7 +24,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
   }
 
   // Close drawer when click on menu item
-  const toggleDrawer = () => {
+  const toggleHandler = () => {
     dispatch({
       type: 'TOGGLE',
     });
@@ -39,11 +39,11 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
           ) : (
             <>
               {drawerClose ? (
-                <Link href={menu.path} offset={menu.offset} onClick={toggleDrawer}>
+                <Link href={menu.path} activeClassName="is-current">
                   <a>{menu.label}</a>
                 </Link>
               ) : (
-                <Link href={menu.path} offset={menu.offset}>
+                <Link href={menu.path} onClick={toggleHandler} activeClassName="is-current" offset={menu.offset}>
                   <a>{menu.label}</a>
                 </Link>
               )}
@@ -97,7 +97,7 @@ ScrollSpyMenu.defaultProps = {
   className: '',
   scrolledPastClassName: '',
   componentTag: 'ul',
-  currentClassName: 'is-current',
+  currentClassName: 'is-active',
 };
 
 export default ScrollSpyMenu;

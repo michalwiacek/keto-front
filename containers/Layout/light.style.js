@@ -75,13 +75,20 @@ export const GlobalStyle = createGlobalStyle`
               position: absolute;
               width: calc(100% - 8px);
               height: 11px;
-              background: #c2c7fb;
+              background: linear-gradient(to left, #ff5b60, #f29e02);
               bottom: 2px;
               left: -4px;
               z-index: -1;
               transform: scaleX(0);
               transform-origin: right center 0;
               transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+            }
+            &.is-current {
+              &:before {
+                transform: scaleX(1);
+                transform-origin: left center 0;
+                transition: transform 0.35s cubic-bezier(0.43, 0.49, 0.51, 0.68);
+              }
             }
           }
           &.is-current {
@@ -247,6 +254,13 @@ export const ContentWrapper = styled.div`
             transform: scaleX(0);
             transform-origin: right center 0;
             transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+          }
+          &.is-current {
+            &:after {
+              transform: scaleX(1);
+              transform-origin: left center 0;
+              transition: transform 0.35s cubic-bezier(0.43, 0.49, 0.51, 0.68);
+            }
           }
         }
       }
