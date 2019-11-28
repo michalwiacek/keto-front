@@ -106,7 +106,7 @@ export const FeaturedArea = styled.div`
   .image-wrapper {
     position: relative;
     width: 100%;
-    height: 45.2vw;
+    height: 45.2vh;
     max-height: 60vh;
     margin: 0px 0px 5vh;
     overflow: hidden;
@@ -114,13 +114,14 @@ export const FeaturedArea = styled.div`
       max-height: 50vh;
     }
   }
-  .image-wrapper img {
+  .image-wrapper > img {
     object-fit: cover;
     position: absolute;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
     transform: scale(1);
     transition: transform 0.4s ease-out 0s;
   }
@@ -272,6 +273,7 @@ export const PostArea = styled.div`
   .articles-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
     @media screen and (max-width: 1220px) {
       flex-direction: row;
       flex-wrap: wrap;        
@@ -292,7 +294,7 @@ export const PostArea = styled.div`
     overflow: hidden;
     flex-direction: row;
     transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-    border-radius: 10px;
+    // border-radius: 10px;
     // box-shadow: 0 0 100px rgba(175, 182, 194, 0.2);
     background-color: ${themeGet('colors.white', '#ffffff')};
     :nth-child(2) {
@@ -330,8 +332,30 @@ export const PostArea = styled.div`
       vertical-align: top;
       overflow: hidden;
       img {
-        width: 80%;
+        width: 15em;
+        height: 8em;
         object-fit: cover;
+        border-radius: 10px;
+        @media only screen and (min-width: 1440px) {
+          width: 25em;
+          height: 15em;
+        }
+        @media only screen and (max-width: 1360px) {
+          width: 20em;
+          height: 11em;
+        }
+        @media only screen and (max-width: 1220px) {
+          width: 10em;
+          height: 7em;
+        }
+        @media only screen and (max-width: 991px) {
+          width: 15em;
+          height: 12em;
+        }
+        @media only screen and (max-width: 667px) {
+          width: 25em;
+          height: 15em;
+        }
       }
     }
 

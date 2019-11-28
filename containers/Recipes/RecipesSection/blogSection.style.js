@@ -106,7 +106,7 @@ export const FeaturedArea = styled.div`
   .image-wrapper {
     position: relative;
     width: 100%;
-    height: 45.2vw;
+    height: 45.2vh;
     max-height: 60vh;
     margin: 0px 0px 5vh;
     overflow: hidden;
@@ -330,6 +330,7 @@ export const PostArea = styled.div`
       vertical-align: top;
       overflow: hidden;
       img {
+        width: 80%;
         width: 80%;
         object-fit: cover;
       }

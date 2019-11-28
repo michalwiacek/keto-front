@@ -195,6 +195,9 @@ export const ArticleBodyArea = styled.section`
       padding-left: 11px;
       font-style: italic;
     }
+    li {
+      list-style-type: inherit;
+    }
   }
 `;
 

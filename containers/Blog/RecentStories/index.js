@@ -47,7 +47,7 @@ function RecentStories({ data: { loading, error, articles } }) {
   if (error) return <p> Error loading posts</p>;
   if (articles && articles.length) {
     return (
-      <div>
+      <>
         <h3>Recent stories</h3>
         <div className="articles-wrapper">
           {articles.map(item => (
@@ -67,7 +67,7 @@ function RecentStories({ data: { loading, error, articles } }) {
             </Link>
           ))}
         </div>
-      </div>
+      </>
     );
   }
   return loading ? <div>Loading ...</div> : '';
