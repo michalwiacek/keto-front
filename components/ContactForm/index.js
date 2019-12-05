@@ -1,37 +1,53 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { Formik, Form } from 'formik';
+import React from 'react';
+import { Formik, Form, ErrorMessage } from 'formik';
 import { Send } from 'grommet-icons';
-import { Grommet, Box, Grid, FormField, TextInput, TextArea, Button, Collapsible } from 'grommet';
+import { Box, FormField, Select, CheckBox, TextInput, TextArea, Button } from 'grommet';
 
-const ContactForm = props => {
-  const [open, setOpen] = React.useState(false);
+const ContactForm =()=> {
 
   return (
-    <Grommet>
-      <Box>
-        <Box align="start" pad="small">
-          <Button primary color="dark-1" onClick={() => setOpen(!open)} label="Napisz do nas" />
-        </Box>
-        <Collapsible open={open} {...props}>
-          <Box background="light-1" round="medium" pad="small" alignContent="stretch">
+    <Box
+      align="stretch"
+      justify="start"
+      direction="column"
+      gap="xxsmall"
+      pad="medium"
+      round="small"
+      // border={{"color":"brand","size":"large","side":"left","style":"solid"}}
+      // elevation="large"
+    >
             <Formik
-              initialValues={{ email: '', name: '', message: '' }}
+              initialValues={{
+                email: '',
+                name: '',
+                message: '',
+                topic: '',
+                term1: false,
+                term2: false
+              }}
+              validateOnChange={false}
+              validateOnBlur={true}
               validate={values => {
                 const errors = {};
-                // REGEX
-                const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/;
-                // VALIDATION
                 if (!values.email) {
                   errors.email = 'Email is required';
-                } else if (regex.test(values.email)) {
+                } else if (
+                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                ) {
                   errors.email = 'Invalid email address';
                 }
-
+                if (!values.name) {
+                  errors.name = 'A name is required'
+                } else if (values.name.length < 3) {
+                  errors.name = "Not valid name"
+                }
                 if (!values.message) {
                   errors.message = 'A message is required';
                 } else if (values.message.length < 100) {
                   errors.message = 'message must be 100 characters';
+                }
+                if (!values.term1) {
+                  errors.term1 = "Potrzebujemy zgody"
                 }
                 return errors;
               }}
@@ -39,17 +55,27 @@ const ContactForm = props => {
                 console.log(values);
               }}
             >
-              {({ touched, errors, values, handleChange, handleBlur, handleSubmit }) => (
+              {({ touched, errors, values, getFieldProps, handleChange, handleBlur, handleSubmit, setFieldValue, isSubmitting, isValid}) => (
                 <Form onSubmit={handleSubmit}>
-                  <Grid
-                    fill
-                    areas={[['name', 'main'], ['formal', 'formal'], ['buttons', 'buttons']]}
-                    columns={['small', 'flex']}
-                    rows={['flex', 'xsmall', 'xxsmall']}
-                    gap="small"
-                  >
-                    <Box gridArea="name">
-                      <FormField label="Imie" htmlFor="name">
+                  <FormField label="Temat" htmlFor={"topic"} error={errors.topic}>
+                    <Select
+                      id="topic"
+                      options={["dieta","współpraca","say hi"]}
+                      value={values.topic}
+                      onChange={event => setFieldValue("topic", event.value)}
+                    />
+                  </FormField>
+                  <FormField error={errors.message}>
+                    <TextArea
+                      resize={false}
+                      id="message"
+                      value={values.message}
+                      placeholder="Co Ci chodzi po głowie? :)"
+                      onChange={handleChange}
+                      label="wiadomość"
+                    />
+                  </FormField>
+                      <FormField label="Imie" htmlFor="name" error={errors.name}>
                         <TextInput
                           id="name"
                           value={values.name}
@@ -57,42 +83,27 @@ const ContactForm = props => {
                           onChange={handleChange}
                         />
                       </FormField>
-                      <FormField label="Email" htmlFor="email">
+                      <FormField label="Email" htmlFor="email" error={errors.email}>
                         <TextInput
                           id="email"
                           value={values.email}
                           placeholder="jak możemy odpowiedzieć?"
+                          onBlur={handleBlur}
                           onChange={handleChange}
                         />
                       </FormField>
-                    </Box>
-                    <Box gridArea="main">
-                      <TextArea
-                        resize={false}
-                        id="message"
-                        value={values.message}
-                        placeholder="Co Ci chodzi po głowie? :)"
-                        onChange={handleChange}
-                        fill
-                        label="wiadomość"
-                      />
-                    </Box>
-                    <Box gridArea="formal">
-                      <p>
-                        Wysyłając oświadczasz, że zgadzasz się na <a href="/">warunki</a> przetwarzania danych.
-                      </p>
-                    </Box>
-                    <Box gridArea="buttons" align="end">
-                      <Button primary color="dark-1" icon={<Send />} type="submit" label="Wyślij" />
-                    </Box>
-                  </Grid>
-                </Form>
+                  <Box align="stretch" justify="center" gap="medium" wrap={false} direction="column" pad="medium">
+                    <CheckBox label="Zgoda na przetwarzanie danych osobowych" name="term1" checked={values.term1} value={values.term1 || false} onChange={handleChange}/>
+                    <ErrorMessage name="term1" component="div" />
+                    <CheckBox label="Zgoda na przetwarzanie danych w celach marketingowych" name="term2" checked={values.term2} value={values.term2 || false} onChange={handleChange}/>
+                  </Box>
+                  <Box align="stretch" justify="start" gap="medium" wrap={false} direction="column" pad="xsmall">
+                    <Button label="Wyślij" type="submit" icon={<Send />} disabled={isSubmitting || !values.term1} primary={true} reverse={true} />
+                  </Box>
+                 </Form>
               )}
             </Formik>
           </Box>
-        </Collapsible>
-      </Box>
-    </Grommet>
   );
 };
 
