@@ -93,7 +93,12 @@ const ContactForm =()=> {
                         />
                       </FormField>
                   <Box align="stretch" justify="center" gap="medium" wrap={false} direction="column" pad="medium">
-                    <CheckBox label="Zgoda na przetwarzanie danych osobowych" name="term1" checked={values.term1} value={values.term1 || false} onChange={handleChange}/>
+                    <CheckBox labelStyle={{ zIndex: 3 }}
+                              label={(
+                                <label htmlFor="term1">
+                                  Zgoda na przetwarzanie danych, szczegóły w <a href="/terms">regulaminie</a>
+                                </label>
+                              )} name="term1" checked={values.term1} value={values.term1 || false} onChange={handleChange}/>
                     <ErrorMessage name="term1" component="div" />
                     <CheckBox label="Zgoda na przetwarzanie danych w celach marketingowych" name="term2" checked={values.term2} value={values.term2 || false} onChange={handleChange}/>
                   </Box>
