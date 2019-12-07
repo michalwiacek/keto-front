@@ -1,17 +1,41 @@
 import React from 'react';
-import Container from '../components/Container';
-import SectionWrapper from '../containers/Blog/BlogSection/blogSection.style';
+import {Box, Grommet, WorldMap, Carousel, Image} from "grommet";
 
 class About extends React.Component {
     render () {
         return (
-            <SectionWrapper>
-              <Container className="wip" fullWidth={false} id="wip" noGutter mobileGutter width="1200px">
-                <div className="work-in-progress">
-                  <h1>Work in progress</h1>
-                </div>
-              </Container>
-            </SectionWrapper>
+            <Grommet full>
+              <Box align="center" pad="xlarge">
+              <Box height="medium" width="xlarge" overflow="hidden" margin={{ top: 'xlarge'}}>
+                <Carousel fill>
+                  <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg" />
+                  <Image fit="cover" src="//v2.grommet.io/assets/IMG_4245.jpg" />
+                  <Image fit="cover" src="//v2.grommet.io/assets/IMG_4210.jpg" />
+                </Carousel>
+              </Box>
+              <Box pad='xlarge' justify="center" alignContent="center">
+                <WorldMap
+                  color="neutral-1"
+                  continents={[
+                    {
+                      name: 'Europe',
+                      color: 'light-5',
+                      onClick: (name) => {},
+                    },
+                  ]}
+                  alignSelf="center"
+                  places={[
+                    {
+                      name: 'Warsaw',
+                      location: [52.237049, 21.017532],
+                      color: 'accent-2',
+                      onClick: (name) => {},
+                    },
+                  ]}
+                />
+              </Box>
+              </Box>
+            </Grommet>
         );
     }
 };
