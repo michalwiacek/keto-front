@@ -59,6 +59,18 @@ export const FeaturedArea = styled.div`
     width: 100%;
     position: inherit;
   }
+  @media only screen and (max-width: 414px) {
+    max-width: 374px;
+  }
+  @media only screen and (max-width: 411px) {
+    max-width: 371px;
+  }
+  @media only screen and (max-width: 375px) {
+    max-width: 335px;
+  }
+  @media only screen and (max-width: 320px) {
+    max-width: 280px;
+  }
 
   h5 {
     color: rgb(255, 51, 102);

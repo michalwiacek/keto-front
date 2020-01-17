@@ -8,7 +8,7 @@ import SectionWrapper, { FeaturedArea, PostArea } from './blogSection.style';
 const BlogSection = () => {
   return (
     <SectionWrapper id="blog">
-      <Container width="1400px">
+      <Container width="1400px" noGutter mobileGutter>
         <FeaturedArea>
           <FeaturedArticle />
         </FeaturedArea>
