@@ -10,7 +10,7 @@ import { LatestNews } from '../../../common/src/data';
 import Container from '../../../components/Container';
 import FeatureSectionWrapper from './latest.style';
 
-const FeatureSection = ({
+const LatestNewsSection = ({
   row,
   col,
   secTitleWrapper,
@@ -56,7 +56,7 @@ const FeatureSection = ({
 };
 
 // FeatureSection style props
-FeatureSection.propTypes = {
+LatestNewsSection.propTypes = {
   secTitleWrapper: PropTypes.object,
   row: PropTypes.object,
   col: PropTypes.object,
@@ -70,7 +70,7 @@ FeatureSection.propTypes = {
 };
 
 // FeatureSection default style
-FeatureSection.defaultProps = {
+LatestNewsSection.defaultProps = {
   iconStyle: {},
   // section header default style
   secTitleWrapper: {
@@ -142,4 +142,4 @@ FeatureSection.defaultProps = {
   },
 };
 
-export default FeatureSection;
+export default LatestNewsSection;
