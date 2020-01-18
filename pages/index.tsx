@@ -8,14 +8,14 @@ import withApollo from '../lib/apollo';
 
 const IndexPage = () => {
   return (
-    <>
+    <Fragment>
       <BannerSection />
       <RideOption />
       <LocationSection />
       <LatestNewsSection />
       <FeatureSection />
-    </>
-  );
+    </Fragment>
+  )
 };
 
 export default withApollo(IndexPage);
