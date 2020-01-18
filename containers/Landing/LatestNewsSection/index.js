@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import gql from 'graphql-tag';
+import { graphql } from 'react-apollo';
 import Box from '../../../components/elements/Box';
 import Text from '../../../components/elements/Text';
 import Button from '../../../components/elements/Button';
@@ -10,7 +12,26 @@ import { LatestNews } from '../../../common/src/data';
 import Container from '../../../components/Container';
 import FeatureSectionWrapper from './latest.style';
 
-const FeatureSection = ({
+export const featuredArticles = gql`
+  query {
+    featuredArticles(limit: 2) {
+      id
+      title
+      publishedAt
+      mainImageUrl
+      readingTime
+      user {
+        name
+        avatarUrl
+      }
+      category {
+        name
+      }
+    }
+  }
+`;
+
+function LatestNewsSection({
   row,
   col,
   secTitleWrapper,
@@ -21,42 +42,47 @@ const FeatureSection = ({
   iconStyle,
   contentStyle,
   btnStyle,
-}) => {
-  return (
-    <FeatureSectionWrapper id="news_section">
-      <Container noGutter mobileGutter className="container">
-        <Box {...secTitleWrapper}>
-          <Heading {...secTitle} content="Latest News" />
-          <Text {...secDescription} content="Be updated with latest news for exciting prizes,coupons and many more!" />
-        </Box>
-        <Box className="row" {...row}>
-          {LatestNews.map((latest, index) => (
-            <Box className="col" {...col} key={latest.id}>
-              <FeatureBlock
-                icon={<img src={latest.img} alt={latest.title} />}
-                iconStyle={iconStyle}
-                contentStyle={contentStyle}
-                title={<Heading content={latest.title} {...featureTitle} />}
-                description={<Text content={latest.description} {...featureDescription} />}
-                button={
-                  <Link href="#1">
-                    <a>
-                      <Button title={latest.buttonText} {...btnStyle} />
-                    </a>
-                  </Link>
-                }
-                className="rideLatest"
-              />
-            </Box>
-          ))}
-        </Box>
-      </Container>
-    </FeatureSectionWrapper>
-  );
-};
+  data: { loading, error, featuredArticles },
+}) {
+  if (error) return <p> Error loading posts</p>;
+  if (featuredArticles && featuredArticles.length) {
+    return (
+      <FeatureSectionWrapper id="news_section">
+        <Container noGutter mobileGutter className="container">
+          <Box {...secTitleWrapper}>
+            <Heading {...secTitle} content="Bądź na bieżąco" />
+            <Text {...secDescription} content="Wiedza to podstawa!" />
+          </Box>
+          <Box className="row" {...row}>
+            {featuredArticles.map((latest, index) => (
+              <Box className="col" {...col} key={latest.id}>
+                <FeatureBlock
+                  icon={<img src={latest.mainImageUrl} alt={latest.title} />}
+                  iconStyle={iconStyle}
+                  contentStyle={contentStyle}
+                  title={<Heading content={latest.title} {...featureTitle} />}
+                  description={<Text content={latest.description} {...featureDescription} />}
+                  button={
+                    <Link href="/blog/[id]" as={`/blog/${latest.id}`} key={`key-${latest.id}`}>
+                      <a>
+                        <Button title="Czytaj..." {...btnStyle} />
+                      </a>
+                    </Link>
+                  }
+                  className="rideLatest"
+                />
+              </Box>
+            ))}
+          </Box>
+        </Container>
+      </FeatureSectionWrapper>
+    );
+  }
+  return loading ? <div>Loading ...</div> : '';
+}
 
 // FeatureSection style props
-FeatureSection.propTypes = {
+LatestNewsSection.propTypes = {
   secTitleWrapper: PropTypes.object,
   row: PropTypes.object,
   col: PropTypes.object,
@@ -67,10 +93,11 @@ FeatureSection.propTypes = {
   btnStyle: PropTypes.object,
   iconStyle: PropTypes.object,
   contentStyle: PropTypes.object,
+  data: PropTypes.object,
 };
 
 // FeatureSection default style
-FeatureSection.defaultProps = {
+LatestNewsSection.defaultProps = {
   iconStyle: {},
   // section header default style
   secTitleWrapper: {
@@ -140,6 +167,7 @@ FeatureSection.defaultProps = {
     color: '#1A73E8',
     fontFamily: 'Lato',
   },
+  data: { LatestNews },
 };
 
-export default FeatureSection;
+export default graphql(featuredArticles)(LatestNewsSection);
