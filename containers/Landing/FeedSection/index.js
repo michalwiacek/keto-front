@@ -1,24 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import Box from '../../../components/elements/Box';
 import Text from '../../../components/elements/Text';
-import Button from '../../../components/elements/Button';
 import Heading from '../../../components/elements/Heading';
-import FeatureBlock from '../../../components/FeatureBlock';
 import { LatestNews } from '../../../common/src/data';
 import Container from '../../../components/Container';
 import FeatureSectionWrapper from './feedSection.style';
 import FeaturedArticle from '../../../components/FeaturedArticle';
 
-const FeatureSection = ({
-  row,
-  col,
-  secTitleWrapper,
-  secTitle,
-  secDescription,
-  
-}) => {
+const FeatureSection = ({ row, col, secTitleWrapper, secTitle, secDescription }) => {
   return (
     <FeatureSectionWrapper id="news_section">
       <Container noGutter mobileGutter className="container">
@@ -86,12 +76,6 @@ FeatureSection.defaultProps = {
   // feature col default style
   col: {
     width: [1, 1 / 2, 1 / 2, 1 / 2],
-  },
-  iconStyle: {},
-  // feature content default style
-  contentStyle: {
-    textAlign: 'left',
-    mt: ['30px', '30px'],
   },
   // feature title default style
   featureTitle: {

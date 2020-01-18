@@ -27,7 +27,6 @@ export const SOCIAL_PROFILES = [
   },
 ];
 
-
 export const MENU_ITEMS = [
   {
     label: 'O nas',
