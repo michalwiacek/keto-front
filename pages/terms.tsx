@@ -3,7 +3,7 @@ import 'isomorphic-fetch';
 
 import Container from '../components/Container';
 import SectionWrapper from '../containers/Blog/BlogSection/blogSection.style';
-import { Grommet, Box } from 'grommet'
+import { Grommet, Box } from 'grommet';
 
 class Terms extends React.Component {
   render() {

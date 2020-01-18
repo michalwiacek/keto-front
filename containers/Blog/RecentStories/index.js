@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 import Link from 'next/link';
 import { graphql } from 'react-apollo';
 import PropTypes from 'prop-types';
-import { SpiralSpinner } from "react-spinners-kit";
+import { SpiralSpinner } from 'react-spinners-kit';
 import BlogPost from '../../../components/BlogPost';
 
 // interface Post {
