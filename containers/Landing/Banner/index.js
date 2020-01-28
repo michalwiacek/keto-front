@@ -1,27 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Box from '../../../components/elements/Box';
-import Heading from '../../../components/elements/Heading';
-import Image from '../../../components/elements/Image';
-import Container from '../../../components/Container';
-import { BannerWrapper } from './banner.style';
-import PeopleImage from '../../../common/src/assets/images/people.svg';
+import { Grommet, Main, Box, Heading, Text, Form, FormField, Button } from 'grommet';
+import theme from '../../Layout/grommet.theme.json';
+// import Box from '../../../components/elements/Box';
+// import Heading from '../../../components/elements/Heading';
+// import Image from '../../../components/elements/Image';
+// import Container from '../../../components/Container';
+// import { BannerWrapper } from './banner.style';
+import heroImage from '../../../common/src/assets/images/background/Hero_black_food.jpg';
 
 const BannerSection = ({ row, contentArea, imageArea, greetingStyle, aboutStyle, greetingStyleTwo, button }) => {
   return (
-    <BannerWrapper id="banner_section">
-      <Container noGutter mobileGutter width="1200px" className="container">
-        <Box {...row}>
-          <Box {...contentArea} className="contentArea">
-            <Heading content="Osiągaj swoje cele z nami." {...greetingStyle} />
-            <Heading content="Zacznij juz dziś!" {...greetingStyleTwo} />
-          </Box>
-          <Box {...imageArea} className="image_area">
-            <Image src={PeopleImage} className="people_image_area" alt="People Image" />
-          </Box>
+    <Grommet full theme={theme}>
+      <Main full background={`url(${heroImage})`}>
+        <Box alignSelf="end" gap="xsmall" width="medium" margin="xlarge" animation="slideLeft">
+          <Heading color="white">Gotowy na Keto podróż siurku?</Heading>
+          <Text color="white">Zapisz się do naszego przewodnika online</Text>
+          <Form>
+            <FormField name="email" label="Email" />
+            <Button type="submit" primary label="Submit" />
+          </Form>
         </Box>
-      </Container>
-    </BannerWrapper>
+      </Main>
+    </Grommet>
+    // {/* <BannerWrapper id="banner_section">
+    //   <Container noGutter mobileGutter width="1200px" className="container">
+    //     <Box {...row}>
+    //       <Box {...contentArea} className="contentArea">
+    //         <Heading content="Osiągaj swoje cele z nami." {...greetingStyle} />
+    //         <Heading content="Zacznij juz dziś!" {...greetingStyleTwo} />
+    //       </Box>
+    //       <Box {...imageArea} className="image_area">
+    //         <Image src={PeopleImage} className="people_image_area" alt="People Image" />
+    //       </Box>
+    //     </Box>
+    //   </Container>
+    // </BannerWrapper> */}
   );
 };
 

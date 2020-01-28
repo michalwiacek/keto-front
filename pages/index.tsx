@@ -1,4 +1,3 @@
-
 import React, { Fragment } from 'react';
 import LatestNewsSection from '../containers/Landing/LatestNewsSection';
 import BannerSection from '../containers/Landing/Banner';
@@ -11,10 +10,10 @@ const IndexPage = () => {
   return (
     <>
       <BannerSection />
-      <RideOption />
+      {/* <RideOption />
       <LocationSection />
       <LatestNewsSection />
-      <FeatureSection />
+      <FeatureSection /> */}
     </>
   );
 };
