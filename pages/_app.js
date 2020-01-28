@@ -23,8 +23,8 @@ class DietMaister extends App {
       <ThemeProvider theme={lightTheme}>
         <>
           <Head>
-            <title>DietMaister</title>
-            <meta name="Description" content="DietMaister landing page" />
+            <title>Foodsteps</title>
+            <meta name="Description" content="Foodsteps landing page" />
             <meta name="theme-color" content="#ec5555" />
             {/* Load google fonts */}
             <link
@@ -44,7 +44,7 @@ class DietMaister extends App {
             </Sticky>
             <Modal />
             <Component {...pageProps} />
-            <Footer />
+            {/* <Footer /> */}
           </ContentWrapper>
         </>
       </ThemeProvider>
