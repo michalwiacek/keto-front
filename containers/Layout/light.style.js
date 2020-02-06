@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from '../../styled-components.ts';
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Lato', sans-serif;
+    font-family: Montserrat, sans-serif;
   }
   h1,
   h2,
@@ -11,20 +11,98 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: Montserrat, sans-serif;
     margin-top: 0;
   }
   p{
-    font-family: 'Lato', sans-serif;
+    font-family: Open-Sans, sans-serif;
   }
   .fixed {
     position: fixed;
   }
-
+  .landing {
+    overflow: hidden;
+    height: 100%;
+  }
   section {
     position: relative;
   }
-  
+  .lower_menu {
+    background: #0d1829;
+    // box-shadow: 0px 3px 8px 0px rgba(43, 83, 135, 0.08);
+    opacity: 0.85;
+    height: 100px;
+    padding: 15px 0;
+    position: fixed;
+    top: calc(100vh - 100px);
+    left: 0;
+    z-index: 8000;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    .lower_nav_menu {
+      margin-right: 40px;
+      li {
+        display: inline-block;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #fff;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+        &.is-current {
+          a {
+            color: #fff;
+            &:after {
+              transform: scaleX(1);
+              transform-origin: left center 0;
+              transition: transform 0.35s cubic-bezier(0.43, 0.49, 0.51, 0.68);
+            }
+          }
+        }
+        a {
+          padding: 5px 0;
+          font-size: 16px;
+          font-weight: 800;
+          font-family: Montserrat, sans-serif;
+          color: #fff;
+          position: relative;
+          transition: 0.15s ease-in-out;
+          &:hover {
+            color: #fff;
+            &:after {
+              transform: scaleX(1);
+              transform-origin: left center 0;
+              transition: transform 0.35s cubic-bezier(0.43, 0.49, 0.51, 0.68);
+            }
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 9px;
+            background: linear-gradient(to left, #ff5b60, #f29e02);
+            bottom: 5px;
+            left: 6px;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: right center 0;
+            transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+          }
+          &.is-current {
+            &:after {
+              transform: scaleX(1);
+              transform-origin: left center 0;
+              transition: transform 0.35s cubic-bezier(0.43, 0.49, 0.51, 0.68);
+            }
+          }
+        }
+      }
+    }
+  }
   *, ::before, ::after {
     background-repeat: no-repeat;
     box-sizing: border-box;
@@ -132,7 +210,19 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
   }
-
+  .sticky-nav-active {
+    .lower_menu { {
+      .lower_nav_menu {
+        li {
+          a {
+            color: #302b4e;
+            &:after {
+              background: linear-gradient(to left, #ff5b60, #f29e02);
+            }
+          }
+        }
+      }
+    }
 `;
 
 export const ContentWrapper = styled.div`
